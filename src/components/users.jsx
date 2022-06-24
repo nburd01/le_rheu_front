@@ -1,17 +1,17 @@
 import React,{useState,useEffect} from 'react';
-
+import { API_URL } from '../store/api_url';
 
 function App() {
   const [data,setData]=useState([]);
 
   const getData=()=>{
-    fetch('https://warm-plateau-25141.herokuapp.com/'
+    fetch(API_URL
     ,{
       method: 'get',
       headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        // 'Authorization': token
+        // 'Authorization':ENV['JWT_SECRET']
        },
     }
     )
