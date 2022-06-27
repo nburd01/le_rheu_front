@@ -1,1 +1,1 @@
-export const API_URL='https://warm-plateau-25141.herokuapp.com/'
+export const API_URL='https://dry-journey-72418.herokuapp.com/user/index'
