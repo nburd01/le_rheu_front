@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.935d902f.css",
-    "main.js": "/static/js/main.e8f0b380.js",
-    "static/js/787.fd81d7f2.chunk.js": "/static/js/787.fd81d7f2.chunk.js",
-    "index.html": "/index.html",
-    "main.935d902f.css.map": "/static/css/main.935d902f.css.map",
-    "main.e8f0b380.js.map": "/static/js/main.e8f0b380.js.map",
-    "787.fd81d7f2.chunk.js.map": "/static/js/787.fd81d7f2.chunk.js.map"
+    "main.css": "/le_rheu_front/static/css/main.935d902f.css",
+    "main.js": "/le_rheu_front/static/js/main.92d9bfac.js",
+    "static/js/787.7efd31bd.chunk.js": "/le_rheu_front/static/js/787.7efd31bd.chunk.js",
+    "index.html": "/le_rheu_front/index.html",
+    "main.935d902f.css.map": "/le_rheu_front/static/css/main.935d902f.css.map",
+    "main.92d9bfac.js.map": "/le_rheu_front/static/js/main.92d9bfac.js.map",
+    "787.7efd31bd.chunk.js.map": "/le_rheu_front/static/js/787.7efd31bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.935d902f.css",
-    "static/js/main.e8f0b380.js"
+    "static/js/main.92d9bfac.js"
   ]
 }
