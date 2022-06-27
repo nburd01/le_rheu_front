@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/le_rheu_front/static/css/main.935d902f.css",
+    "main.js": "/le_rheu_front/static/js/main.3c7da98f.js",
+    "static/js/787.fd81d7f2.chunk.js": "/le_rheu_front/static/js/787.fd81d7f2.chunk.js",
+    "index.html": "/le_rheu_front/index.html",
+    "main.935d902f.css.map": "/le_rheu_front/static/css/main.935d902f.css.map",
+    "main.3c7da98f.js.map": "/le_rheu_front/static/js/main.3c7da98f.js.map",
+    "787.fd81d7f2.chunk.js.map": "/le_rheu_front/static/js/787.fd81d7f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.935d902f.css",
+    "static/js/main.3c7da98f.js"
+  ]
+}
