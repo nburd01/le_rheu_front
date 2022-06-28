@@ -8,26 +8,26 @@ export default function TopBar() {
     <div class="topbar">
     <div class="top">
         <nav class="menu">
-            <a href="#">Mon Espace</a>
-            <a href="#">Nous rejoindre</a>
+            {/* <a href="#">Mon Espace</a> */}
+            {/* <a href="#">Nous rejoindre</a> */}
         </nav>
         <div class="logo">
-            <img src="../assets/img/logo-leRheu.png"></img>
+            {/* <img src="../assets/img/logo-leRheu.png"></img> */}
         </div>
         <div class="labels">
+            {/* <img src="/assets/label_jeunes.jpg"></img>
             <img src="/assets/label_jeunes.jpg"></img>
-            <img src="/assets/label_jeunes.jpg"></img>
-            <img src="/assets/label_jeunes.jpg"></img>
+            <img src="/assets/label_jeunes.jpg"></img> */}
         </div>
         <ul class ="nav-links">
             <li>
-                <a>Nos disciplines</a>
+                {/* <a>Nos disciplines</a> */}
             </li>
             <li>
-                <a>Nous contacter</a>
+                {/* <a>Nous contacter</a> */}
             </li>
             <li>
-                <a>Mon compte</a>
+                {/* <a>Mon compte</a> */}
             </li>
         </ul>
         <div class="burger">
@@ -37,11 +37,11 @@ export default function TopBar() {
         </div>
     </div>
     <div class="disciplines">
-        <a href="#">Football</a>
-        <a href="#">Futsal</a>
-        <a href="#">Beach Soccer</a>
-        <a href="#">Fitfoot</a>
-        <a href="#">Féminines</a>
+        {/* <a href="#">Football</a> */}
+        {/* <a href="#">Futsal</a> */}
+        {/* <a href="#">Beach Soccer</a> */}
+        {/* <a href="#">Fitfoot</a> */}
+        {/* <a href="#">Féminines</a> */}
     </div>
 </div>
   )

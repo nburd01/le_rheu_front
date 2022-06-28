@@ -3,8 +3,6 @@ import './assets/stylesheets/buttons.css';
 import './assets/stylesheets/containers.css';
 import './assets/stylesheets/img.css';
 
-
-
 import Users from './components/users'
 import TopBar from './components/TopBar';
 import Footer from './components/footer';
