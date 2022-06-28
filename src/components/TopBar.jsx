@@ -8,7 +8,7 @@ export default function TopBar() {
     <div class="topbar">
     <div class="top">
         <nav class="menu">
-            <a href="#">Mon Espace</a>
+            <a href="#">Se connecter</a>
             <a href="#">Nous rejoindre</a>
         </nav>
         <div class="logo">
