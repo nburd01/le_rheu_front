@@ -31,9 +31,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="container">
      {
        data && data.length>0 && data.map((user)=><p>{user.email}</p>)
      }
+      </div>
     </div>
   );
 }
