@@ -1,0 +1,22 @@
+.button-block a{
+    border: 1px solid var(--primary) ;
+    margin: 1em;
+    padding: 0.1em;
+    background: 
+        linear-gradient(to right, #fa709a 0%, #fee140 100%) no-repeat;
+}
+
+.more-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-weight:600;
+    font-size:0.7em;
+    width: auto;
+}
+
+@media only screen and (max-width: 960px) {
+    a{
+        display: block;
+    }
+}

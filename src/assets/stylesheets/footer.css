@@ -1,0 +1,38 @@
+footer {
+    display: block;
+    justify-content: space-around;
+    background-image: linear-gradient(180deg, var(--fourth) 80%, var(--secondary) 1%);
+}
+footer a{
+    font-size:0.8em;
+}
+    footer .column-block{
+        display: flex;
+        justify-content: space-around;
+    }
+    footer .logo-div{
+        display: flex;
+        justify-content: center;
+    }
+    footer .logo{
+        height: 10em;
+        justify-content: center;
+    }
+    footer ul{
+        padding-left: 0;
+        list-style: none;
+    }
+    footer li::before{
+        content: " ";
+    }
+    footer a:hover{
+        color: var(--secondary);
+        text-decoration: underline ;
+    }
+    @media only screen and (max-width: 960px) {
+        footer .column-block{
+            display: block;
+            justify-content: space-around;
+        }
+    
+    }

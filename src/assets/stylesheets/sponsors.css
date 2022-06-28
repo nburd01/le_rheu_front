@@ -1,0 +1,21 @@
+
+.sponsors{
+    display: flex;
+    align-items: center;
+}
+.sponsor-img{
+    height: auto;
+    width: 100%;
+    margin: 2em;
+    background :linear-gradient(180deg, rgba(212, 206, 125, 0.2),  rgba(54, 54, 54, 0.2) 40%, rgba(28, 28, 28, 0.2) 100%), 
+
+
+}
+
+@media only screen and (max-width: 960px) {
+    .sponsors{
+        display: block;
+        align-items: center;
+    }
+
+}

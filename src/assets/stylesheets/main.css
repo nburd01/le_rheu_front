@@ -1,0 +1,24 @@
+
+ *, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    --primary:#FFFD00;
+    --secondary:#242B2E; 
+    --third:#ffffff; 
+    --fourth: #F2F2F2
+    }
+
+body{
+    line-height: 1,625;
+    margin: 0;
+    font-family: 'Noto Sans', 'sans-serif' ;
+    /* color: #6F6F6F ; */
+    color: inherit ;
+    background:
+        linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+        /* url(/assets/Index.png) top center / cover no-repeat; */
+    overflow-x: hidden;
+}

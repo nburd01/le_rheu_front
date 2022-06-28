@@ -1,0 +1,25 @@
+.container-small .block-contact{
+    background: var(--primary);
+    padding : 2em;
+    border-radius: 20px;
+}
+.block-contact{
+    display: flex;
+    justify-content: space-between ;
+}
+    .block-contact .icon{
+        display: inline-block;
+    }
+
+@media only screen and (max-width: 960px) {
+    .block-contact{
+        display: block;
+    }
+
+    .block-contact .icon{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+}

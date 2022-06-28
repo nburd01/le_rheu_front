@@ -1,0 +1,58 @@
+.disciplines-block{
+    align-content: stretch;
+
+}
+.disciplines-card{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 300px;
+    margin: 0.4em;
+    border-radius: 20px;
+}
+
+.disciplines-card img{
+    contain: center cover;
+}
+
+        .disciplines-card:nth-child(1){
+            background:
+                /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
+                url(/assets/discipline1.jpg) center center / cover no-repeat;
+                width: calc(100% - 1em);
+        }
+        .disciplines-card:nth-child(2){
+            background: 
+                /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
+                url(/assets/discipline2.jpg)  center center / cover no-repeat;
+                width: calc(60% - 1em);
+        }
+        .disciplines-card:nth-child(3){
+            background: 
+                /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
+                url(/assets/discipline3.jpg)  center center / cover no-repeat;
+                width: calc(40% - 1em);
+        }
+        .disciplines-card:nth-child(4){
+            background: 
+                /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
+                url(/assets/discipline4.jpg)  center center / cover no-repeat;
+                width: calc(30% - 1em);
+        }
+        .disciplines-card:nth-child(5){
+            background: 
+                /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
+                url(/assets/discipline5.jpg) center center / cover no-repeat;
+                width: calc(70% - 1.1em);
+        }
+
+
+
+        
+.disciplines-card:hover{
+    border: solid 1px var(--primary);
+    background-image: 
+        linear-gradient(180deg, var(--secondary 0.3), var(--primary 0.3) 40%, var(--primary 0.3)  100%);
+        transition: all 0.3s;
+}
+

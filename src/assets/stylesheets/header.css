@@ -1,0 +1,31 @@
+.header-home{
+    height: calc(100vh - 10px); 
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-start;
+    text-transform: uppercase;
+    background:
+        linear-gradient(180deg, rgba(212, 206, 125, 0.2),  rgba(54, 54, 54, 0.2) 40%, rgba(28, 28, 28, 0.2) 100%), 
+        url(../img/Header_LeRheu.jpg) top center / cover;
+}
+.header-home .block-infos{
+padding-left: 8em;
+padding-bottom: 8em;
+line-height: 1em;
+
+}
+.header-home .block-infos h1{
+color: var(--primary);
+font-weight:900;
+}
+.header-home .block-infos p{
+color: var(--fourth);
+font-weight:bolder;
+}
+
+@media only screen and (max-width: 960px) {
+    .header-home .block-infos h1{
+        line-height: 1.1em;
+    }
+
+}

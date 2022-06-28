@@ -1,0 +1,32 @@
+a {
+    color: inherit;
+    text-decoration: none;
+    border-radius: 1rem;
+
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h2::after{
+    content:'';
+    display: block;
+    border: solid 0.1em var(--primary, #000);
+    position: absolute;
+    width: 2em;
+    height: 2px;
+}
+
+@media only screen and (max-width: 960px) {
+    h2 {
+        padding-top: 1.875em;
+        padding-bottom: 1em;
+    }
+    h2:first-of-type{
+        padding-top: 1.875em;
+        margin: 0;
+
+    }
+}

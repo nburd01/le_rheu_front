@@ -1,0 +1,16 @@
+.block-boutique img{
+    display: flex;
+    flex-direction: row;
+
+    width: auto;
+    background: center center / cover no-repeat;
+    border: none;    
+}
+@media only screen and (max-width: 960px) {
+    .block-boutique{
+        display: block;
+}
+    .block-boutique img{
+        display: block;
+    }
+}

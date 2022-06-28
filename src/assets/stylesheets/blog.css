@@ -1,0 +1,48 @@
+.blog-block{
+    display: inline-flex;
+}
+
+.blog-card{
+    display: inline-flex;
+    flex-direction: column;
+
+    border: solid 1px var(--secondary, #000);
+    border-radius: 20px;
+    margin: 5px;
+    height: 400px;
+    min-width: 25%;
+}
+        .blog-card:nth-child(1){
+            background:
+                linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%), 
+                url(/assets/blog1.jpg) center center / cover no-repeat;
+        }
+        .blog-card:nth-child(2){
+            background: 
+                linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%), 
+                url(/assets/blog2.jpg) center center / cover no-repeat;
+        }
+        .blog-card:nth-child(3){
+            background: 
+                linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%), 
+                url(/assets/blog3.jpg) center center / cover no-repeat;
+        }
+        .blog-card:nth-child(4){
+            background: 
+                linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%), 
+                url(/assets/blog4.jpg) center center / cover no-repeat;
+        }
+        .blog-card:nth-child(1):hover{
+            background:
+                url(/assets/blog1.jpg) left center / cover no-repeat;
+                transition: all 0.3s;
+        }
+
+    @media only screen and (max-width: 960px) {
+        .blog-block{
+            display: block;
+        }
+        .blog-card{
+            display: block;
+        }
+    }
