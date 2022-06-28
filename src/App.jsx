@@ -8,6 +8,10 @@ import TopBar from './components/TopBar';
 import Footer from './components/footer';
 import HeaderHome from './components/HeaderHome';
 import ScoreBar from './components/ScoreBar';
+import LeClub from './components/leClub';
+import LesDisciplines from './components/lesDisciplines';
+import Blog from './components/blog';
+
 
 
 function App() {
@@ -16,11 +20,11 @@ function App() {
       <TopBar/>
       <HeaderHome/>
       <ScoreBar/>
-      <div className="container">
-        <Users />
-      </div>
+      <Users />
+      <LeClub/>
+      <LesDisciplines/>
+      <Blog/>
       <Footer/>
-      
     </div>
   );
 }
