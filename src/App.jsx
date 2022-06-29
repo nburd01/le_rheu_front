@@ -10,7 +10,8 @@ import HeaderHome from './components/HeaderHome';
 import ScoreBar from './components/ScoreBar';
 import LeClub from './components/leClub';
 import LesDisciplines from './components/lesDisciplines';
-import Blog from './components/blog';
+import Blog from './features/Post/posts';
+import Posts from './features/Post/posts';
 
 
 
