@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
-import { API_URL } from '../store/api_url';
+import { API_URL } from '../../store/api_url';
 
-function App() {
+function UserList() {
   const [data,setData]=useState([]);
 
   const getData=()=>{
@@ -39,4 +39,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default UserList;
