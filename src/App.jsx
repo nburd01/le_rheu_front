@@ -7,7 +7,7 @@ import Users from './components/users'
 import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
 import ScoreBar from './components/ScoreBar/ScoreBar';
-import LeClub from './components/leClub/leClub';
+import LeClub from './components/LeClub/LeClub';
 
 import Blog from './features/Post/posts';
 import HeaderHome from './components/HeaderHome/HeaderHome';
