@@ -99,7 +99,7 @@ color:var(--secondary, #3e6bd3);
 cursor: pointer;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1400px) {
 
     .topbar{
         display: flex;
