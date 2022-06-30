@@ -17,7 +17,7 @@ const toggleNav = () => {
     <div class="topbar">
         <div class="top">
             <nav class="menu">
-                <a href="#">Se connecter</a>
+                <a href="/login">Se connecter</a>
                 <a href="/connection">Nous rejoindre</a>
             </nav>
             <div class="logo">
