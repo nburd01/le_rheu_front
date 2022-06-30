@@ -25,11 +25,11 @@ function App() {
       <main>
 
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="/about" element={<About />} />
-        <Route path="/disciplines" element={<Disciplines />} />
-        <Route path="/disciplines" element={<Contact />} />
-        <Route path="/connection" element={<Connection />} />
+        <Route path='/le_rheu_front/' element={<Home/>}/>
+        <Route path="/le_rheu_front/about" element={<About />} />
+        <Route path="/le_rheu_front/disciplines" element={<Disciplines />} />
+        <Route path="/le_rheu_front/contact" element={<Contact />} />
+        <Route path="/le_rheu_front/connection" element={<Connection />} />
       </Routes>
 
       </main>

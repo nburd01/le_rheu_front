@@ -1,9 +1,16 @@
 import React from 'react'
 import '../../assets/stylesheets/posts.css'
 
-export default function Posts() {
+export default function Posts({Posts}) {
+
+
+    // const Modify = (e) => {
+    //     e.preventDefault();
+    //     navigate('/modify/' + post.id)
+    //   }
+
   return (
-      
+
 <div class="container">
     <h2>Actualité</h2>
     <div class="blog-block">
