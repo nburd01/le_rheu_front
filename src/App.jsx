@@ -18,14 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <TopBar/>
-
-      <HeaderHome/>
-      <h1>Bienvenu sur l'application REACT, reliée à l'API Rails 🙈</h1>
-      <hr />
-      <h2><Users /></h2>
-      <Footer/>
-
-      
+       
       <main>
 
       <Routes>
