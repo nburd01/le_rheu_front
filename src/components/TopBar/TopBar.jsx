@@ -5,6 +5,7 @@ import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
+import SignUp from '../SignUp/SignUp';
 
 
 
@@ -17,6 +18,7 @@ export default function TopBar() {
             <a href="#">Se connecter</a>
             <a href="#">Nous rejoindre</a>
         </nav>
+        <SignUp/>
         <div class="logo">
             <img src="../assets/img/logo-leRheu.png"></img>
         </div>
