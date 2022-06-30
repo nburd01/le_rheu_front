@@ -5,19 +5,22 @@
     display: flex ;
     font-size: .875rem;
     text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 0px 20px;
     align-items: center;
 }
     .topbar .top .menu{
         width: 33%;
         align-items: left;
         justify-content: flex-start;
+
+
     }
         .topbar .top .menu a{
             align-items: left;
             justify-content: flex-start;
             color: inherit;
             padding : 0.5em 1.5em ;
+            margin:1em 0.3em;
         }
             .topbar .top .menu a:nth-child(1n){
                 background-color:var(--primary, #3e6bd3);
@@ -42,10 +45,19 @@
         display : flex ;
         width: 33%;
         justify-content: center;
+        
     }
         .topbar .top .logo img{
            min-height: 50px ;
-           max-height: 100px ;
+           max-height: 350px ;
+        }
+
+        .lerheu-logo{
+            width:  150px;
+            object-fit: contain;
+            margin: 5px 5px;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
     .topbar .top .labels{
@@ -84,15 +96,24 @@
 .topbar .nav-links{
     display: flex;
     /* background-color: var(--primary); */
-    width: 40%;
+    width: 33%;
+    align-items: end;
+    justify-content: end;
 }
 .topbar .nav-links li{
     list-style: none;
     padding : 0.5em 1.5em ;
-    margin:1em;
+    margin:1em 0.3em;
     border-radius:20px;
     background-color: var(--primary);
 }
+
+.topbar .nav-links li :last-child{
+padding-right: 0;
+margin-right: 0;
+}
+
+
 .topbar .nav-links li:hover{
 background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 color:var(--secondary, #3e6bd3);
