@@ -83,11 +83,20 @@
 
 .topbar .nav-links{
     display: flex;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     width: 40%;
 }
 .topbar .nav-links li{
     list-style: none;
+    padding : 0.5em 1.5em ;
+    margin:1em;
+    border-radius:20px;
+    background-color: var(--primary);
+}
+.topbar .nav-links li:hover{
+background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+color:var(--secondary, #3e6bd3);
+cursor: pointer;
 }
 
 @media only screen and (max-width: 960px) {
