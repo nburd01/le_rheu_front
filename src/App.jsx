@@ -12,6 +12,7 @@ import LeClub from './components/leClub/leClub';
 import Blog from './features/Post/posts';
 import HeaderHome from './components/HeaderHome/HeaderHome';
 import Disciplines from './components/Disciplines/Disciplines';
+import SignUp from './components/SignUp';
 
 
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <TopBar/>
+      <SignUp />
       <HeaderHome/>
       <ScoreBar/>
       <Users />
