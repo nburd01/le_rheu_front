@@ -4,14 +4,15 @@ import './assets/stylesheets/containers.css';
 import './assets/stylesheets/img.css';
 
 import Users from './components/users'
-import TopBar from './components/TopBar';
-import Footer from './components/footer';
-import HeaderHome from './components/HeaderHome';
-import ScoreBar from './components/ScoreBar';
-import LeClub from './components/leClub';
-import LesDisciplines from './components/lesDisciplines';
+import TopBar from './components/TopBar/TopBar';
+import Footer from './components/Footer/footer';
+import ScoreBar from './components/ScoreBar/ScoreBar';
+import LeClub from './components/leClub/leClub';
+
 import Blog from './features/Post/posts';
-import Posts from './features/Post/posts';
+import HeaderHome from './components/HeaderHome/HeaderHome';
+import Disciplines from './components/Disciplines/Disciplines';
+
 
 
 
@@ -23,7 +24,7 @@ function App() {
       <ScoreBar/>
       <Users />
       <LeClub/>
-      <LesDisciplines/>
+      <Disciplines/>
       <Blog/>
       <Footer/>
     </div>
