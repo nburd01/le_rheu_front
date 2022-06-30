@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
-import { API_URL } from '../store/api_url';
+import { API_URL } from '../../store/api_url';
 
-function App() {
+function UserList() {
   const [data,setData]=useState([]);
 
   const getData=()=>{
@@ -31,10 +31,12 @@ function App() {
 
   return (
     <div className="App">
+      <div className="container">
      {
        data && data.length>0 && data.map((user)=><p>{user.email}</p>)
      }
+      </div>
     </div>
   );
 }
-export default App;
+export default UserList;

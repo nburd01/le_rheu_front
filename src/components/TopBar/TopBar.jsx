@@ -1,6 +1,13 @@
 import React from 'react'
-import '../assets/stylesheets/topbar.css';
-import '../assets/stylesheets/buttons.css';
+import './Topbar.css';
+import '../../assets/stylesheets/containers.css';
+import '../../assets/stylesheets/buttons.css';
+import '../../assets/stylesheets/img.css';
+import '../../assets/stylesheets/font.css';
+import '../../assets/stylesheets/main.css';
+import SignUp from '../SignUp/SignUp';
+
+
 
 
 export default function TopBar() {
@@ -8,9 +15,10 @@ export default function TopBar() {
     <div class="topbar">
     <div class="top">
         <nav class="menu">
-            <a href="#">Mon Espace</a>
+            <a href="#">Se connecter</a>
             <a href="#">Nous rejoindre</a>
         </nav>
+        <SignUp/>
         <div class="logo">
             <img src="../assets/img/logo-leRheu.png"></img>
         </div>

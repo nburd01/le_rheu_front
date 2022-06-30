@@ -6,7 +6,7 @@
     text-transform: uppercase;
     background:
         linear-gradient(180deg, rgba(212, 206, 125, 0.2),  rgba(54, 54, 54, 0.2) 40%, rgba(28, 28, 28, 0.2) 100%), 
-        url(../img/Header_LeRheu.jpg) top center / cover;
+        url(../../assets/img/Header_LeRheu.jpg) top center / cover;
 }
 .header-home .block-infos{
 padding-left: 8em;
