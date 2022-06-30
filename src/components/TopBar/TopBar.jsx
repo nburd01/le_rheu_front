@@ -19,12 +19,7 @@ export default function TopBar() {
             <a href="/connection">Nous rejoindre</a>
         </nav>
         <div class="logo">
-            <img src="../assets/img/logo-leRheu.png"></img>
-        </div>
-        <div class="labels">
-            <img src="/assets/label_jeunes.jpg"></img>
-            <img src="/assets/label_jeunes.jpg"></img>
-            <img src="/assets/label_jeunes.jpg"></img>
+            <img className="lerheu-logo" src={require("../../assets/img/logo-leRheu.png")} alt={"S.C. Le Rheu"}/>
         </div>
         <ul class ="nav-links">
             <li>
