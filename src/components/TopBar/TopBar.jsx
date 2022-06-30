@@ -1,6 +1,12 @@
 import React from 'react'
-import '../assets/stylesheets/topbar.css';
-import '../assets/stylesheets/buttons.css';
+import './Topbar.css';
+import '../../assets/stylesheets/containers.css';
+import '../../assets/stylesheets/buttons.css';
+import '../../assets/stylesheets/img.css';
+import '../../assets/stylesheets/font.css';
+import '../../assets/stylesheets/main.css';
+
+
 
 
 export default function TopBar() {

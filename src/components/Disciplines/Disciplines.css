@@ -18,31 +18,31 @@
         .disciplines-card:nth-child(1){
             background:
                 /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
-                url(../img/discipline1.jpg) center center / cover no-repeat;
+                url(../../assets/img/discipline1.jpg) center center / cover no-repeat;
                 width: calc(100% - 1em);
         }
         .disciplines-card:nth-child(2){
             background: 
                 /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
-                url(../img/discipline2.jpg)  center center / cover no-repeat;
+                url(../../assets/img/discipline2.jpg)  center center / cover no-repeat;
                 width: calc(60% - 1em);
         }
         .disciplines-card:nth-child(3){
             background: 
                 /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
-                url(../img/discipline3.jpg)  center center / cover no-repeat;
+                url(../../assets/img/discipline3.jpg)  center center / cover no-repeat;
                 width: calc(40% - 1em);
         }
         .disciplines-card:nth-child(4){
             background: 
                 /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
-                url(../img/discipline4.jpg)  center center / cover no-repeat;
+                url(../../assets/img/discipline4.jpg)  center center / cover no-repeat;
                 width: calc(30% - 1em);
         }
         .disciplines-card:nth-child(5){
             background: 
                 /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
-                url(../img/discipline5.jpg) center center / cover no-repeat;
+                url(../../assets/img/discipline5.jpg) center center / cover no-repeat;
                 width: calc(70% - 1.1em);
         }
 

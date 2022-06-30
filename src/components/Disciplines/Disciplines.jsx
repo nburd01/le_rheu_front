@@ -1,7 +1,12 @@
 import React from 'react'
-import '../assets/stylesheets/disciplines.css'
+import './Disciplines.css'
+import '../../assets/stylesheets/containers.css';
+import '../../assets/stylesheets/buttons.css';
+import '../../assets/stylesheets/img.css';
+import '../../assets/stylesheets/font.css';
+import '../../assets/stylesheets/main.css';
 
-export default function LesDisciplines() {
+export default function Disciplines() {
   return (
     <div className="container">
         <h2>Nos disciplines</h2>
