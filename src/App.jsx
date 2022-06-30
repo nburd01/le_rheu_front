@@ -3,31 +3,34 @@ import './assets/stylesheets/buttons.css';
 import './assets/stylesheets/containers.css';
 import './assets/stylesheets/img.css';
 
-import Users from './components/users'
+import { BrowserRouter,  Routes, Route, Link, } from 'react-router-dom';
+import './App.css';
 import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
-import ScoreBar from './components/ScoreBar/ScoreBar';
-import LeClub from './components/LeClub/LeClub';
 
-import Blog from './features/Post/posts';
-import HeaderHome from './components/HeaderHome/HeaderHome';
-import Disciplines from './components/Disciplines/Disciplines';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
 
 
 
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <TopBar/>
-      <HeaderHome/>
-      <ScoreBar/>
-      <Users />
-      <LeClub/>
-      <Disciplines/>
-      <Blog/>
-      <Footer/>
-    </div>
+
+      <main>
+
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path="/about" element={<About />} />
+      </Routes>
+
+      </main>
+
+        <Footer/>
+    </BrowserRouter>
+
   );
 }
 
