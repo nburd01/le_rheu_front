@@ -1,5 +1,5 @@
 import React from 'react'
-import Disciplines from '../../components/Disciplines/Disciplines'
+import DisciplinesBar from '../../components/DisciplinesBar/DisciplinesBar'
 import HeaderHome from '../../components/HeaderHome/HeaderHome'
 import LeClub from '../../components/LeClub/LeClub'
 import ScoreBar from '../../components/ScoreBar/ScoreBar'
@@ -13,7 +13,7 @@ export default function Home() {
         <ScoreBar/>
         <UserList/>
         <LeClub/>
-        <Disciplines/>
+        <DisciplinesBar/>
         <Posts/>
     </div>
   )

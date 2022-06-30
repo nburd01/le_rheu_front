@@ -1,12 +1,12 @@
 import React from 'react'
-import './Disciplines.css'
+import './DisciplinesBar.css'
 import '../../assets/stylesheets/containers.css';
 import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 
-export default function Disciplines() {
+export default function DisciplinesBar() {
   return (
     <div className="container">
         <h2>Nos disciplines</h2>
