@@ -5,6 +5,7 @@ import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
+// import logo from '../assets/img/logo-leRheu.png';
 
 
 
@@ -78,9 +79,11 @@ export default function Footer() {
                 </ul>
             </div>
         </div>
+
         <div class="logo-div">
-            <img class="logo" src="../assets/img/logo-leRheu.png"/>
+            <img className='logo-leRheu' src={require('../../assets/img/logo-leRheu.png')} alt={"logo le Rheu"}  />
         </div>
+        
     </div>
 </footer>
   )
