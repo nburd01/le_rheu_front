@@ -13,7 +13,7 @@ import About from './pages/About/About';
 import Disciplines from './components/DisciplinesBar/DisciplinesBar';
 import Contact from './pages/Contact/Contact';
 import Connection from './pages/Connection/Connection';
-
+import ConnectionLogin from './pages/Connection/ConnectionLogin';
 
 
 
@@ -30,6 +30,7 @@ function App() {
         <Route path="/disciplines" element={<Disciplines />} />
         <Route path="/disciplines" element={<Contact />} />
         <Route path="/connection" element={<Connection />} />
+        <Route path="/login" element={<ConnectionLogin />} />
       </Routes>
 
       </main>
