@@ -43,6 +43,7 @@ const SignUp = () => {
         <input name='password' type='password' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
         <input type='submit' value='Register'/> 
       </form>
+      <h1>{email}</h1>
     </div>
   )
 }
