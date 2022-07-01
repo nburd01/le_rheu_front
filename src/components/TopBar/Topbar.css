@@ -202,6 +202,8 @@ cursor: pointer;
 
     .nav-active{
         transform: translateX(0%);
+        transition:all 0.4s;
+
     }
 
 }

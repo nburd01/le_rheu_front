@@ -8,10 +8,13 @@ nav {
     height: 2px;
     background-color: white;
     margin: 20px;
+    transition:all 0.4s;
+
 }
 
 @media only screen and (max-width: 960px) {
     .nav-links{
         position: absolute;
+        transition:all 0.4s;
     }
 }
