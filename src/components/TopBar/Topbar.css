@@ -116,8 +116,8 @@
     display: flex;
     /* background-color: var(--primary); */
     width: 33%;
-    align-items: end;
-    justify-content: end;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 .topbar .nav-links li{
     list-style: none;
