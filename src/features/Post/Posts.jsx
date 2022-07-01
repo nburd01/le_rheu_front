@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
 import '../../assets/stylesheets/posts.css';
 
 
@@ -36,18 +35,18 @@ class Posts extends React.Component {
 
 
 	return (
-  <Link to={'/house/' + post.id} post={post}>
 
   <div class="container">
 
     <h2>Actualité</h2>
     <div class="blog-block">
+      
       <div class="blog-card"> 
         <div class="tag">
        {
          items.map(
-           (item) => (
-             <ol key = { item.id } >
+          (item) => (
+           <ol key = { item.id } >
 					{ item.title },
 
 					</ol>
@@ -56,8 +55,8 @@ class Posts extends React.Component {
         </div>
         <div class="title">
         {
-          items.map((item) => (
-            <ol key = { item.id } >
+         items.map((item) => (
+           <ol key = { item.id } >
 					{ item.content },
 					</ol>
 				  ))
@@ -66,8 +65,6 @@ class Posts extends React.Component {
       </div>
     </div>
   </div>
-
-  </Link>
 
 	);
 }
