@@ -13,6 +13,7 @@ import About from './pages/About/About';
 import Disciplines from './components/DisciplinesBar/DisciplinesBar';
 import Contact from './pages/Contact/Contact';
 import Connection from './pages/Connection/Connection';
+import Posts from './features/Post/Posts';
 
 
 
@@ -30,6 +31,9 @@ function App() {
         <Route path="/le_rheu_front/disciplines" element={<Disciplines />} />
         <Route path="/le_rheu_front/contact" element={<Contact />} />
         <Route path="/le_rheu_front/connection" element={<Connection />} />
+        <Route path="/le_rheu_front/posts" element={<Posts />} />
+        <Route path="/le_rheu_front/posts:/id" element={<Posts />} />
+        <Route path="/le_rheu_front/*" element={<Home />} />
       </Routes>
 
       </main>
