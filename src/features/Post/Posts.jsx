@@ -1,31 +1,72 @@
-import React from 'react'
-import '../../assets/stylesheets/posts.css'
-
-export default function Posts({Posts}) {
+import React from "react";
+import '../../assets/stylesheets/posts.css';
 
 
-    // const Modify = (e) => {
-    //     e.preventDefault();
-    //     navigate('/modify/' + post.id)
-    //   }
 
-  return (
+class Posts extends React.Component {
 
-<div class="container">
+	// Constructor
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			items: [],
+			DataisLoaded: false
+		};
+	}
+
+	// ComponentDidMount is used to
+	// execute the code
+	componentDidMount() {
+		fetch(
+      "http://localhost:3000/posts")
+        .then((res) => res.json())
+        .then((json) => {
+          this.setState({
+            items: json,
+            DataisLoaded: true
+          });
+			})
+	}
+
+
+	render() {
+		const { DataisLoaded, items } = this.state;
+
+
+	return (
+
+  <div class="container">
+
     <h2>Actualité</h2>
     <div class="blog-block">
+      <div class="blog-card"> 
+        <div class="tag">
+       {
+         items.map(
+          (item) => (
+           <ol key = { item.id } >
+					{ item.title },
 
-        <div class="blog-card">
-            <div class="tag">
-                <p>Résultats</p>
-            </div>
-            <div class="title">
-                <h3>Les portes ouvertes ont lieu ce mercredi 5 avril</h3> 
-            </div>
+					</ol>
+				))
+			}
         </div>
-
+        <div class="title">
+        {
+         items.map((item) => (
+           <ol key = { item.id } >
+					{ item.content },
+					</ol>
+				  ))
+			  } 
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
-  )
+	);
 }
+}
+
+export default Posts;

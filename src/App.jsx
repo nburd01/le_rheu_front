@@ -14,6 +14,8 @@ import Disciplines from './components/DisciplinesBar/DisciplinesBar';
 import Contact from './pages/Contact/Contact';
 import Connection from './pages/Connection/Connection';
 import ConnectionLogin from './pages/Connection/ConnectionLogin';
+import Posts from './features/Post/Posts';
+
 
 
 
@@ -25,12 +27,17 @@ function App() {
       <main>
 
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="/about" element={<About />} />
-        <Route path="/disciplines" element={<Disciplines />} />
-        <Route path="/disciplines" element={<Contact />} />
-        <Route path="/connection" element={<Connection />} />
+
+        <Route path='/le_rheu_front/' element={<Home/>}/>
+        <Route path="/le_rheu_front/about" element={<About />} />
+        <Route path="/le_rheu_front/disciplines" element={<Disciplines />} />
+        <Route path="/le_rheu_front/contact" element={<Contact />} />
+        <Route path="/le_rheu_front/connection" element={<Connection />} />
+        <Route path="/le_rheu_front/posts" element={<Posts />} />
+        <Route path="/le_rheu_front/posts:/id" element={<Posts />} />
+        <Route path="/le_rheu_front/*" element={<Home />} />
         <Route path="/login" element={<ConnectionLogin />} />
+
       </Routes>
 
       </main>

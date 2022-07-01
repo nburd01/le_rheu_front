@@ -33,10 +33,9 @@
                 url(../img/blog4.jpg) center center / cover no-repeat;
         }
         .blog-card:nth-child(1):hover{
-            background:
-                url(../img/blog2.jpg) left center / cover no-repeat;
-                transition: all 0.3s;
-    }
+            background: 
+                linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%)
+        }
 
     @media only screen and (max-width: 960px) {
         .blog-block{
