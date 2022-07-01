@@ -34,7 +34,7 @@ function App() {
         <Route path="/le_rheu_front/contact" element={<Contact />} />
         <Route path="/le_rheu_front/connection" element={<Connection />} />
         <Route path="/le_rheu_front/posts" element={<Posts />} />
-        <Route path="/le_rheu_front/posts:/id" element={<Posts />} />
+        <Route path="/le_rheu_front/posts/:id" element={<Posts />} />
         <Route path="/le_rheu_front/*" element={<Home />} />
         <Route path="/login" element={<ConnectionLogin />} />
 
