@@ -21,33 +21,13 @@ import MyProfile from './pages/MyProfile/MyProfile';
 
 
 function App() {
-  return (
-    <BrowserRouter>
+      <div className="div">
+        
       <TopBar/>
-       
-      <main>
-
-      <Routes>
-
-        <Route path='/' element={<Home/>}/>
-        <Route path="/myprofile" element={<MyProfile />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/disciplines" element={<Disciplines />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/connection" element={<Connection />} />
-        <Route path="/posts" element={<Posts />} />
-        {/* <Route path="/posts/:id" element={<Posts />} /> */}
-        <Route path="/login" element={<ConnectionLogin />} />
-        <Route path="/*" element={<Home />} />
-
-      </Routes>
-
-      </main>
-
-        <Footer/>
-    </BrowserRouter>
-
-  );
+      <Link to="/">Home</Link>
+      <Footer/>
+      </div>
+    // </BrowserRouter>
 }
 
 export default App;
