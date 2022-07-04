@@ -38,7 +38,7 @@ function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/posts/:id" element={<Posts />} />
         <Route path="/login" element={<ConnectionLogin />} />
-        <Route path="/*" element={<Home />} />
+        <Route path="/*" element={<Home />} />n 
 
       </Routes>
 
