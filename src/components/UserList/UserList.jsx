@@ -1,9 +1,9 @@
-import React,{useState,useEffect} from 'react';
+import {useState,useEffect} from 'react';
 import { API_URL } from '../../store/api_url';
 
 export default function UserList() {
   
-  const [data,setData]=useState([]);
+  const [setData]=useState([]);
 
   const getData=()=>{
     fetch(API_URL
