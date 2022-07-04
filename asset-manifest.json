@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/le_rheu_front/static/css/main.d53ef104.css",
-    "main.js": "/le_rheu_front/static/js/main.cff056aa.js",
+    "main.js": "/le_rheu_front/static/js/main.e9f5612a.js",
     "static/media/discipline5.jpg": "/le_rheu_front/static/media/discipline5.a783577f53317bc71f54.jpg",
     "static/media/discipline3.jpg": "/le_rheu_front/static/media/discipline3.06a137b3caa919315fd5.jpg",
     "static/media/blog3.jpg": "/le_rheu_front/static/media/blog3.06cb72000dc269063d5b.jpg",
@@ -15,10 +15,10 @@
     "static/media/logo-leRheu.png": "/le_rheu_front/static/media/logo-leRheu.10e0c53eda83cb8c922d.png",
     "index.html": "/le_rheu_front/index.html",
     "main.d53ef104.css.map": "/le_rheu_front/static/css/main.d53ef104.css.map",
-    "main.cff056aa.js.map": "/le_rheu_front/static/js/main.cff056aa.js.map"
+    "main.e9f5612a.js.map": "/le_rheu_front/static/js/main.e9f5612a.js.map"
   },
   "entrypoints": [
     "static/css/main.d53ef104.css",
-    "static/js/main.cff056aa.js"
+    "static/js/main.e9f5612a.js"
   ]
 }
