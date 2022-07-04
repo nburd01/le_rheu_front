@@ -3,7 +3,7 @@ import './assets/stylesheets/buttons.css';
 import './assets/stylesheets/containers.css';
 import './assets/stylesheets/img.css';
 
-import { HashRouter,  Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter,  Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
@@ -22,7 +22,7 @@ import MyProfile from './pages/MyProfile/MyProfile';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <TopBar/>
        
       <main>
@@ -45,7 +45,7 @@ function App() {
       </main>
 
         <Footer/>
-    </HashRouter>
+    </BrowserRouter>
 
   );
 }
