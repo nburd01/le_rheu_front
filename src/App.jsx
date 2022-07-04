@@ -2,12 +2,10 @@ import './assets/stylesheets/main.css';
 import './assets/stylesheets/buttons.css';
 import './assets/stylesheets/containers.css';
 import './assets/stylesheets/img.css';
-
 import { BrowserRouter,  Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
-
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Disciplines from './components/DisciplinesBar/DisciplinesBar';
@@ -18,16 +16,34 @@ import Posts from './features/Post/Posts';
 import MyProfile from './pages/MyProfile/MyProfile';
 
 
-
-
 function App() {
-      <div className="div">
-        
+  return (
+    <BrowserRouter>
       <TopBar/>
-      <Link to="/">Home</Link>
-      <Footer/>
-      </div>
-    // </BrowserRouter>
+
+      <main>
+
+      <Routes>
+
+        <Route path='/le_rheu_front/' element={<Home/>}/>
+        <Route path="/le_rheu_front/myprofile" element={<MyProfile />} />
+        <Route path="/le_rheu_front/about" element={<About />} />
+        <Route path="/le_rheu_front/disciplines" element={<Disciplines />} />
+        <Route path="/le_rheu_front/contact" element={<Contact />} />
+        <Route path="/le_rheu_front/connection" element={<Connection />} />
+        <Route path="/le_rheu_front/posts" element={<Posts />} />
+        {/* <Route path="/posts/:id" element={<Posts />} /> */}
+        <Route path="/le_rheu_front/login" element={<ConnectionLogin />} />
+        <Route path="/le_rheu_front/*" element={<Home />} />
+
+      </Routes>
+
+      </main>
+
+        <Footer/>
+    </BrowserRouter>
+
+  );
 }
 
 export default App;
