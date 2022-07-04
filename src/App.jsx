@@ -29,7 +29,7 @@ function App() {
 
       <Routes>
 
-        <Route path='/le_rheu_front/' element={<Home/>}/>
+        <Route path='/le_rheu_front' element={<Home/>}/>
         <Route path="/le_rheu_front/myprofile" element={<MyProfile />} />
         <Route path="/le_rheu_front/about" element={<About />} />
         <Route path="/le_rheu_front/disciplines" element={<Disciplines />} />
