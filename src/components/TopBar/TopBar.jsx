@@ -27,13 +27,13 @@ const toggleNav = () => {
             </div>
             <ul class ="nav-links">
                 <li>
-                <a href="/le_rheu_front/disciplines">Nos disciplines</a>
+                <a href="/disciplines">Nos disciplines</a>
                 </li>
                 <li>
-                    <a href="/le_rheu_front/contact">Nous contacter</a>
+                    <a href="/contact">Nous contacter</a>
                 </li>
                 <li>
-                    <a href="/le_rheu_front/account">Mon compte</a>
+                    <a href="/account">Mon compte</a>
                 </li>
             </ul>
             <div class="burger" onClick={toggleNav}>
@@ -54,11 +54,11 @@ const toggleNav = () => {
             <nav>
                 {toggleMenu &&(
                 <ul className="list">
-                    <li className="items"><a href="/le_rheu_front//le_rheu_front//login">Se connecter</a></li>
-                    <li className="items"><a href="/le_rheu_front/connection">Nous rejoindre</a></li>
-                    <li className="items"><a href="/le_rheu_front/disciplines">Nos disciplines</a></li>
-                    <li className="items"><a href="/le_rheu_front/contact">Nous contacter</a></li>
-                    <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
+                    <li className="items"><a href="/login">Se connecter</a></li>
+                    <li className="items"><a href="connection">Nous rejoindre</a></li>
+                    <li className="items"><a href="disciplines">Nos disciplines</a></li>
+                    <li className="items"><a href="contact">Nous contacter</a></li>
+                    <li className="items"><a href="MyProfile">Mon compte</a></li>
                 </ul>
                 )}
             </nav>
