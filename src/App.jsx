@@ -3,7 +3,7 @@ import './assets/stylesheets/buttons.css';
 import './assets/stylesheets/containers.css';
 import './assets/stylesheets/img.css';
 
-import { BrowserRouter,  Routes, Route, Link, } from 'react-router-dom';
+import { BrowserRouter,  Routes, Route } from 'react-router-dom';
 import './App.css';
 import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';

@@ -19,7 +19,7 @@ class Posts extends React.Component {
 	// execute the code
 	componentDidMount() {
 		fetch(
-      "http://localhost:3000/posts")
+      "API_URL")
         .then((res) => res.json())
         .then((json) => {
           this.setState({
