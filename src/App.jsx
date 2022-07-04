@@ -15,6 +15,7 @@ import Contact from './pages/Contact/Contact';
 import Connection from './pages/Connection/Connection';
 import ConnectionLogin from './pages/Connection/ConnectionLogin';
 import Posts from './features/Post/Posts';
+import MyProfile from './pages/MyProfile/MyProfile';
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <Routes>
 
         <Route path='/le_rheu_front/' element={<Home/>}/>
+        <Route path="/le_rheu_front/myprofile" element={<MyProfile />} />
         <Route path="/le_rheu_front/about" element={<About />} />
         <Route path="/le_rheu_front/disciplines" element={<Disciplines />} />
         <Route path="/le_rheu_front/contact" element={<Contact />} />
