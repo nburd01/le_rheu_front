@@ -21,7 +21,7 @@ const toggleNav = () => {
                 <a href="/connection">Nous rejoindre</a>
             </nav>
             <div class="logo">
-                <a href="/le_rheu_front">
+                <a href="/">
                     <img className="lerheu-logo" src={require("../../assets/img/logo-leRheu.png")} alt={"S.C. Le Rheu"}/>
                 </a>
             </div>
