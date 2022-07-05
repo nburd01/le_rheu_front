@@ -34,13 +34,27 @@ const Posts = () =>{
 		}
 
 	const postsRender = posts.map((post) => 
-		<div class="blog-block">
-			<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog-card" key={post.id}>
-				<a href={post.url_for_post} target="_blank" rel="noreferrer" className="tag">
-					{post.title}
-				</a>
+		
+<div className="container post">
+
+	<div class="blog block">
+		<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
+			<a href={post.url_for_post} target="_blank" rel="noreferrer" className="tag">
+				{post.title}
 			</a>
+		</a>
+		{post.associated_topics?.length > 0 && (
+			<div className="blog topics">
+				{post.associated_topics.map((topic) => (
+					<a href={post.associated_topics} key={topic} className="blog labels">
+						{topic}
+					</a>
+				))}
+			</div>
+		)}
 		</div>
+		</div>
+
 	);
 
 	const content = isLoading ? (<div>Loading...</div>) : (<div>{postsRender}</div>)   
