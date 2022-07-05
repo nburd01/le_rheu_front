@@ -1,12 +1,12 @@
 import {useState,useEffect} from 'react';
-import { API_URL } from '../../store/api_url';
+import { API_URL_LOCAL } from '../../store/api_url';
 
 export default function UserList() {
   
-  const [setData]=useState([]);
+  const [data, setData]=useState([]);
 
   const getData=()=>{
-    fetch(API_URL
+    fetch(API_URL_LOCAL
     ,{
       method: 'get',
       headers : { 
@@ -30,13 +30,13 @@ export default function UserList() {
 
   },[])
 
-  // return (
-  //   <div className="App">
-  //     <div className="container">
-  //    {
-  //      data && data.length>0 && data.map((user)=><p>{user.email}</p>)
-  //    }
-  //     </div>
-  //   </div>
-  // );
+  return (
+    <div className="App">
+      <div className="container">
+     {
+       data && data.length>0 && data.map((user)=><p>{user.email}</p>)
+     }
+      </div>
+    </div>
+  );
 }

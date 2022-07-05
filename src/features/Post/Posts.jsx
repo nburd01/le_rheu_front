@@ -1,73 +1,126 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../../assets/stylesheets/posts.css';
+import axios from "axios";
+// import { API_URL } from "../../store/api_url";
 
 
+const Posts = () =>{
 
-class Posts extends React.Component {
+	const [isLoading, setIsLoading] = React.useState(true);
+	const [posts, setPosts] = React.useState([]);
 
-	// Constructor
-	constructor(props) {
-		super(props);
+	useEffect(() => {
+		getData();
+	},[]);
+	
+		const getData= () => {
+			axios('https://api.dailysmarty.com/' + 'posts').then(response  =>{
+				setIsLoading(false);
+				console.log("RES", response.data);
 
-		this.state = {
-			items: [],
-			DataisLoaded: false
-		};
-	}
-
-	// ComponentDidMount is used to
-	// execute the code
-	componentDidMount() {
-		fetch(
-      "API_URL")
-        .then((res) => res.json())
-        .then((json) => {
-          this.setState({
-            items: json,
-            DataisLoaded: true
-          });
+				if (response.data.posts) {
+					setPosts(response.data.posts);
+				} else{
+					console.log("An error happened")
+				}
 			})
-	}
+			.catch(error => {
+				setIsLoading(false);
+				console.log('An error occured', error);
 
 
-	render() {
-		const { DataisLoaded, items } = this.state;
+			
+			})
+		}
 
+	const postsRender = posts.map((post) => 
+		<div class="blog-block">
+			<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog-card" key={post.id}>
+				<a href={post.url_for_post} target="_blank" rel="noreferrer" className="tag">
+					{post.title}
+				</a>
+			</a>
+		</div>
+	);
+
+	const content = isLoading ? (<div>Loading...</div>) : (<div>{postsRender}</div>)   
 
 	return (
-
-  <div class="container">
-
-    <h2>Actualité</h2>
-    <div class="blog-block">
-      
-      <div class="blog-card"> 
-        <div class="tag">
-       {
-         items.map(
-          (item) => (
-           <ol key = { item.id } >
-					{ item.title },
-
-					</ol>
-				))
-			}
-        </div>
-        <div class="title">
-        {
-         items.map((item) => (
-           <ol key = { item.id } >
-					{ item.content },
-					</ol>
-				  ))
-			  } 
-        </div>
-      </div>
-    </div>
-  </div>
-
-	);
-}
-}
+		<div className="container">
+			<h2>Actualité</h2>
+			<p>{content}</p>
+		</div>
+	)
+};
 
 export default Posts;
+
+
+// class Posts extends React.Component {
+// ---------------INITIALISE THIS STATE----------------------
+	// // Constructor
+	// constructor(props) {
+	// 	super(props);
+
+	// 	this.state = {
+	// 		posts: [],
+	// 		DataisLoaded: false
+	// 	};
+	// }
+
+// // ----------------FETCH------------------------
+// 	// ComponentDidMount is used to
+// 	// execute the code
+// 	componentDidMount() {
+// 		fetch(
+//       "API_URL_LOCAL")
+//         .then((res) => res.json())
+//         .then((json) => {
+//           this.setState({
+//             posts: json,
+//             DataisLoaded: true
+//           });
+// 			})
+// 	}
+
+// // ---------------METHODE RENDER AVEC CORPS DE LA FONCTION---------------------
+
+// 	render() {
+// 		const { DataisLoaded, posts } = this.state;
+
+
+// // -----------------HTML-----------------------
+// 	return (
+
+//   <div class="container">
+
+//     <h2>Actualité</h2>
+//     <div class="blog-block">
+      
+//       <div class="blog-card"> 
+//         <div class="tag">
+
+// {/* --------ITERATION-------- */}
+//        {
+//          posts.map(
+//           (item) => (
+//            <ol key = { posts.id } >
+// 					{ posts.title },
+
+// 					</ol>
+// 				))
+// 			}
+// {/* --------END ITERATION-------- */}
+
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+
+// 	);
+// }
+// // ---------------FIN RENDER AVEC CORPS DE LA FONCTION---------------------
+
+// }
+
+// export default Posts;
