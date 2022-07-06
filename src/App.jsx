@@ -18,23 +18,23 @@ import MyProfile from './pages/MyProfile/MyProfile';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/le_rheu_front">
       <TopBar/>
 
       <main>
 
       <Routes>
 
-        <Route path='/le_rheu_front/' element={<Home/>}/>
-        <Route path="/le_rheu_front/myprofile" element={<MyProfile />} />
-        <Route path="/le_rheu_front/about" element={<About />} />
-        <Route path="/le_rheu_front/disciplines" element={<Disciplines />} />
-        <Route path="/le_rheu_front/contact" element={<Contact />} />
-        <Route path="/le_rheu_front/connection" element={<Connection />} />
-        <Route path="/le_rheu_front/posts" element={<Posts />} />
+        <Route path='/' element={<Home/>}/>
+        <Route path="/myprofile" element={<MyProfile />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/disciplines" element={<Disciplines />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/connection" element={<Connection />} />
+        <Route path="/posts" element={<Posts />} />
         {/* <Route path="/posts/:id" element={<Posts />} /> */}
-        <Route path="/le_rheu_front/login" element={<ConnectionLogin />} />
-        <Route path="/le_rheu_front/*" element={<Home />} />
+        <Route path="/login" element={<ConnectionLogin />} />
+        <Route path="/*" element={<Home />} />
 
       </Routes>
 
