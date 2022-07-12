@@ -29,17 +29,8 @@ const SignIn = () => {
     })
     .then(response => response.json())
     .then(result => {
-        if (result.token){
-        localStorage.setItem('token', result.token)
-        this.setState({
-            user: result.user
-            })
-        }
-        else {
-            this.setState({
-                error: result.error
-            })
-        }
+      console.log(result);
+      window.localStorage.setItem("isLoggedIn", true);
     })
   }
 

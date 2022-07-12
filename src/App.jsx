@@ -17,6 +17,7 @@ import MyProfile from './pages/MyProfile/MyProfile';
 
 
 function App() {
+  const loggedIn = window.localStorage.getItem("isLoggedIn");
   return (
     <BrowserRouter basename="/le_rheu_front">
       <TopBar/>
@@ -25,7 +26,7 @@ function App() {
 
       <Routes>
 
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={loggedIn ? <MyProfile/> : <Home />}/>
         <Route path="/myprofile" element={<MyProfile />} />
         <Route path="/about" element={<About />} />
         <Route path="/disciplines" element={<Disciplines />} />
