@@ -28,7 +28,13 @@ const SignUp = () => {
         }
       })
     })
-    .then(response => response.json())
+    .then((response) => {
+      console.log(response);
+      response.json().then((data) => {
+          console.log(data);
+      });
+  });
+
   }
 
 
@@ -43,7 +49,7 @@ const SignUp = () => {
         <input name='password' type='password' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
         <input type='submit' value='Register'/> 
       </form>
-      <h1>{email}</h1>
+      <p>{email}</p>
     </div>
   )
 }
