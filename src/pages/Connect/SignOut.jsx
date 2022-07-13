@@ -1,28 +1,19 @@
 import React from 'react';
-
+import { useNavigate } from "react-router-dom";
 
 const SignOut = () => {
-
-  function FetchData(e){
-    e.preventDefault();
-    fetch('http://localhost:3000/users/sign_out', {
-      method: "DELETE",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-    }).then(response => response.json())
-    .then(result => {
-      console.log(result);
-      window.localStorage.removeItem("isLoggedIn")
-    })
+  const nav = useNavigate();
+  function Logout(){
+    window.localStorage.removeItem("isLoggedIn");
+    nav("/*");
+    window.location.reload(true);
   }
 
 
 
   return (
     <div>
-      <button onClick={FetchData}>
+      <button onClick={Logout}>
         Sign Out
       </button>
     </div>
