@@ -27,9 +27,6 @@ const Posts = () =>{
 			.catch(error => {
 				setIsLoading(false);
 				console.log('An error occured', error);
-
-
-			
 			})
 		}
 
