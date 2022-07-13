@@ -5,10 +5,13 @@ import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
-import SignOut from '../SignOut/SignOut';
+import SignOut from '../../pages/Connect/SignOut';
+import SignIn from '../../pages/Connect/SignIn';
+import SignUp from '../../pages/Connect/SignUp';
 
 export default function TopBar() {
 
+const loggedIn = window.localStorage.getItem("isLoggedIn");
 const [toggleMenu, SetToggleMenu] = useState(false)
 const toggleNav = () => {
     SetToggleMenu(!toggleMenu)
@@ -18,9 +21,9 @@ const toggleNav = () => {
     <div className="topbar">
         <div className="top">
             <nav className="menu">
-                <a href="/le_rheu_front/login">Se connecter</a>
-                <a href="/le_rheu_front/connection">Nous rejoindre</a>
-                <SignOut />
+                {loggedIn 
+                ? <SignOut/>
+                : <SignIn/>}
             </nav>
             <div className="logo">
                 <a href="/le_rheu_front/">
