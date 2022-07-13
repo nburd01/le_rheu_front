@@ -38,7 +38,7 @@ export default function Footer() {
                 <h4>Les Actualités</h4>
                 <ul>
                     <li>
-                    <a href="#">Actualités</a>
+                        <a href="#">Actualités</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +79,6 @@ export default function Footer() {
                 </ul>
             </div>
         </div>
-
         <div className="logo-div">
             <img className='logo-leRheu' src={require('../../assets/img/logo-leRheu.png')} alt={"logo le Rheu"}  />
         </div>

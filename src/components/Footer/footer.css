@@ -31,8 +31,14 @@ footer a{
     }
     @media only screen and (max-width: 960px) {
         footer .column-block{
-            display: block;
-            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
         }
     
     }

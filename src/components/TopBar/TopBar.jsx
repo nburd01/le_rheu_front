@@ -20,44 +20,39 @@ const toggleNav = () => {
   return (
     <div className="topbar">
         <div className="top">
-            <nav className="menu">
+            <div className="menu">
                 {loggedIn 
                 ? <SignOut/>
                 : <SignIn/>}
-            </nav>
+            </div>
             <div className="logo">
                 <a href="/le_rheu_front/">
                     <img className="lerheu-logo" src={require("../../assets/img/logo-leRheu.png")} alt={"S.C. Le Rheu"}/>
                 </a>
             </div>
-            <ul className ="nav-links">
-                <li>
-                <a href="/le_rheu_front/disciplines">Nos disciplines</a>
-                </li>
-                <li>
-                    <a href="/le_rheu_front/contact">Nous contacter</a>
-                </li>
-                <li>
-                    <a href="/le_rheu_front/account">Mon compte</a>
-                </li>
-            </ul>
+            <div className='top-link'>
+                <ul className ="nav-links">
+                    <li>
+                    <a href="/le_rheu_front/disciplines">Nos disciplines</a>
+                    </li>
+                    <li>
+                        <a href="/le_rheu_front/contact">Nous contacter</a>
+                    </li>
+                    <li>
+                        <a href="/le_rheu_front/account">Mon compte</a>
+                    </li>
+                </ul>
+            </div>
             <div className="burger" onClick={toggleNav}>
                 <div className="line1"></div>
                 <div className="line2"></div>
                 <div className="line3"></div>
             </div>
-
         </div>
-        <div className="disciplines">
-            <a href="#">Football</a>
-            <a href="#">Futsal</a>
-            <a href="#">Beach Soccer</a>
-            <a href="#">Fitfoot</a>
-            <a href="#">Féminines</a>
-        </div>
+        {toggleMenu &&(
         <div>
             <nav>
-                {toggleMenu &&(
+                
                 <ul className="list">
                     <li className="items"><a href="/le_rheu_front/login">Se connecter</a></li>
                     <li className="items"><a href="/le_rheu_front/connection">Nous rejoindre</a></li>
@@ -65,8 +60,15 @@ const toggleNav = () => {
                     <li className="items"><a href="/le_rheu_front/contact">Nous contacter</a></li>
                     <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
                 </ul>
-                )}
             </nav>
+        </div>
+        )}
+        <div className="disciplines">
+            <a href="#">Football</a>
+            <a href="#">Futsal</a>
+            <a href="#">Beach Soccer</a>
+            <a href="#">Fitfoot</a>
+            <a href="#">Féminines</a>
         </div>
     </div>
   )
