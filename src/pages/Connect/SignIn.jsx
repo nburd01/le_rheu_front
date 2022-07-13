@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import SignUp from './SignUp';
 
 
 const SignIn = () => {
@@ -44,6 +45,7 @@ const SignIn = () => {
         <input name='password' type='password' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
         <input type='submit' value='Authenticate'/> 
       </form>
+      <p>Vous n'avez pas encore de compte avec nous :  </p>
     </div>
   )
 }
