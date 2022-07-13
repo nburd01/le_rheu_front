@@ -9,8 +9,6 @@ const SignOut = () => {
     window.location.reload(true);
   }
 
-
-
   return (
     <div>
       <button onClick={Logout}>

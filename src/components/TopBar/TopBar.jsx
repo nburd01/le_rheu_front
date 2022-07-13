@@ -24,6 +24,7 @@ const toggleNav = () => {
                 {loggedIn 
                 ? <SignOut/>
                 : <SignIn/>}
+                
             </div>
             <div className="logo">
                 <a href="/le_rheu_front/">
