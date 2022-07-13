@@ -5,6 +5,7 @@ import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
+import SignOut from '../SignOut/SignOut';
 
 export default function TopBar() {
 
@@ -19,6 +20,7 @@ const toggleNav = () => {
             <nav class="menu">
                 <a href="/le_rheu_front/login">Se connecter</a>
                 <a href="/le_rheu_front/connection">Nous rejoindre</a>
+                <SignOut />
             </nav>
             <div class="logo">
                 <a href="/le_rheu_front/">

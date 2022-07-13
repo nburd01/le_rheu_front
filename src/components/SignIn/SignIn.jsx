@@ -1,14 +1,11 @@
 import React from 'react';
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 
 const SignIn = () => {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const navigate = useNavigate();
-
 
   const data = {
     user: {},
@@ -31,22 +28,9 @@ const SignIn = () => {
       })
     })
     .then(response => response.json())
-    navigate('/')
     .then(result => {
-      console.log(result)
-        if (result.token){
-        localStorage.setItem('token', result.token)
-        this.setState({
-            user: result.user
-          })
-
-        }
-        else {
-            this.setState({
-                error: result.error,
-              })
-              console.log('error')
-        }
+      console.log(result);
+      window.localStorage.setItem("isLoggedIn", true);
     })
   }
 
