@@ -12,9 +12,9 @@ import '../../assets/stylesheets/main.css';
 export default function Footer() {
   return (
     <footer>
-    <div class="container container-end">
-        <div class="column-block">
-            <div class="footer-column">
+    <div className="container container-end">
+        <div className="column-block">
+            <div className="footer-column">
                 <h4>Le Club</h4>
                 <ul>
                     <li> 
@@ -34,7 +34,7 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <div class="footer-column">
+            <div className="footer-column">
                 <h4>Les Actualités</h4>
                 <ul>
                     <li>
@@ -42,7 +42,7 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <div class="footer-column">
+            <div className="footer-column">
                 <h4>Partenaires</h4>
                 <ul>
                     <li>
@@ -56,7 +56,7 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-            <div class="footer-column">
+            <div className="footer-column">
                 <h4>La boutique</h4>
                 <ul>
                     <li>
@@ -64,7 +64,7 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-             <div class="footer-column">
+             <div className="footer-column">
                 <h4>Nous contacter</h4>
                 <ul>
                     <li>
@@ -80,10 +80,9 @@ export default function Footer() {
             </div>
         </div>
 
-        <div class="logo-div">
+        <div className="logo-div">
             <img className='logo-leRheu' src={require('../../assets/img/logo-leRheu.png')} alt={"logo le Rheu"}  />
         </div>
-        
     </div>
 </footer>
   )

@@ -34,7 +34,7 @@ const Posts = () =>{
 		
 <div className="container post">
 
-	<div class="blog block">
+	<div className="blog block">
 		<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
 			<a href={post.url_for_post} target="_blank" rel="noreferrer" className="tag">
 				{post.title}
@@ -65,73 +65,3 @@ const Posts = () =>{
 };
 
 export default Posts;
-
-
-// class Posts extends React.Component {
-// ---------------INITIALISE THIS STATE----------------------
-	// // Constructor
-	// constructor(props) {
-	// 	super(props);
-
-	// 	this.state = {
-	// 		posts: [],
-	// 		DataisLoaded: false
-	// 	};
-	// }
-
-// // ----------------FETCH------------------------
-// 	// ComponentDidMount is used to
-// 	// execute the code
-// 	componentDidMount() {
-// 		fetch(
-//       "API_URL_LOCAL")
-//         .then((res) => res.json())
-//         .then((json) => {
-//           this.setState({
-//             posts: json,
-//             DataisLoaded: true
-//           });
-// 			})
-// 	}
-
-// // ---------------METHODE RENDER AVEC CORPS DE LA FONCTION---------------------
-
-// 	render() {
-// 		const { DataisLoaded, posts } = this.state;
-
-
-// // -----------------HTML-----------------------
-// 	return (
-
-//   <div class="container">
-
-//     <h2>Actualité</h2>
-//     <div class="blog-block">
-      
-//       <div class="blog-card"> 
-//         <div class="tag">
-
-// {/* --------ITERATION-------- */}
-//        {
-//          posts.map(
-//           (item) => (
-//            <ol key = { posts.id } >
-// 					{ posts.title },
-
-// 					</ol>
-// 				))
-// 			}
-// {/* --------END ITERATION-------- */}
-
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-
-// 	);
-// }
-// // ---------------FIN RENDER AVEC CORPS DE LA FONCTION---------------------
-
-// }
-
-// export default Posts;
