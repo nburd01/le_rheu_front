@@ -1,0 +1,22 @@
+.Log-content {
+  display: flex;
+}
+
+.log_button {
+  background-color: var(--primary);
+}
+
+input {
+  border-radius: 20px;
+  padding: 0.5em 1.5em;
+  margin: 1em 0.3em;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid gray;
+}
+
+.log_button:hover{
+  background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  color:var(--secondary, #3e6bd3);
+  cursor: pointer;
+  }

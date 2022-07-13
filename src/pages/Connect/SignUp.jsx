@@ -42,12 +42,11 @@ const SignUp = () => {
   return(
     <div>
       <form onSubmit={FetchData}>
-        <h1>Sign Up Form</h1>
-        <label>Email :</label>
-        <input name='email' value={data.user.email} onChange={(e) => setEmail(e.target.value)}/>
-        <label>Password :</label>
-        <input name='password' type='password' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
-        <input type='submit' value='Register'/> 
+        <div className='Log-content'>
+          <input name='email' placeholder='Email' value={data.user.email} onChange={(e) => setEmail(e.target.value)}/>
+          <input name='password' type='password' placeholder='Mot de passe' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
+          <input className='log_button' type='submit' value="S'enregistrer"/> 
+        </div>
       </form>
       <p>{email}</p>
     </div>
