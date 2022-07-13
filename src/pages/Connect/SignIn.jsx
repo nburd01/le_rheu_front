@@ -32,6 +32,7 @@ const SignIn = () => {
     .then(result => {
       console.log(result);
       window.localStorage.setItem("isLoggedIn", true);
+      window.location.reload(true);
     })
   }
 
