@@ -15,19 +15,19 @@ const toggleNav = () => {
 }
 
   return (
-    <div class="topbar">
-        <div class="top">
-            <nav class="menu">
+    <div className="topbar">
+        <div className="top">
+            <nav className="menu">
                 <a href="/le_rheu_front/login">Se connecter</a>
                 <a href="/le_rheu_front/connection">Nous rejoindre</a>
                 <SignOut />
             </nav>
-            <div class="logo">
+            <div className="logo">
                 <a href="/le_rheu_front/">
                     <img className="lerheu-logo" src={require("../../assets/img/logo-leRheu.png")} alt={"S.C. Le Rheu"}/>
                 </a>
             </div>
-            <ul class ="nav-links">
+            <ul className ="nav-links">
                 <li>
                 <a href="/le_rheu_front/disciplines">Nos disciplines</a>
                 </li>
@@ -38,14 +38,14 @@ const toggleNav = () => {
                     <a href="/le_rheu_front/account">Mon compte</a>
                 </li>
             </ul>
-            <div class="burger" onClick={toggleNav}>
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div className="burger" onClick={toggleNav}>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
             </div>
 
         </div>
-        <div class="disciplines">
+        <div className="disciplines">
             <a href="#">Football</a>
             <a href="#">Futsal</a>
             <a href="#">Beach Soccer</a>

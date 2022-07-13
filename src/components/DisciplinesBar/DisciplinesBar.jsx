@@ -10,52 +10,52 @@ export default function DisciplinesBar() {
   return (
     <div className="container">
         <h2>Nos disciplines</h2>
-        <div class="disciplines-block">
-            <div class="disciplines-card">
+        <div className="disciplines-block">
+            <div className="disciplines-card">
                     
-                <div class="tag">
+                <div className="tag">
                     <p>Ecole de foot</p>
                 </div> 
             </div>
 
 
-            <div class="disciplines-card">
-                <div class="img">
+            <div className="disciplines-card">
+                <div className="img">
                                 
 
                 </div>
-                <div class="tag">
+                <div className="tag">
                     <p>Fitfoot</p>
                 </div>
             </div>
 
 
-            <div class="disciplines-card">
-                <div class="img">
+            <div className="disciplines-card">
+                <div className="img">
                     
 
                 </div>
-                <div class="tag">
+                <div className="tag">
                     <p>Foot à 11</p>
                 </div>
             </div>
 
 
-            <div class="disciplines-card">
-                <div class="img">
+            <div className="disciplines-card">
+                <div className="img">
                     
 
                 </div>
-                <div class="tag">
+                <div className="tag">
                     <p>Futsal</p>
                 </div>
             </div>
 
 
-            <div class="disciplines-card">
-                <div class="img">         
+            <div className="disciplines-card">
+                <div className="img">         
                 </div>
-                <div class="tag">
+                <div className="tag">
                     <p>Beach Soccer</p>
                 </div>
             </div>
