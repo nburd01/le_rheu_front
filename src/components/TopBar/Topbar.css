@@ -106,7 +106,7 @@
     padding: 10px 20px;
     background-image: linear-gradient(-20deg, var(--secondary) 10%, var(--secondary) 20%);
 }
-.topbar .disciplines a{
+.topbar .discipline{
     display: flex ;
     justify-content: center;
     font-size: .875rem;
