@@ -14,7 +14,7 @@ const Posts = () =>{
 	},[]);	
 	
 		const getData= () => {
-			axios('https://api.dailysmarty.com/' + 'posts')
+			axios('https://api.dailysmarty.com/posts')
 			.then(response  =>{
 				setIsLoading(false);
 				console.log("RES", response.data);
