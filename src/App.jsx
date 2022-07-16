@@ -12,6 +12,7 @@ import Disciplines from './components/DisciplinesBar/DisciplinesBar';
 import Contact from './pages/Contact/Contact';
 import Posts from './features/Post/Posts';
 import MyProfile from './pages/MyProfile/MyProfile';
+import Institutionnel from './pages/Institutionnel/Institutionnel';
 
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
         <Route path="/disciplines" element={<Disciplines />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/posts" element={<Posts />} />
-        {/* <Route path="/posts/:id" element={<Posts />} /> */}
+        <Route path="/institution" element={<Institutionnel />} />
+        <Route path="/posts/:id" element={<Posts />} />
         <Route path="/*" element={<Home />} />
 
       </Routes>

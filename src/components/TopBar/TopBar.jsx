@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter,  Routes, Route, Link } from 'react-router-dom';
 import './Topbar.css';
 import '../../assets/stylesheets/containers.css';
 import '../../assets/stylesheets/buttons.css';
@@ -8,6 +9,8 @@ import '../../assets/stylesheets/main.css';
 import SignOut from '../../pages/Connect/SignOut';
 import SignIn from '../../pages/Connect/SignIn';
 import SignUp from '../../pages/Connect/SignUp';
+import axios from "axios";
+
 
 export default function TopBar() {
 
@@ -16,6 +19,43 @@ const [toggleMenu, SetToggleMenu] = useState(false)
 const toggleNav = () => {
     SetToggleMenu(!toggleMenu)
 }
+
+const [isLoading, setIsLoading] = React.useState(true);
+const [discipline, setDiscipline] = React.useState([]);
+
+
+useEffect(() => {
+    getDiscipline();
+},[]);
+
+    const getDiscipline = () => {
+        axios(
+            'http://localhost:3000/disciplines/') 
+        .then(response => {
+			setIsLoading(false);
+            console.log("disciplines", response.data);
+
+            if (response.data) {
+                setDiscipline(response.data);
+            } else {
+					console.log("An error happened")
+            }
+        }) 
+        .catch(error => {
+            setIsLoading(false);
+            console.log('An error occured', error);
+        })
+    }
+
+    const disciplineRender = discipline.map((discipline) => 
+        <div className="discipline">
+            <p>{discipline.name}</p>
+        </div>
+        
+    );
+
+    const disciplinesRendering = isLoading ? "Loading"  : disciplineRender
+
 
   return (
     <div className="topbar">
@@ -65,11 +105,7 @@ const toggleNav = () => {
         </div>
         )}
         <div className="disciplines">
-            <a href="#">Football</a>
-            <a href="#">Futsal</a>
-            <a href="#">Beach Soccer</a>
-            <a href="#">Fitfoot</a>
-            <a href="#">Féminines</a>
+            <Link to ="disciplines" className="discipline">{disciplinesRendering}</Link>
         </div>
     </div>
   )

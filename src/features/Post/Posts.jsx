@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import '../../assets/stylesheets/posts.css';
-import axios from "axios";
+import axios from "axios";	
 // import { API_URL } from "../../store/api_url";
 
 
@@ -11,10 +11,11 @@ const Posts = () =>{
 
 	useEffect(() => {
 		getData();
-	},[]);
+	},[]);	
 	
 		const getData= () => {
-			axios('https://api.dailysmarty.com/' + 'posts').then(response  =>{
+			axios('https://api.dailysmarty.com/' + 'posts')
+			.then(response  =>{
 				setIsLoading(false);
 				console.log("RES", response.data);
 
@@ -32,25 +33,25 @@ const Posts = () =>{
 
 	const postsRender = posts.map((post) => 
 		
-<div className="container post">
+		<div className="container post">
 
-	<div className="blog block">
-		<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
-			<a href={post.url_for_post} target="_blank" rel="noreferrer" className="tag">
-				{post.title}
-			</a>
-		</a>
-		{post.associated_topics?.length > 0 && (
-			<div className="blog topics">
-				{post.associated_topics.map((topic) => (
-					<a href={post.associated_topics} key={topic} className="blog labels">
-						{topic}
+			<div className="blog block">
+				<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
+					<a href={post.url_for_post} target="_blank" rel="noreferrer" className="tag">
+						{post.title}
 					</a>
-				))}
+				</a>
+				{post.associated_topics?.length > 0 && (
+					<div className="blog topics">
+						{post.associated_topics.map((topic) => (
+							<a href={post.associated_topics} key={topic} className="blog labels">
+								{topic}
+							</a>
+						))}
+					</div>
+				)}
 			</div>
-		)}
-	</div>
-</div>
+		</div>
 
 	);
 
