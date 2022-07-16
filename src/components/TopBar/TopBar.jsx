@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter,  Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Topbar.css';
 import '../../assets/stylesheets/containers.css';
 import '../../assets/stylesheets/buttons.css';
@@ -8,8 +8,9 @@ import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 import SignOut from '../../pages/Connect/SignOut';
 import SignIn from '../../pages/Connect/SignIn';
-import SignUp from '../../pages/Connect/SignUp';
+
 import axios from "axios";
+import DisciplinesCards from '../Disciplines/DisciplinesCards';
 
 
 export default function TopBar() {

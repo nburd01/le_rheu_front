@@ -8,11 +8,11 @@ import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Disciplines from './components/DisciplinesBar/DisciplinesBar';
 import Contact from './pages/Contact/Contact';
 import Posts from './features/Post/Posts';
 import MyProfile from './pages/MyProfile/MyProfile';
 import Institutionnel from './pages/Institutionnel/Institutionnel';
+import DisciplinesCards from './components/Disciplines/DisciplinesCards';
 
 
 function App() {
@@ -28,13 +28,13 @@ function App() {
         <Route path='/' element={loggedIn ? <MyProfile/> : <Home />}/>
         <Route path="/myprofile" element={<MyProfile />} />
         <Route path="/about" element={<About />} />
-        <Route path="/disciplines" element={<Disciplines />} />
+        <Route path="/disciplines" element={<DisciplinesCards />} />
+        <Route path="/disciplines/:id" element={<DisciplinesCards/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/institution" element={<Institutionnel />} />
         <Route path="/posts/:id" element={<Posts />} />
         <Route path="/*" element={<Home />} />
-
       </Routes>
 
       </main>

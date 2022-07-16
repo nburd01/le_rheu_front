@@ -2,10 +2,19 @@ import React, { useEffect } from "react";
 import '../../assets/stylesheets/posts.css';
 import axios from "axios";	
 // import { API_URL } from "../../store/api_url";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Posts = () =>{
-
+	const settings = {
+		dots: true,
+		infinite: false,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		initialSlide: 0,
+	};
 	const [isLoading, setIsLoading] = React.useState(true);
 	const [posts, setPosts] = React.useState([]);
 
@@ -14,7 +23,7 @@ const Posts = () =>{
 	},[]);	
 	
 		const getData= () => {
-			axios('https://api.dailysmarty.com/' + 'posts')
+			axios('https://api.dailysmarty.com/posts')
 			.then(response  =>{
 				setIsLoading(false);
 				console.log("RES", response.data);
@@ -34,7 +43,7 @@ const Posts = () =>{
 	const postsRender = posts.map((post) => 
 		
 		<div className="container post">
-
+			
 			<div className="blog block">
 				<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
 					<a href={post.url_for_post} target="_blank" rel="noreferrer" className="tag">
@@ -60,7 +69,9 @@ const Posts = () =>{
 	return (
 		<div className="container">
 			<h2>Actualité</h2>
-			<p>{content}</p>
+			<Slider {...settings}>
+				{postsRender}
+      </Slider>
 		</div>
 	)
 };
