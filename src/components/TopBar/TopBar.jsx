@@ -8,10 +8,6 @@ import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 import SignOut from '../../pages/Connect/SignOut';
 import SignIn from '../../pages/Connect/SignIn';
-<<<<<<< HEAD
-
-=======
->>>>>>> f7ab818269637018d4b1329742cf069202a02647
 import axios from "axios";
 import DisciplinesCards from '../Disciplines/DisciplinesCards';
 
