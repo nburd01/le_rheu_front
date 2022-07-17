@@ -15,21 +15,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .blog.card{
+    display: flex;
     border: solid 1px var(--secondary, #000);
-    width: 80%;
+    width: 20em;
     height: 350px;
+    align-items: flex-start;
+    flex-direction: column;
     background: 
     linear-gradient(to right, #fa709a 0%, #fee140 100%) no-repeat;
+    position: relative;
 }
+
+.blog.title{
+    margin: 0 2em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 2em;
+}
+
+.blog.date{
+    margin: 3em 2em;
+    font-weight: lighter;
+    position: absolute;
+    bottom: 2.5em;
+}
+
 .blog.topics{
     margin: 1em;
     }
+
 .blog.topics #a{
     margin: 1em;
     }
+
 .blog.labels{
         margin: 1em;
         flex-wrap: wrap;
