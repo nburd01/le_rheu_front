@@ -47,8 +47,7 @@ const Posts = () =>{
 			<div className="blog block">
 				<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
 					<a href={post.date} target="_blank" rel="noreferrer" className="blog date">
-						{/* {post.title} */}
-						<p>050293</p>
+						<p>{post.created_at}</p>
 					</a>
 					<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog title">
 						{post.title}

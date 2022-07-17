@@ -1,7 +1,8 @@
 .disciplines-block{
     align-content: stretch;
-
+    display: flex-wrap;
 }
+
 .disciplines-card{
     display: inline-flex;
     flex-direction: column;
@@ -9,11 +10,23 @@
     height: 300px;
     margin: 0.4em;
     border-radius: 20px;
+    overflow: hidden;
 }
 
-.disciplines-card img{
-    contain: center contain;
-    /* display: inline-block; */
+.disciplines.card img{
+    contain: center cover;
+    object-fit: cover; 
+
+
+}
+
+.disciplines.card.tag {
+    display: block;
+    margin: 1em 0 0 1em;
+    padding: 0.3em 0.5em;
+    border-radius: 1rem;
+    background: var(--primary);
+    font-weight: 500;
 }
 
         .disciplines-card:nth-child(1){
@@ -21,6 +34,7 @@
                 /* linear-gradient(180deg, rgba(212, 206, 125, 0.219),  rgba(54, 54, 54, 0.5) 40%, rgba(28, 28, 28, 0.4) 100%),  */
                 center center / contain no-repeat;
                 width: calc(100% - 1em);
+                height: 20vh;
         }
         .disciplines-card:nth-child(2){
             background: 
@@ -46,6 +60,7 @@
                 center center / cover no-repeat;
                 width: calc(70% - 1.1em);
         }
+
 
 
 
