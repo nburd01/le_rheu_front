@@ -42,13 +42,16 @@ const [discipline, setDiscipline] = React.useState([]);
 
     const disciplineRender = discipline.map((discipline) => 
 
-                <div className="disciplines-card">
-                    <p className="tag">{discipline.name}</p>
+
                     <div className="disciplines-card">
-                        <img src={discipline.img_url}>
-                        </img>
+                        <div className="tag">
+                            <p>{discipline.name}</p>
+                        </div>
+                        <div className="img">
+                            <img src={discipline.img_url}></img>
+                        </div>
                     </div>
-                </div>
+
         
     );
 
@@ -56,9 +59,9 @@ const [discipline, setDiscipline] = React.useState([]);
 
     
     return (
-        <div className="container">
+    <div className="container">
 		<h2>Disciplines</h2>
-        <Link to ="disciplines" className="disciplines-block">{disciplinesRendering}</Link>
+        <div className="disciplines-block">{disciplinesRendering}</div>
     </div>
   )
 }
