@@ -39,17 +39,21 @@ const Posts = () =>{
 				console.log('An error occured', error);
 			})
 		}
+		const cardBackground = (src) => ({
+			backgroundImage: 'url(' + src + ')'
+		  })
 
 	const postsRender = posts.map((post) => 
 		
 		<div className="container post">
 			
 			<div className="blog block">
+				<div className="blog bg" style={cardBackground(post.post_url)}>
 				<a href={post.title} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
 					<a href={post.date} target="_blank" rel="noreferrer" className="blog date">
 						<p>{post.created_at}</p>
 					</a>
-					<a href={post.title} target="_blank" rel="noreferrer" className="blog title">
+					<a href={post.id} target="_blank" rel="noreferrer" className="blog title">
 						{post.title}
 					</a>
 				</a>
@@ -62,8 +66,10 @@ const Posts = () =>{
 						))}
 					</div>
 				)}
+				</div>
 			</div>
 		</div>
+		// </div>
 
 
 	);
