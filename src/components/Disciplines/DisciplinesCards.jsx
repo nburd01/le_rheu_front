@@ -59,7 +59,7 @@ const [discipline, setDiscipline] = React.useState([]);
 
     
     return (
-    <div className="container">
+    <div className="container disciplines">
 		<h2>Disciplines</h2>
         <div className="disciplines-block">{disciplinesRendering}</div>
     </div>

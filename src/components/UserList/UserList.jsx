@@ -31,7 +31,7 @@ export default function UserList() {
   },[])
 
   return (
-    <div className="App">
+    <div className="UserList">
       <div className="container">
      {
        data && data.length>0 && data.map((user)=><p>{user.email}</p>)

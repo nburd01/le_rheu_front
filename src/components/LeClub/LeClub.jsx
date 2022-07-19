@@ -9,7 +9,7 @@ import '../../assets/stylesheets/main.css';
 
 export default function LeClub() {
   return (
-<div className="container">
+<div className="container leClub">
     <h2>Le Club</h2>
     <div className="button-block club">
         <a href="#">Notre vision</a>

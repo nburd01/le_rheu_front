@@ -25,7 +25,7 @@ function App() {
 
       <Routes>
 
-        <Route path='/' element={loggedIn ? <MyProfile/> : <Home />}/>
+        <Route path='/' element={loggedIn ? <MyProfile/> : <Home />}/> 
         <Route path="/myprofile" element={<MyProfile />} />
         <Route path="/about" element={<About />} />
         <Route path="/disciplines" element={<DisciplinesCards />} />
@@ -34,7 +34,8 @@ function App() {
         <Route path="/posts" element={<Posts />} />
         <Route path="/institution" element={<Institutionnel />} />
         <Route path="/posts/:id" element={<Posts />} />
-        <Route path="/*" element={<Home />} />
+        <Route path="/*" element={<Home />} /> 
+        
       </Routes>
 
       </main>

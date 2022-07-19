@@ -44,32 +44,30 @@ const Posts = () =>{
 		  })
 
 	const postsRender = posts.map((post) => 
-		
-		<div className="container post">
-			
-			<div className="blog block">
-				<div className="blog bg" style={cardBackground(post.post_url)}>
-				<a href={post.title} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
-					<a href={post.date} target="_blank" rel="noreferrer" className="blog date">
-						<p>{post.created_at}</p>
+			<div className="container post">	
+				<div className="blog block">
+					<div className="blog bg" style={cardBackground(post.post_url)}>
+					<a href={post.title} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
+						<a href={post.date} target="_blank" rel="noreferrer" className="blog date">
+							<p>{post.created_at}</p>
+						</a>
+						<a href={post.id} target="_blank" rel="noreferrer" className="blog title">
+							{post.title}
+						</a>
 					</a>
-					<a href={post.id} target="_blank" rel="noreferrer" className="blog title">
-						{post.title}
-					</a>
-				</a>
-				{post.associated_topics?.length > 0 && (
-					<div className="blog topics">
-						{post.associated_topics.map((topic) => (
-							<a href={post.associated_topics} key={topic} className="blog labels">
-								{topic}
-							</a>
-						))}
+					{post.associated_topics?.length > 0 && (
+						<div className="blog topics">
+							{post.associated_topics.map((topic) => (
+								<a href={post.associated_topics} key={topic} className="blog labels">
+									{topic}
+								</a>
+							))}
+						</div>
+					)}
 					</div>
-				)}
 				</div>
 			</div>
-		</div>
-		// </div>
+
 
 
 	);
@@ -77,7 +75,7 @@ const Posts = () =>{
 	// const content = isLoading ? (<div>Loading...</div>) : (<div>{postsRender}</div>)   
 
 	return (
-		<div className="container">
+		<div className="container posts">
 			<h2>Actualité</h2>
 			<Slider {...settings}>
 				{postsRender}
