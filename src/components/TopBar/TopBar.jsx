@@ -9,7 +9,6 @@ import '../../assets/stylesheets/main.css';
 import SignOut from '../../pages/Connect/SignOut';
 import SignIn from '../../pages/Connect/SignIn';
 import axios from "axios";
-import DisciplinesCards from '../Disciplines/DisciplinesCards';
 
 
 export default function TopBar() {
