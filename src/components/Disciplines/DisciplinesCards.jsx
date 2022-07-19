@@ -48,7 +48,7 @@ const [discipline, setDiscipline] = React.useState([]);
                             <p>{discipline.name}</p>
                         </div>
                         <div className="img">
-                            <img src={discipline.img_url}></img>
+                            <img src={discipline.discipline_img}></img>
                         </div>
                     </div>
 

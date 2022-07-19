@@ -23,13 +23,13 @@ const Posts = () =>{
 	},[]);	
 	
 		const getData= () => {
-			axios('https://api.dailysmarty.com/posts')
+			axios('http://localhost:3000/posts')
 			.then(response  =>{
 				setIsLoading(false);
-				console.log("RES", response.data);
+				console.log("POSTS", response.data);
 
-				if (response.data.posts) {
-					setPosts(response.data.posts);
+				if (response.data) {
+					setPosts(response.data);
 				} else{
 					console.log("An error happened")
 				}
@@ -45,11 +45,11 @@ const Posts = () =>{
 		<div className="container post">
 			
 			<div className="blog block">
-				<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
+				<a href={post.title} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
 					<a href={post.date} target="_blank" rel="noreferrer" className="blog date">
 						<p>{post.created_at}</p>
 					</a>
-					<a href={post.url_for_post} target="_blank" rel="noreferrer" className="blog title">
+					<a href={post.title} target="_blank" rel="noreferrer" className="blog title">
 						{post.title}
 					</a>
 				</a>
@@ -65,9 +65,10 @@ const Posts = () =>{
 			</div>
 		</div>
 
+
 	);
 
-	const content = isLoading ? (<div>Loading...</div>) : (<div>{postsRender}</div>)   
+	// const content = isLoading ? (<div>Loading...</div>) : (<div>{postsRender}</div>)   
 
 	return (
 		<div className="container">
