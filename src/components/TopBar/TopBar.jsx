@@ -47,9 +47,7 @@ useEffect(() => {
     }
 
     const disciplineRender = discipline.map((discipline) => 
-        <div className="discipline">
-            <p>{discipline.name}</p>
-        </div>
+            <Link to ={discipline.discipline_root} className="discipline">{discipline.name}</Link>
         
     );
 

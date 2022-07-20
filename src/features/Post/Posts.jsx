@@ -76,7 +76,7 @@ const Posts = () =>{
 
 	return (
 		<div className="container posts">
-			<h2>Actualité</h2>
+			<h2>	Actualité</h2>
 			<Slider {...settings}>
 				{postsRender}
       </Slider>
