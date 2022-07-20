@@ -2,14 +2,14 @@ import React from 'react'
 import axios from "axios";
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react'
-import './DisciplinesCards.css'
+import './Disciplines.css'
 import '../../assets/stylesheets/containers.css';
 import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 
-export default function DisciplinesCards(props) {
+export default function Disciplines(props) {
 const [cards, setCards] = React.useState([]);
 
     

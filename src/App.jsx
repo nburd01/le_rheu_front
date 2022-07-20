@@ -10,7 +10,7 @@ import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import Posts from './components/Post/Posts';
 import MyProfile from './pages/MyProfile/MyProfile';
-import DisciplinesCards from './components/Disciplines/DisciplinesCards';
+import Disciplines from './components/Disciplines/Disciplines';
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
 
           <Route path='/' element={<Home/>}/> 
           <Route path="/myprofile" element={<MyProfile />} />
-          <Route path="/disciplines" element={<DisciplinesCards />} />
+          <Route path="/disciplines" element={<Disciplines />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<Posts />} />
