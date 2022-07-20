@@ -55,13 +55,14 @@ const [discipline, setDiscipline] = React.useState([]);
         
     );
 
-    const disciplinesRendering = isLoading ? "Loading"  : disciplineRender
+    const disciplinesBlockRendering = isLoading ? "Loading"  : disciplineRender
 
     
     return (
     <div className="container disciplines">
-		<h2>Disciplines</h2>
-        <div className="disciplines-block">{disciplinesRendering}</div>
+		
+        <h2>Disciplines</h2>
+        <div className="disciplines-block">{disciplinesBlockRendering}</div>
     </div>
   )
 }

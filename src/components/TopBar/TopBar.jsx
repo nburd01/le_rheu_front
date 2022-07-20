@@ -6,9 +6,10 @@ import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
-import SignOut from '../../pages/Connect/SignOut';
-import SignIn from '../../pages/Connect/SignIn';
+import SignOut from '../../pages/SignIn/SignOut';
+import SignIn from '../../pages/SignIn/SignIn';
 import axios from "axios";
+
 
 
 export default function TopBar() {
@@ -58,10 +59,20 @@ useEffect(() => {
     <div className="topbar">
         <div className="top">
             <div className="menu">
-                {loggedIn 
-                ? <SignOut/>
-                : <SignIn/>}
-                
+                {loggedIn ? 
+                <>
+                    <li><Link to={'/myadvert/'}>Mes Annonces</Link></li>
+                    <li><Link to={'/profil/'}>Profil</Link></li>
+                    {/* <li onClick={logout}>Se Déconnecter</li> */}
+                </>
+                : 
+                <>
+                    <li><Link to='/register'>S'inscrire</Link></li>
+                    <li><Link to='/login'>Se Connecter</Link></li> 
+                </>
+}
+
+                <SignOut/>
             </div>
             <div className="logo">
                 <a href="/le_rheu_front/">
@@ -70,15 +81,12 @@ useEffect(() => {
             </div>
             <div className='top-link'>
                 <ul className ="nav-links">
-                    <li>
-                    <a href="/le_rheu_front/disciplines">Nos disciplines</a>
-                    </li>
-                    <li>
+                    {/* <li>
                         <a href="/le_rheu_front/contact">Nous contacter</a>
                     </li>
                     <li>
                         <a href="/le_rheu_front/account">Mon compte</a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="burger" onClick={toggleNav}>
@@ -102,7 +110,7 @@ useEffect(() => {
         </div>
         )}
         <div className="disciplines">
-            <Link to ="disciplines" className="discipline">{disciplinesRendering}</Link>
+            {disciplinesRendering}
         </div>
     </div>
   )

@@ -55,11 +55,11 @@ const Posts = () =>{
 							{post.title}
 						</a>
 					</a>
-					{post.associated_topics?.length > 0 && (
+					{post.tag_id?.length > 0 && (
 						<div className="blog topics">
-							{post.associated_topics.map((topic) => (
-								<a href={post.associated_topics} key={topic} className="blog labels">
-									{topic}
+							{post.tag_id.map((tag) => (
+								<a href={post.tag_id} key={tag} className="blog labels">
+									{tag}
 								</a>
 							))}
 						</div>

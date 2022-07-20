@@ -7,24 +7,37 @@ import './App.css';
 import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
 import Home from './pages/Home/Home';
-import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-import Posts from './features/Post/Posts';
+import Posts from './components/Post/Posts';
 import MyProfile from './pages/MyProfile/MyProfile';
-import Institutionnel from './pages/Institutionnel/Institutionnel';
 import DisciplinesCards from './components/Disciplines/DisciplinesCards';
 
 
 function App() {
   const loggedIn = window.localStorage.getItem("isLoggedIn");
   return (
-    <div className="App">
+<div className="App">
+
       <TopBar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+
+        <main>
+
+        <Routes>
+
+          <Route path='/' element={<Home/>}/> 
+          <Route path="/myprofile" element={<MyProfile />} />
+          <Route path="/disciplines" element={<DisciplinesCards />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/posts/:id" element={<Posts />} />
+          <Route path="/*" element={<Home />} /> 
+          
+        </Routes>
+
+        </main>
+
       <Footer/>
-    </div>
+</div>
 
 
   );
