@@ -1,10 +1,17 @@
 import React from 'react';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAtom } from 'jotai';
+import {userAtom, authorizationAtom} from '../../stores/auth';
+import Cookies from 'js-cookie';
+
 
 const SignIn = () => {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const loggedIn = window.localStorage.getItem("isLoggedIn");
+
 
   const data = {
     user: {},
@@ -36,14 +43,28 @@ const SignIn = () => {
 
   return(
     <div>
-      <form onSubmit={FetchData}>
-        <div className='Log-content'>
-          <input name='email' placeholder='Email' value={data.user.email} onChange={(e) => setEmail(e.target.value)}/>
-          <input name='password' type='password' placeholder='Mot de passe' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
-          <input className='log_button' type='submit' value="Se connecter"/> 
+     
+      <div className="test">
+          {loggedIn 
+          ?
+          <div className="container">
+            <div>
+              <h1>You are logged in</h1>
+            </div>
+            <div>
+              <btn>Add profile component here</btn>
+            </div>
+          </div>
+          : 
+          <form onSubmit={FetchData}>
+          <div className='Log-content'>
+            <input name='email' placeholder='Email' value={data.user.email} onChange={(e) => setEmail(e.target.value)}/>
+            <input name='password' type='password' placeholder='Mot de passe' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
+            <input className='log_button' type='submit' value="Se connecter"/> 
+          </div>
+        </form>
+        }
         </div>
-      </form>
-      <p>Vous n'avez pas encore de compte avec nous :  </p>
     </div>
   )
 }
