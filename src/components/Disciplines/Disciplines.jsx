@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from "axios";
-import { Link } from 'react-router-dom';
 import { useEffect } from 'react'
 import './Disciplines.css'
 import '../../assets/stylesheets/containers.css';
@@ -10,7 +9,7 @@ import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 
 export default function Disciplines(props) {
-const [cards, setCards] = React.useState([]);
+// const [cards, setCards] = React.useState([]);
 
     
 const [isLoading, setIsLoading] = React.useState(true);
@@ -48,7 +47,7 @@ const [discipline, setDiscipline] = React.useState([]);
                             <p>{discipline.name}</p>
                         </div>
                         <div className="img">
-                            <img src={discipline.discipline_img}></img>
+                            <img src={discipline.discipline_img} alt="discipline_image"></img>
                         </div>
                     </div>
 
