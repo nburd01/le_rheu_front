@@ -30,7 +30,10 @@ const Football = () => {
   );
 
   return (
-    <h1>{disciplinesRender}</h1> 
+    <div className="container">
+        <h2>Football</h2>
+        <p>{disciplinesRender}</p> 
+    </div>
     )
 
   

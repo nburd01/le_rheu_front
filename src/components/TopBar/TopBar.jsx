@@ -27,7 +27,7 @@ const TopBar = () => {
         fetch('http://localhost:3000/users/sign_out', {
           method: 'delete',
           headers: {
-            'Authorization': authorizationapp,
+            // 'Authorization': authorizationapp,
             'Content-Type': 'application/json'
           }
         })
@@ -71,9 +71,12 @@ const TopBar = () => {
         }
 
         const disciplineRender = discipline.map((discipline) => 
-                <Link to ={discipline.discipline_root} className="discipline">{discipline.name}</Link>
-            
+        <nav>
+
+            <Link to ={discipline.discipline_root} className="discipline">{discipline.name}</Link>  
+        </nav>
         );
+
         const disciplinesRendering = isLoading ? "Loading"  : disciplineRender
 
     return (

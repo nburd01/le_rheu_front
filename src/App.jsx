@@ -11,15 +11,20 @@ import Contact from './pages/Contact/Contact';
 import Posts from './components/Post/Posts';
 import MyProfile from './pages/MyProfile/MyProfile';
 import Disciplines from './components/Disciplines/Disciplines';
-import PageName from './pages/Disciplines/Football';
 import Football from './pages/Disciplines/Football';
 import SignUp from './pages/SignUp/SignUp';
 import SignIn from './pages/SignIn/SignIn';
 import SignOut from './pages/SignIn/SignOut';
+import Discipline from './components/Disciplines/Discipline';
+import Beach from './pages/Disciplines/Beach';
+import Futsal from './pages/Disciplines/Futsal';
+import Fitfoot from './pages/Disciplines/Fitfoot';
+import Feminines from './pages/Disciplines/Feminines';
+import Arbitrage from './pages/Disciplines/Arbitrage';
 
 
 function App() {
-  const loggedIn = window.localStorage.getItem("isLoggedIn");
+  // const loggedIn = window.localStorage.getItem("isLoggedIn");
   return (
 <div className="App">
 
@@ -35,12 +40,13 @@ function App() {
           <Route path='/sign_out' element={<SignOut/>}/>
           <Route path="/myprofile" element={<MyProfile />} />
           <Route path = '/disciplines' element= {<Disciplines />}/>
-            <Route path = '/football' element= {<Football />} />
-            <Route path = '/beach' element= {<PageName />} />
-            <Route path = '/futsal' element= {<PageName />} />
-            <Route path = '/fitfoot' element= {<PageName />} />
-            <Route path = '/feminines' element= {<PageName />} />
-            <Route path = '/arbitrage' element= {<PageName />} />
+          <Route path = '/discipline/:id' element= {<Discipline/>}/>
+          <Route path = '/football' element= {<Football />} />
+          <Route path = '/beach' element= {<Beach/>} />
+          <Route path = '/futsal' element= {<Futsal/>} />
+          <Route path = '/fitfoot' element= {<Fitfoot/>} />
+          <Route path = '/feminines' element= {<Feminines/>} />
+          <Route path = '/arbitrage' element= {<Arbitrage/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<Posts />} />

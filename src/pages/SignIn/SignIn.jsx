@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAtom } from 'jotai';
 import {userAtom, authorizationAtom} from '../../stores/auth';
 import Cookies from 'js-cookie';
-
+import Logout from './SignOut'
 
 const SignIn = () => {
 
@@ -26,12 +26,7 @@ const SignIn = () => {
       headers: {
           "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        user:{
-          email: email,
-          password: password,
-        }
-      })
+      body: JSON.stringify(data)
     })
     .then(response => response.json())
     .then(result => {
@@ -52,7 +47,10 @@ const SignIn = () => {
               <h1>You are logged in</h1>
             </div>
             <div>
-              <btn>Add profile component here</btn>
+              <p>Welcome {data.user.email}</p>
+            </div>
+            <div>
+              <button onClick={Logout}>logout</button>
             </div>
           </div>
           : 
