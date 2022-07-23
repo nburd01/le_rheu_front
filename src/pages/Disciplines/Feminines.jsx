@@ -4,16 +4,16 @@ import axios from "axios";
 
 const Feminines = () => {
 
-	const [disciplines, setDisciplines] = React.useState([]);
+    const [disciplines, setDisciplines] = React.useState([]);
 
   useEffect(() => {
-		getDisciplines();
+		fetchFeminines();
 	},[]);
 
-  const getDisciplines= () => {
-    axios('http://localhost:3000/disciplines')
+  const fetchFeminines= () => {
+    axios('http://localhost:3000/disciplines/329')
     .then(response  =>{
-      console.log("DISCIPLINES", response.data);
+      console.log("féminines", response.data);
       if (response.data) {
         setDisciplines(response.data);
       } else{
@@ -21,16 +21,18 @@ const Feminines = () => {
       }
     })
   }
-  const disciplinesRender = disciplines.map((discipline) =>
-    <div>
-      <p>  
-        {discipline.id}
-      </p>
-    </div>
-  );
+  const disciplinesRender = 
+  <div>
+      <h2>
+        {disciplines.name}
+      </h2>
+        {disciplines.id}
+  </div>
 
   return (
-    <h1>{disciplinesRender}</h1> 
+    <div className="container">
+        <p>{disciplinesRender}</p> 
+    </div>
     )
 
   

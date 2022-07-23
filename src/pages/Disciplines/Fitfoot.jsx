@@ -1,39 +1,11 @@
-import React, { useEffect } from "react";
-import axios from "axios";	
+import React from 'react'
 
+function Fitfoot() {
+    return (
+        <div className="container">
+            <h2>Fitfoot</h2>
+        </div>
+      )
+}
 
-const Fitfoot = () => {
-
-	const [disciplines, setDisciplines] = React.useState([]);
-
-  useEffect(() => {
-		getDisciplines();
-	},[]);
-
-  const getDisciplines= () => {
-    axios('http://localhost:3000/disciplines')
-    .then(response  =>{
-      console.log("DISCIPLINES", response.data);
-      if (response.data) {
-        setDisciplines(response.data);
-      } else{
-        console.log("An error happened")
-      }
-    })
-  }
-  const disciplinesRender = disciplines.map((discipline) =>
-    <div>
-      <p>  
-        {discipline.id}
-      </p>
-    </div>
-  );
-
-  return (
-    <h1>{disciplinesRender}</h1> 
-    )
-
-  
-};
-
-export default Fitfoot;
+export default Fitfoot
