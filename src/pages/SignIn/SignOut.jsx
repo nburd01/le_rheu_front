@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const SignOut = () => {
   const nav = useNavigate();
@@ -10,11 +11,7 @@ const SignOut = () => {
   }
 
   return (
-    <div>
-      <button onClick={Logout}>
-        Sign Out
-      </button>
-    </div>
+<Link onClick={Logout} to='/'>Se deconnecter</Link>
   )
   
 }

@@ -10,11 +10,13 @@ import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 import axios from "axios";
+import SignOut from '../../pages/SignIn/SignOut';
 
 
 
 const TopBar = () => {
 
+    const loggedIn = window.localStorage.getItem("isLoggedIn");
     const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
     const [id, setId] = useAtom(userAtom);
     const navigate = useNavigate();
@@ -86,20 +88,20 @@ const TopBar = () => {
                 
                 <div className="menu">
                 <ul>
-                    <li><Link to='/'>Home</Link></li>
-                    {authorizationapp === ''?
+                    {loggedIn
+
+                    ?
                     <>
-                    <li><Link to='/register'>S'inscrire</Link></li>
-                    <li><Link to='/login'>Se Connecter</Link></li> 
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to={'/myprofile/' + id}>Mon Profil</Link></li>
+                    <li><SignOut /></li>
                     </>
                     :
                     <>
-                    <li><Link to={'/myprofile/' + id}>Mon Profil</Link></li>
-                    <li onClick={logout}>Se Déconnecter</li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/register'>S'inscrire</Link></li><li><Link to='/login'>Se Connecter</Link></li>
                     </>
-                    
-                }
-
+                    }
                 </ul>
                 </div>
                 
@@ -128,12 +130,21 @@ const TopBar = () => {
             <div>
                 <nav>
                     <ul className="list">
+                    {!loggedIn
+
+                        ?
+                        <>
                         <li className="items"><a href="/le_rheu_front/login">Se connecter</a></li>
                         <li className="items"><a href="/le_rheu_front/register">Nous rejoindre</a></li>
                         <li className="items"><a href="/le_rheu_front/disciplines">Nos disciplines</a></li>
                         <li className="items"><a href="/le_rheu_front/contact">Nous contacter</a></li>
+                        </>
+                        :
+                        <>
                         <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
                         <li className="items"><a href="/le_rheu_front/sign_out">Log out</a></li>
+                        </>
+                    }
                     </ul>
                 </nav>
             </div>
