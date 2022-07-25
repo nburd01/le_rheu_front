@@ -112,12 +112,9 @@ const TopBar = () => {
                 </div>
                 <div className='top-link'>
                     <ul className ="nav-links">
-                        {/* <li>
-                            <a href="/le_rheu_front/contact">Nous contacter</a>
-                        </li>
-                        <li>
-                            <a href="/le_rheu_front/account">Mon compte</a>
-                        </li> */}
+                        {/* <img src="src/assets/img/blog1.jpg" alt="test" /> */}
+                        {/* <img src={require('../../assets/img/blog1')} /> */}
+                        <img src={"../../assets/img/blog1"} />
                     </ul>
                 </div>
                 <div className="burger" onClick={toggleNav}>
