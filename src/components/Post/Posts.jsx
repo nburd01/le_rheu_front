@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Post from "./Post";
 import { Link } from "react-router-dom";
 
+
 const Posts = () => {
 	const settings = {	
 		dots: true,
@@ -75,14 +76,14 @@ const Posts = () => {
 			<div className="container post">	
 				<div className="blog block">
 					<div className="blog bg" style={cardBackground(post.post_url)}>
-					<a href={post.title} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
-						<a href={post.date} target="_blank" rel="noreferrer" className="blog date">
-							<p>{post.created_at}</p>
-						</a>
-						<a href={post.id} target="_blank" rel="noreferrer" className="blog title">
-							{post.title}
-						</a>
-					</a>
+						<Link to={post.id} target="_blank" rel="noreferrer" className="blog card" key={post.id}>
+							<a href={post.date} target="_blank" rel="noreferrer" className="blog date">
+								<p>{post.created_at}</p>
+							</a>
+							<a href={post.id} target="_blank" rel="noreferrer" className="blog title">
+								{post.title}
+							</a>
+						</Link>
 					{post.tag_id?.length > 0 && (
 						<div className="blog topics">
 							{post.tag_id.map((tag) => (
