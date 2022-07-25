@@ -21,6 +21,7 @@ import Futsal from './pages/Disciplines/Futsal';
 import Fitfoot from './pages/Disciplines/Fitfoot';
 import Feminines from './pages/Disciplines/Feminines';
 import Arbitrage from './pages/Disciplines/Arbitrage';
+import Post from './components/Post/Post';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path = '/feminines' element= {<Feminines/>} />
           <Route path = '/arbitrage' element= {<Arbitrage/>} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/post" element={<Post/>} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<Posts />} />
           <Route path="/*" element={<Home />} /> 

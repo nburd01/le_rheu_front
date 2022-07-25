@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from "axios";
 import { useEffect } from 'react'
+import { Link } from "react-router-dom";
 import './Disciplines.css'
 import '../../assets/stylesheets/containers.css';
 import '../../assets/stylesheets/buttons.css';
@@ -60,7 +61,9 @@ const [discipline, setDiscipline] = React.useState([]);
     return (
     <div className="container disciplines">
 		
-        <h2>Disciplines</h2>
+        <h2>
+			<Link to={`/disciplines`}>Disciplines</Link>
+		</h2>
         <div className="disciplines-block">{disciplinesBlockRendering}</div>
     </div>
   )
