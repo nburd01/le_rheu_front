@@ -45,10 +45,15 @@ const [discipline, setDiscipline] = React.useState([]);
 
                     <div className="disciplines-card">
                         <div className="tag">
-                            <p>{discipline.name}</p>
+                            <Link to={discipline.discipline_root}>
+                                <p>{discipline.name}</p>
+                            </Link>
+
                         </div>
                         <div className="img">
-                            <img src={discipline.discipline_img} alt="discipline_image"></img>
+			                <Link to={discipline.discipline_root}>
+                                <img src={discipline.discipline_img} alt="discipline_image"></img>
+                            </Link>
                         </div>
                     </div>
 
