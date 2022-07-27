@@ -15,9 +15,9 @@ export default function LeClub() {
         <Link to={`/club`}>Le Club</Link>
     </h2>
     <div className="button-block club">
-        <a href="#">Notre vision</a>
-        <a href="#">Labels FFF</a>
-        <a href="#">Infrastructures</a>
+        <Link to={`/vision`}>Notre vision</Link>
+        <Link to={`/labels`}>Labels FFF</Link>
+        <Link to={`/infrastructures`}>Infrastructures</Link>
     </div>   
 </div>
 

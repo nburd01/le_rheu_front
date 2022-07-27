@@ -22,6 +22,10 @@ import Fitfoot from './pages/Disciplines/Fitfoot';
 import Feminines from './pages/Disciplines/Feminines';
 import Arbitrage from './pages/Disciplines/Arbitrage';
 import Post from './components/Post/Post';
+import Infrastructures from './pages/Infrastructures/Infrastructures';
+import Vision from './pages/Vision/Vision';
+import Labels from './pages/Labels/Labels';
+import Dashboard from './admin/Admin';
 
 
 function App() {
@@ -40,18 +44,22 @@ function App() {
           <Route path='/login' element={<SignIn/>}/>
           <Route path='/sign_out' element={<SignOut/>}/>
           <Route path="/myprofile" element={<MyProfile />} />
-          <Route path = '/disciplines' element= {<Disciplines />}/>
-          <Route path = '/discipline/:id' element= {<Discipline/>}/>
-          <Route path = '/football' element= {<Football />} />
-          <Route path = '/beach' element= {<Beach/>} />
-          <Route path = '/futsal' element= {<Futsal/>} />
-          <Route path = '/fitfoot' element= {<Fitfoot/>} />
-          <Route path = '/feminines' element= {<Feminines/>} />
-          <Route path = '/arbitrage' element= {<Arbitrage/>} />
+          <Route path ='/disciplines' element= {<Disciplines />}/>
+          <Route path ='/discipline/:id' element= {<Discipline/>}/>
+          <Route path ='/football' element= {<Football />} />
+          <Route path ='/beach' element= {<Beach/>} />
+          <Route path ='/futsal' element= {<Futsal/>} />
+          <Route path ='/fitfoot' element= {<Fitfoot/>} />
+          <Route path ='/feminines' element= {<Feminines/>} />
+          <Route path ='/arbitrage' element= {<Arbitrage/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/post" element={<Post/>} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<Posts />} />
+          <Route path="/infrastructures" element={<Infrastructures />} />
+          <Route path="/vision" element={<Vision />} />
+          <Route path="/labels" element={<Labels />} />
+          <Route path="/admin" element={<Dashboard />} /> 
           <Route path="/*" element={<Home />} /> 
           
         </Routes>
