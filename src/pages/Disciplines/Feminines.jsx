@@ -11,7 +11,7 @@ const Feminines = () => {
 	},[]);
 
   const fetchFeminines= () => {
-    axios('http://localhost:3000/disciplines/365')
+    axios('http://localhost:3000/disciplines/5')
     .then(response  =>{
       console.log("féminines", response.data);
       if (response.data) {
