@@ -8,7 +8,7 @@ import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
-import Posts from './components/Post/Posts';
+import Posts from './components/Post/Blog';
 import MyProfile from './pages/MyProfile/MyProfile';
 import Disciplines from './components/Disciplines/Disciplines';
 import Football from './pages/Disciplines/Football';
@@ -53,9 +53,11 @@ function App() {
           <Route path ='/feminines' element= {<Feminines/>} />
           <Route path ='/arbitrage' element= {<Arbitrage/>} />
           <Route path="/contact" element={<Contact />} />
+          
           <Route path="/post" element={<Post/>} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<Posts />} />
+
           <Route path="/infrastructures" element={<Infrastructures />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/labels" element={<Labels />} />
