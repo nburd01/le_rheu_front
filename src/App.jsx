@@ -26,6 +26,7 @@ import Infrastructures from './pages/Infrastructures/Infrastructures';
 import Vision from './pages/Vision/Vision';
 import Labels from './pages/Labels/Labels';
 import Dashboard from './admin/Admin';
+import Comments from './components/Comments/Comments';
 
 
 function App() {
@@ -57,6 +58,8 @@ function App() {
           <Route path="/post" element={<Post/>} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/posts/:id" element={<Post />} />
+
+          <Route path="/comments/" element={<Comments />} />
 
           <Route path="/infrastructures" element={<Infrastructures />} />
           <Route path="/vision" element={<Vision />} />

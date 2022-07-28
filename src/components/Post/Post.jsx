@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import {useParams } from 'react-router-dom';
+import Comments from "../Comments/Comments";
 
 function Post() {
   const id = useParams().id;
   const [postTitle, setPostTitle] = useState(" ");
   const [postContent, setPostContent] = useState(" ");
   const [userId, setUserId] = useState(" ");
+  const [postTag, setPostTag] = useState(" ");
 
 
   useEffect(() => {
@@ -21,6 +23,7 @@ function Post() {
         setPostTitle(response.title);
         setPostContent(response.content);
         setUserId(response.user_id);
+        setPostTag(response.tag_id);
         // .catch(err => console.error(err));
       });
   }, [id]);
@@ -32,9 +35,10 @@ function Post() {
       <div>{postContent}</div>
       <br />
       <div>User #{userId}</div>
+      <div className="tag">Tag {postTag}</div>
       <br />
       <div>
-        <h3>Comments</h3>
+        {<Comments/>}
       </div>
     </div>
   )
