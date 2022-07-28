@@ -3,7 +3,7 @@ import DisciplinesBar from '../../components/Disciplines/Disciplines'
 import HeaderHome from '../../components/HeaderHome/HeaderHome'
 import LeClub from '../../components/LeClub/LeClub'
 import ScoreBar from '../../components/ScoreBar/ScoreBar'
-import Posts from '../../components/Post/Posts'
+import Blog from '../../components/Post/Blog'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <ScoreBar/>
         <LeClub/>
         <DisciplinesBar/>
-        <Posts/> 
+        <Blog/> 
     </div>
   )
 }
