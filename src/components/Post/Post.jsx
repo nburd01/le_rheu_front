@@ -5,6 +5,7 @@ function Post() {
   const id = useParams().id;
   const [postTitle, setPostTitle] = useState(" ");
   const [postContent, setPostContent] = useState(" ");
+  const [userId, setUserId] = useState(" ");
 
 
   useEffect(() => {
@@ -19,15 +20,22 @@ function Post() {
       .then(response => {
         setPostTitle(response.title);
         setPostContent(response.content);
+        setUserId(response.user_id);
         // .catch(err => console.error(err));
       });
   }, [id]);
 
   return (
-    <div>
-      <div>Post {id}</div>
+    <div className="container">
+      <h2>Post {id}</h2>
       <div>{postTitle}</div>
       <div>{postContent}</div>
+      <br />
+      <div>User #{userId}</div>
+      <br />
+      <div>
+        <h3>Comments</h3>
+      </div>
     </div>
   )
 }
