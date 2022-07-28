@@ -1,8 +1,12 @@
-import React from 'react'
+import * as React from 'react';
+import {useParams } from 'react-router-dom';
 
 function Post() {
+
+  let { id } = useParams();
+
   return (
-    <div>Post</div>
+    <div>Post {id}</div>
   )
 }
 
