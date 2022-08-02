@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
-import { useAtom } from 'jotai';
-import {userAtom, authorizationAtom} from '../../stores/auth';  
 import Cookies from 'js-cookie';
 import './Topbar.css';
 import '../../assets/stylesheets/containers.css';
@@ -11,14 +9,15 @@ import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 import axios from "axios";
 import SignOut from '../../pages/SignIn/SignOut';
-
+import {jwtAtom} from '../../stores/auth'
+import { useAtomValue } from "jotai";
 
 
 const TopBar = () => {
 
     const loggedIn = window.localStorage.getItem("isLoggedIn");
-    const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
-    const [id, setId] = useAtom(userAtom);
+    const jwt = useAtomValue(jwtAtom);
+
     const navigate = useNavigate();
     const [toggleMenu, SetToggleMenu] = useState(false)
     const toggleNav = () => {
@@ -29,16 +28,17 @@ const TopBar = () => {
         fetch('http://localhost:3000/users/sign_out', {
           method: 'delete',
           headers: {
-            // 'Authorization': authorizationapp,
-            'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              Authorization: jwt,
+
           }
         })
-      console.log('authorizationapp',authorizationapp)
+    //   console.log('authorizationapp',authorizationapp)
 
         .then((response) => {return response.json()})
         .then((response) => {
-          setAuthorizationapp('');
-          setId('');
+        //   setAuthorizationapp('');
+        //   setId('');
           Cookies.set('id', "")
           Cookies.set('token', "")
           navigate('/')
@@ -93,7 +93,7 @@ const TopBar = () => {
                     ?
                     <>
                     <li><Link to='/'>Home</Link></li>
-                    <li><Link to={'/myprofile/' + id}>Mon Profil</Link></li>
+                    {/* <li><Link to={'/myprofile/' + id}>Mon Profil</Link></li> */}
                     <li><SignOut /></li>
                     </>
                     :

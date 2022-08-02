@@ -9,7 +9,7 @@ import Footer from './components/Footer/footer';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import Posts from './components/Post/Blog';
-import MyProfile from './pages/MyProfile/MyProfile';
+import MyProfile from './pages/Profile/Profile';
 import Disciplines from './components/Disciplines/Disciplines';
 import Football from './pages/Disciplines/Football';
 import SignUp from './pages/SignUp/SignUp';
@@ -27,6 +27,8 @@ import Vision from './pages/Vision/Vision';
 import Labels from './pages/Labels/Labels';
 import Dashboard from './admin/Admin';
 import Comments from './components/Comments/Comments';
+import { Profiler } from 'react';
+import Profile from './pages/Profile/Profile';
 
 
 function App() {
@@ -44,7 +46,7 @@ function App() {
           <Route path='/register' element={<SignUp/>}/>
           <Route path='/login' element={<SignIn/>}/>
           <Route path='/sign_out' element={<SignOut/>}/>
-          <Route path="/myprofile" element={<MyProfile />} />
+          <Route path="/profile/:id" element={<Profile/>} />
           <Route path ='/disciplines' element= {<Disciplines />}/>
           <Route path ='/discipline/:id' element= {<Discipline/>}/>
           <Route path ='/football' element= {<Football />} />
@@ -60,6 +62,8 @@ function App() {
           <Route path="/posts/:id" element={<Post />} />
 
           <Route path="/comments/" element={<Comments />} />
+
+
 
           <Route path="/infrastructures" element={<Infrastructures />} />
           <Route path="/vision" element={<Vision />} />
