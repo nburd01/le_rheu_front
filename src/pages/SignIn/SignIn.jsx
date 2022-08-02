@@ -1,52 +1,58 @@
-import React from 'react';
-import { useState, useEffect } from "react";
-import { useAtom, useAtomValue, useSetAtom } from "jotai";
-import { authorizationAtom } from "../../stores/auth";
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import Cookies from "js-cookie";
-import Logout from './SignOut'
+import { useAtom } from 'jotai';
+import {userAtom, authorizationAtom} from '../../stores/auth'
+import { API_URL } from '../../stores/api_url';
+import Cookies from 'js-cookie';
+
 
 const SignIn = () => {
 
+
+  const loggedIn = window.localStorage.getItem("isLoggedIn");
+
+  const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const loggedIn = window.localStorage.getItem("isLoggedIn");
-  const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
+  const [user, setUser] = useAtom(userAtom);
+  const [authorization, setAuthorization] = useAtom(authorizationAtom);
 
 
-  const data = {
-    "user": {
-    "email": email,
-    "password": password
-    }
-  };
+
 
   function FetchData(e){
+    
     e.preventDefault();
-    fetch('http://localhost:3000/users/sign_in', {
-      method: "POST",
+    
+    const data = {
+      "user" : {
+        "email": email,
+        "password": password
+      }
+    };
+    
+    fetch(API_URL + 'users/sign_in', {
+      method: 'post',
       headers: {
-          "Content-Type": "application/json"
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     })
-    // .then(response => response.json())
-    .then(response => {
-      console.log([...response.headers.get('authorization')].join('').split(" ")[1])
-      setAuthorizationapp([...response.headers.get('authorization')].join(''));
-      Cookies.set('token', [...response.headers.get('authorization')].join(''))
-      console.log("token", response.token)
+    .then((response) => {
       console.log(response.headers.get("Authorization"));
-      return response.json()
-
+      setAuthorization(response.headers.get('authorization'));
+      Cookies.set('token', response.headers.get('authorization'));
+      return response.json();
     })
-    .then(response => {
-      Cookies.set('token', [...response.headers.get('authorization')].join(''))
+    .then((response) => {
+      // console.log(response);
+      setUser(response.user.id);
+      Cookies.set('id', response.user.id);
+      Cookies.set('fulluser', JSON.stringify(response.user));
       window.localStorage.setItem("isLoggedIn", true);
-      window.location.reload(true);
-      return response.json()
     })
-  }
+    .catch((error) => console.log(error));
+  }  
 
   return(
     <div>
@@ -60,9 +66,6 @@ const SignIn = () => {
             </div>
             <div>
               <p>Welcome {email}</p>
-            </div>
-            <div>
-              <button onClick={Logout}>logout</button>
             </div>
           </div>
           : 

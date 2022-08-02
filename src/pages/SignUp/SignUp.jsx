@@ -1,56 +1,54 @@
-import React from 'react';
-import { useState } from "react";
-// import {useNavigate } from "react-router-dom";
-import { useAtomValue } from "jotai";
-import {jwtAtom} from '../../stores/auth'
-
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { useSetAtom } from 'jotai';
+import {userAtom, authorizationAtom} from '../../stores/auth'
+import { API_URL } from '../../stores/api_url';
+import Cookies from 'js-cookie';
 import './SignUp.css'
 
-const SignUp = () => {
 
+const Signup = () => {
+
+  const navigate = useNavigate();
+  const setUser = useSetAtom(userAtom);
+  const setAuthorization = useSetAtom(authorizationAtom);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  // const navigate = useNavigate();
-  const jwt = useAtomValue(jwtAtom);
-
   const loggedIn = window.localStorage.getItem("isLoggedIn");
 
-
-  const data = {
-    user: {
-    "email": email,
-    "password": password,
-    },
-  };
-
-  function FetchData(e){
+  const FetchData = (e) => {
+  
     e.preventDefault();
 
-    fetch('http://localhost:3000/users', {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        Authorization: jwt,
-
-      },
-        body: JSON.stringify(data)
-    }).then((res) => {
-      if (res.ok) {
-        console.log(res.headers.get("Authorization"));
-        localStorage.setItem("token", res.headers.get("Authorization"));
-        return res.json();
-      } else {
-        throw new Error(res);
+    const data = {
+      "user": {
+        "email": email,
+        "password": password
       }
-    }) 
-    .then((json) => console.dir(json))
-    .catch((err) => console.error(err));
+    };
+
+    fetch(`${API_URL}users`, {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then((response) => {
+      setAuthorization(response.headers.get('authorization'));
+      Cookies.set('token', response.headers.get('authorization'));
+      return response.json();
+    })
+    .then((response) => {
+      setUser(response.user.id);
+      Cookies.set('id', response.user.id);
+      Cookies.set('fulluser', JSON.stringify(response.user));
+      navigate('/');
+    })
+    .catch((error) => console.log(error));
   }
-
-
-
-  return(
+  
+  return (
     <div>
       <div className="test">
         {loggedIn
@@ -59,14 +57,14 @@ const SignUp = () => {
         :
         <form onSubmit={FetchData}>
           <div className='Log-content'>
-            <input name='email' placeholder='Email' value={data.user.email} onChange={(e) => setEmail(e.target.value)}/>
-            <input name='password' type='password' placeholder='Mot de passe' value={data.user.password} onChange={(e) => setPassword(e.target.value)}/>
+            <input name='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input name='password' type='password' placeholder='Mot de passe' onChange={(e) => setPassword(e.target.value)}/>
             <input className='log_button' type='submit' value="S'enregistrer"/> 
           </div>
         </form>}
       </div>
     </div>
-  )
+  );
 }
 
-export default SignUp;
+export default Signup;
