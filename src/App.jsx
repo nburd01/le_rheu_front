@@ -9,7 +9,6 @@ import Footer from './components/Footer/footer';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import Posts from './components/Post/Blog';
-import MyProfile from './pages/Profile/Profile';
 import Disciplines from './components/Disciplines/Disciplines';
 import Football from './pages/Disciplines/Football';
 import SignUp from './pages/SignUp/SignUp';
@@ -46,7 +45,7 @@ function App() {
           <Route path='/register' element={<SignUp/>}/>
           <Route path='/login' element={<SignIn/>}/>
           <Route path='/sign_out' element={<SignOut/>}/>
-          <Route path="/profile/:id" element={<Profile/>} />
+          <Route path="/profil/:id" element={<Profile/>} />
           <Route path ='/disciplines' element= {<Disciplines />}/>
           <Route path ='/discipline/:id' element= {<Discipline/>}/>
           <Route path ='/football' element= {<Football />} />
