@@ -24,27 +24,6 @@ const TopBar = () => {
         SetToggleMenu(!toggleMenu)
     }
 
-    const logout = () =>{
-        fetch('http://localhost:3000/users/sign_out', {
-          method: 'delete',
-          headers: {
-              'Content-Type': 'application/json',
-              Authorization: jwt,
-
-          }
-        })
-    //   console.log('authorizationapp',authorizationapp)
-
-        .then((response) => {return response.json()})
-        .then((response) => {
-        //   setAuthorizationapp('');
-        //   setId('');
-          Cookies.set('id', "")
-          Cookies.set('token', "")
-          navigate('/')
-        })
-      }
-
     const [isLoading, setIsLoading] = React.useState(true);
     const [discipline, setDiscipline] = React.useState([]);
 
