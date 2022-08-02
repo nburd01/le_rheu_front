@@ -104,7 +104,7 @@ const TopBar = () => {
                     <li onClick={logout}>Se Déconnecter</li>
                     </>
          
-      }
+                }
                 </ul>
                 </div>
                 
@@ -130,19 +130,21 @@ const TopBar = () => {
             <div>
                 <nav>
                     <ul className="list">
-                    {!loggedIn
+                    {authorizationapp === ''
 
                         ?
+
+                        <>
+                        <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
+                        <li className="items"><a href="/le_rheu_front/sign_out">Log out</a></li>
+                        <li className="items" onClick={logout}>Se Déconnecter</li>
+                        </>
+                        :
                         <>
                         <li className="items"><a href="/le_rheu_front/login">Se connecter</a></li>
                         <li className="items"><a href="/le_rheu_front/register">Nous rejoindre</a></li>
                         <li className="items"><a href="/le_rheu_front/disciplines">Nos disciplines</a></li>
                         <li className="items"><a href="/le_rheu_front/contact">Nous contacter</a></li>
-                        </>
-                        :
-                        <>
-                        <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
-                        <li className="items"><a href="/le_rheu_front/sign_out">Log out</a></li>
                         </>
                     }
                     </ul>
