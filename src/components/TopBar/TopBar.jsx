@@ -9,14 +9,20 @@ import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 import axios from "axios";
 import SignOut from '../../pages/SignIn/SignOut';
-import {jwtAtom} from '../../stores/auth'
-import { useAtomValue } from "jotai";
+import { API_URL } from '../../stores/api_url';
+import {jwtAtom, authorizationAtom, userAtom} from '../../stores/auth'
+import { useAtom, useAtomValue } from 'jotai';
 
 
 const TopBar = () => {
 
     const loggedIn = window.localStorage.getItem("isLoggedIn");
     const jwt = useAtomValue(jwtAtom);
+    const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
+    const [id, setId] = useAtom(userAtom);
+
+    // const [id, setId] = useAtom(userAtom);
+
 
     const navigate = useNavigate();
     const [toggleMenu, SetToggleMenu] = useState(false)
@@ -51,6 +57,24 @@ const TopBar = () => {
             })
         }
 
+        const logout = () =>{
+            fetch(`${API_URL}users/sign_out`, {
+              method: 'delete',
+              headers: {
+                'Authorization': authorizationapp,
+                'Content-Type': 'application/json'
+              }
+            })
+            .then((response) => {return response.json()})
+            .then((response) => {
+              setAuthorizationapp('');
+              setId('');
+              Cookies.set('id', "")
+              Cookies.set('token', "")
+              navigate('/')
+            })
+          }
+
         const disciplineRender = discipline.map((discipline) => 
         <nav>
 
@@ -66,21 +90,21 @@ const TopBar = () => {
 
                 
                 <div className="menu">
-                <ul>
-                    {loggedIn
 
-                    ?
+                <ul>
+                {authorizationapp === ''?
                     <>
-                    <li><Link to='/'>Home</Link></li>
-                    {/* <li><Link to={'/myprofile/' + id}>Mon Profil</Link></li> */}
-                    <li><SignOut /></li>
+                    <li><Link to='/register'>S'inscrire</Link></li>
+                    <li><Link to='/login'>Se Connecter</Link></li> 
                     </>
                     :
                     <>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/register'>S'inscrire</Link></li><li><Link to='/login'>Se Connecter</Link></li>
+
+                    <li><Link to={'/profil/' + id}>Profil</Link></li>
+                    <li onClick={logout}>Se Déconnecter</li>
                     </>
-                    }
+         
+      }
                 </ul>
                 </div>
                 
