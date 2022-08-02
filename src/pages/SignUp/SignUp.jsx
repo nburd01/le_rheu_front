@@ -1,9 +1,8 @@
 import React from 'react';
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAtom } from "jotai";
-import {userAtom, authorizationAtom} from '../../stores/auth';
-import Cookies from 'js-cookie';
+// import {useNavigate } from "react-router-dom";
+import { useAtomValue } from "jotai";
+import {jwtAtom} from '../../stores/auth'
 
 import './SignUp.css'
 
@@ -11,9 +10,9 @@ const SignUp = () => {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const navigate = useNavigate();
-  const [userapp, setUserapp] = useAtom(userAtom);
-  const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
+  // const navigate = useNavigate();
+  const jwt = useAtomValue(jwtAtom);
+
   const loggedIn = window.localStorage.getItem("isLoggedIn");
 
 
@@ -32,7 +31,8 @@ const SignUp = () => {
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": authorizationapp,
+        Authorization: jwt,
+
       },
         body: JSON.stringify(data)
     }).then((res) => {

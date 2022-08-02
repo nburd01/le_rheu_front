@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {useParams } from 'react-router-dom';
 import Comments from "../Comments/Comments";
+import {jwtAtom} from '../../stores/auth'
+import { useAtomValue } from "jotai";
 
 function Post() {
   const id = useParams().id;
@@ -8,6 +10,7 @@ function Post() {
   const [postContent, setPostContent] = useState(" ");
   const [userId, setUserId] = useState(" ");
   const [postTag, setPostTag] = useState(" ");
+  const jwt = useAtomValue(jwtAtom);
 
 
   useEffect(() => {
@@ -15,7 +18,7 @@ function Post() {
       method: "get",
       headers: {
         "Content-Type": "application/json",
-        // Authorization: jwt,
+        Authorization: jwt,
       },
     })
       .then(response => response.json())
