@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-// import {useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { useAtomValue } from "jotai";
 import {jwtAtom} from '../../stores/auth'
 
@@ -10,7 +10,7 @@ const SignUp = () => {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const jwt = useAtomValue(jwtAtom);
 
   const loggedIn = window.localStorage.getItem("isLoggedIn");
@@ -37,13 +37,15 @@ const SignUp = () => {
         body: JSON.stringify(data)
     }).then((res) => {
       if (res.ok) {
-        console.log(res.headers.get("Authorization"));
         localStorage.setItem("token", res.headers.get("Authorization"));
         return res.json();
       } else {
         throw new Error(res);
       }
     }) 
+    .then((response) => {
+      navigate('/')
+    })
     .then((json) => console.dir(json))
     .catch((err) => console.error(err));
   }
