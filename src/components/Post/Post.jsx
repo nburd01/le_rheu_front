@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {useParams } from 'react-router-dom';
 import Comments from "../Comments/Comments";
-import {jwtAtom} from '../../stores/auth'
+import {authorizationAtom} from '../../stores/auth'
 import { useAtomValue } from "jotai";
 import { API_URL } from '../../stores/api_url';
 
@@ -11,7 +11,7 @@ function Post() {
   const [postContent, setPostContent] = useState(" ");
   const [userId, setUserId] = useState(" ");
   const [postTag, setPostTag] = useState(" ");
-  const jwt = useAtomValue(jwtAtom);
+  const jwt = useAtomValue(authorizationAtom);
 
 
   useEffect(() => {

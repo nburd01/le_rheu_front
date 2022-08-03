@@ -8,16 +8,11 @@ import Cookies from 'js-cookie';
 
 const SignIn = () => {
 
-
-  const loggedIn = window.localStorage.getItem("isLoggedIn");
-
   const navigate = useNavigate();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [user, setUser] = useAtom(userAtom);
-  const [authorization, setAuthorization] = useAtom(authorizationAtom);
-
-
+  const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
 
 
   function FetchData(e){
@@ -40,27 +35,33 @@ const SignIn = () => {
     })
     .then((response) => {
       console.log(response.headers.get("Authorization"));
-      setAuthorization(response.headers.get('authorization'));
-      Cookies.set('token', response.headers.get('authorization'));
+      setAuthorizationapp(response.headers.get('Authorization'));
+      Cookies.set('token', response.headers.get('Authorization'));
       return response.json();
     })
     .then((response) => {
-      // console.log(response);
       setUser(response.user.id);
       Cookies.set('id', response.user.id);
       Cookies.set('fulluser', JSON.stringify(response.user));
-      window.localStorage.setItem("isLoggedIn", true);
     })
     .catch((error) => console.log(error));
   }  
 
   return(
-    <div>
+    <div className="container">
 
-      <div className="test">
-          {loggedIn 
+      <div >
+          {authorizationapp === ""
           ?
-          <div className="container">
+          <form onSubmit={FetchData}>
+            <div className='Log-content'>
+              <input name='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
+              <input name='password' type='password' placeholder='Mot de passe' onChange={(e) => setPassword(e.target.value)}/>
+              <input className='log_button' type='submit' value="Se connecter"/> 
+            </div>
+          </form>        
+          : 
+         <div className="container">
             <div>
               <h1>You are logged in</h1>
             </div>
@@ -68,14 +69,6 @@ const SignIn = () => {
               <p>Welcome {email}</p>
             </div>
           </div>
-          : 
-          <form onSubmit={FetchData}>
-          <div className='Log-content'>
-            <input name='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
-            <input name='password' type='password' placeholder='Mot de passe' onChange={(e) => setPassword(e.target.value)}/>
-            <input className='log_button' type='submit' value="Se connecter"/> 
-          </div>
-        </form>
         }
         </div>
     </div>

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import {useParams } from 'react-router-dom';
 import './Profile.css'
-import {jwtAtom} from '../../stores/auth'
+import {authorizationAtom} from '../../stores/auth'
 import { useAtomValue } from "jotai";
 
 function Profile() {
   const id = useParams().id;
   const [userId,setUserId] = useState(" ");
-  const jwt = useAtomValue(jwtAtom);
+  const jwt = useAtomValue(authorizationAtom);
 
 
   useEffect(() => {

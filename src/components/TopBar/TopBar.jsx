@@ -8,22 +8,15 @@ import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 import axios from "axios";
-import SignOut from '../../pages/SignIn/SignOut';
 import { API_URL } from '../../stores/api_url';
-import {jwtAtom, authorizationAtom, userAtom} from '../../stores/auth'
+import {authorizationAtom, userAtom} from '../../stores/auth'
 import { useAtom, useAtomValue } from 'jotai';
 
 
 const TopBar = () => {
-
-    const loggedIn = window.localStorage.getItem("isLoggedIn");
-    const jwt = useAtomValue(jwtAtom);
+    const jwt = useAtomValue(authorizationAtom);
     const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
     const [id, setId] = useAtom(userAtom);
-
-    // const [id, setId] = useAtom(userAtom);
-
-
     const navigate = useNavigate();
     const [toggleMenu, SetToggleMenu] = useState(false)
     const toggleNav = () => {
@@ -67,12 +60,13 @@ const TopBar = () => {
             })
             .then((response) => {return response.json()})
             .then((response) => {
-              setAuthorizationapp('');
-              setId('');
-              Cookies.set('id', "")
-              Cookies.set('token', "")
+              setAuthorizationapp(null);
+              setId(null);
+              Cookies.remove('id')
+              Cookies.remove('token')
               navigate('/')
             })
+            console.log("cookies", Cookies)
           }
 
         const disciplineRender = discipline.map((discipline) => 
@@ -99,9 +93,8 @@ const TopBar = () => {
                     </>
                     :
                     <>
-
                     <li><Link to={'/profil/' + id}>Profil</Link></li>
-                    <li onClick={logout}>Se Déconnecter</li>
+                    <li><Link onClick={logout}>Se Déconnecter</Link></li>
                     </>
          
                 }
@@ -115,9 +108,9 @@ const TopBar = () => {
                 </div>
                 <div className='top-link'>
                     <ul className ="nav-links">
-                        {/* <img src="src/assets/img/blog1.jpg" alt="test" /> */}
+                        {/* <img src="src/assets/img/blog1.jpg" alt="test" />
                         {/* <img src={require('../../assets/img/blog1')} /> */}
-                        <img src={"../../assets/img/blog1"} />
+                        {/* <img src={"../../assets/img/blog1"} /> */}
                     </ul>
                 </div>
                 <div className="burger" onClick={toggleNav}>
@@ -133,19 +126,21 @@ const TopBar = () => {
                     {authorizationapp === ''
 
                         ?
-
-                        <>
-                        <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
-                        <li className="items"><a href="/le_rheu_front/sign_out">Log out</a></li>
-                        <li className="items" onClick={logout}>Se Déconnecter</li>
-                        </>
-                        :
                         <>
                         <li className="items"><a href="/le_rheu_front/login">Se connecter</a></li>
                         <li className="items"><a href="/le_rheu_front/register">Nous rejoindre</a></li>
                         <li className="items"><a href="/le_rheu_front/disciplines">Nos disciplines</a></li>
                         <li className="items"><a href="/le_rheu_front/contact">Nous contacter</a></li>
                         </>
+
+                        :
+
+                        <>
+                        <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
+                        {/* <li className="items"><a href="/le_rheu_front/sign_out">Log out</a></li> */}
+                        <li className="items" onClick={logout}>Se Déconnecter</li>
+                        </>
+
                     }
                     </ul>
                 </nav>
