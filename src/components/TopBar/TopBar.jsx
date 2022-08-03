@@ -40,7 +40,7 @@ const TopBar = () => {
 
         const getDiscipline = () => {
             axios(
-                'http://localhost:3000/disciplines/') 
+                `${API_URL}disciplines`) 
             .then(response => {
                 setIsLoading(false);
                 console.log("disciplines", response.data);

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";	
+import { API_URL } from '../../stores/api_url';
 
 
 const Feminines = () => {
@@ -11,7 +12,7 @@ const Feminines = () => {
 	},[]);
 
   const fetchFeminines= () => {
-    axios('http://localhost:3000/disciplines/5')
+    axios(`${API_URL}disciplines/5`)
     .then(response  =>{
       console.log("féminines", response.data);
       if (response.data) {
