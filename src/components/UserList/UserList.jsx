@@ -1,13 +1,13 @@
 import {useState,useEffect} from 'react';
 import { API_URL_LOCAL } from '../../store/api_url';
-import {jwtAtom} from '../../stores/auth'
+import {authorizationAtom} from '../../stores/auth'
 import { useAtomValue } from "jotai";
 
 
 export default function UserList() {
   
   const [data, setData]=useState([]);
-  const jwt = useAtomValue(jwtAtom);
+  const jwt = useAtomValue(authorizationAtom);
 
   const getData=()=>{
     fetch(API_URL_LOCAL

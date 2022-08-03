@@ -2,8 +2,8 @@ import './assets/stylesheets/main.css';
 import './assets/stylesheets/buttons.css';
 import './assets/stylesheets/containers.css';
 import './assets/stylesheets/img.css';
-import { Routes, Route} from 'react-router-dom';
 import './App.css';
+import { Routes, Route} from 'react-router-dom';
 import TopBar from './components/TopBar/TopBar';
 import Footer from './components/Footer/footer';
 import Home from './pages/Home/Home';
@@ -26,12 +26,11 @@ import Vision from './pages/Vision/Vision';
 import Labels from './pages/Labels/Labels';
 import Dashboard from './admin/Admin';
 import Comments from './components/Comments/Comments';
-import { Profiler } from 'react';
 import Profile from './pages/Profile/Profile';
 
 
 function App() {
-  // const loggedIn = window.localStorage.getItem("isLoggedIn");
+
   return (
 <div className="App">
 
