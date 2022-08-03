@@ -71,12 +71,11 @@ const TopBar = () => {
 
         const disciplineRender = discipline.map((discipline) => 
         <nav>
-
             <Link to ={discipline.discipline_root} className="discipline">{discipline.name}</Link>  
         </nav>
         );
 
-        const disciplinesRendering = isLoading ? "Loading"  : disciplineRender
+        const disciplinesRendering = isLoading ? <i class="fa-regular fa-loader fa-spin"></i> : disciplineRender
 
     return (
         <div className="topbar">
@@ -89,7 +88,8 @@ const TopBar = () => {
                 {authorizationapp === ''?
                     <>
                     <li><Link to='/register'>S'inscrire</Link></li>
-                    <li><Link to='/login'>Se Connecter</Link></li> 
+                    <li><Link to='/login'>Se Connecter</Link></li>    
+
                     </>
                     :
                     <>
