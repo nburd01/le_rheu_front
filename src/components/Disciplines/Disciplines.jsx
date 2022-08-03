@@ -2,6 +2,7 @@ import React from 'react'
 import axios from "axios";
 import { useEffect } from 'react'
 import { Link } from "react-router-dom";
+import { API_URL } from '../../stores/api_url';
 import './Disciplines.css'
 import '../../assets/stylesheets/containers.css';
 import '../../assets/stylesheets/buttons.css';
@@ -23,7 +24,7 @@ const [discipline, setDiscipline] = React.useState([]);
 
     const getDiscipline = () => {
         axios(
-            'http://localhost:3000/disciplines/') 
+            `${API_URL}disciplines`) 
         .then(response => {
 			setIsLoading(false);
             console.log("disciplines", response.data);

@@ -3,6 +3,7 @@ import {useParams } from 'react-router-dom';
 import Comments from "../Comments/Comments";
 import {jwtAtom} from '../../stores/auth'
 import { useAtomValue } from "jotai";
+import { API_URL } from '../../stores/api_url';
 
 function Post() {
   const id = useParams().id;
@@ -14,7 +15,7 @@ function Post() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/posts/" + id, {
+    fetch(`${API_URL}disciplines` + id, {
       method: "get",
       headers: {
         "Content-Type": "application/json",

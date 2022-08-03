@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";	
+import { API_URL } from '../../stores/api_url';
 
 
 const Football = () => {
@@ -11,7 +12,7 @@ const Football = () => {
 	},[]);
 
   const getDisciplines= () => {
-    axios('http://localhost:3000/disciplines')
+    axios(`${API_URL}disciplines`)
     .then(response  =>{
       console.log("DISCIPLINES", response.data);
       if (response.data) {
