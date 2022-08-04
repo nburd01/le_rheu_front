@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 
 const Blog = () => {
@@ -43,8 +44,9 @@ const Blog = () => {
 			}
 		]
 	};
-	const [isLoading, setIsLoading] = React.useState(true);
-	const [posts, setPosts] = React.useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+	const [posts, setPosts] = useState([]);
+	const [changeOnHover, setChangeOnHover] = useState("false")
 
 	useEffect(() => {
 		getData();
@@ -71,11 +73,24 @@ const Blog = () => {
 			backgroundImage: 'url(' + src + ')'
 		  })
 
+
+		function enterCard(e){
+			console.log("targetvalue",e.target)
+			setChangeOnHover(false) 
+			console.log("Is hovering ?",changeOnHover)
+		}
+
+		function exitCard(e){
+			// console.log(e.target)
+			setChangeOnHover(true) 
+			console.log("Is hovering ?",changeOnHover)
+		}	
+
 	const postsRender = posts.map((post) => 
 			<div className="container post">	
 				<div className="blog block">
-					<div className="blog bg" style={cardBackground(post.post_url)}>
-						<Link to={"/posts/" + post.id} className="blog card" key={post.id}>
+					<div className="blog bg" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? cardBackground(post.post_url) : null }>
+						<Link to={"/posts/" + post.id} className="blog card" key={post.id} >
 							<a href={post.date} className="blog date">
 								<p>{post.created_at}</p>
 							</a>
@@ -97,11 +112,12 @@ const Blog = () => {
 			</div>
 	);
 
+
 	// const content = isLoading ? (<div>Loading...</div>) : (<div>{postsRender}</div>)   
 
 	return (
 		<div className="container posts">
-			<h2>
+			<h2 >
 				<Link to={`/post`}>Actualité</Link>
 			</h2>
 			<Slider {...settings}>
