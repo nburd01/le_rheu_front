@@ -51,7 +51,7 @@ const TopBar = () => {
         }
 
         const logout = () =>{
-            fetch(`${API_URL}users/sign_out`, {
+            fetch(`${API_URL}users/sign_out   `, {
               method: 'delete',
               headers: {
                 'Authorization': authorizationapp,
@@ -64,9 +64,10 @@ const TopBar = () => {
               setId(null);
               Cookies.remove('id')
               Cookies.remove('token')
+              Cookies.remove('fulluser')
               navigate('/')
             })
-            console.log("cookies", Cookies)
+            console.log("cookies after logout :", Cookies)
           }
 
         const disciplineRender = discipline.map((discipline) => 
@@ -75,7 +76,7 @@ const TopBar = () => {
         </nav>
         );
 
-        const disciplinesRendering = isLoading ? <i class="fa-regular fa-loader fa-spin"></i> : disciplineRender
+        const disciplinesRendering = isLoading ? <i className="fa-regular fa-loader fa-spin"></i> : disciplineRender
 
     return (
         <div className="topbar">
@@ -94,7 +95,7 @@ const TopBar = () => {
                     :
                     <>
                     <li><Link to={'/profil/' + id}>Profil</Link></li>
-                    <li><Link onClick={logout}>Se Déconnecter</Link></li>
+                    {/* <li><Link onClick={logout}>Se Déconnecter</Link></li> */}
                     </>
          
                 }

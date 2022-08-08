@@ -32,6 +32,8 @@ function Post() {
       });
   }, [id]);
 
+ 
+
   return (
     <div className="container">
       <h2>Post {id}</h2>
@@ -44,6 +46,7 @@ function Post() {
       <div>
         {<Comments/>}
       </div>
+      <p id="demo"></p>
     </div>
   )
 }
