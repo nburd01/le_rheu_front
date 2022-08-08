@@ -46,7 +46,7 @@ const Blog = () => {
 	};
 	const [isLoading, setIsLoading] = useState(true);
 	const [posts, setPosts] = useState([]);
-	const [changeOnHover, setChangeOnHover] = useState("false")
+	const [changeOnHover, setChangeOnHover] = useState(false)
 
 	useEffect(() => {
 		getData();
@@ -89,8 +89,8 @@ const Blog = () => {
 	const postsRender = posts.map((post) => 
 			<div className="container post">	
 				<div className="blog block">
-					<div className="blog bg" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? cardBackground(post.post_url) : null }>
-						<Link to={"/posts/" + post.id} className="blog card" key={post.id} >
+					<div className="blog bg" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? {color: "red"} : {color: "green"} }>
+						<Link to={"/posts/" + post.id} className="blog card" key={post.id} style={cardBackground(post.post_url)} >
 							<a href={post.date} className="blog date">
 								<p>{post.created_at}</p>
 							</a>

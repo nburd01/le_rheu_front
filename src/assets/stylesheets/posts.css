@@ -25,10 +25,11 @@
 .blog.bg{
     border-radius: 20px;
     background: 
-    linear-gradient(to right, #fa709a 0%, #fee140 50%) no-repeat;
+    linear-gradient(to right, #fa709915 0%, #fee140 50%) no-repeat;
 }
 
-.blog.card{
+
+.card{
     display: flex;
     width: 20em;
     height: 650px;
@@ -38,9 +39,15 @@
     linear-gradient(to right, #fa709a 0%, #fee140 50%) no-repeat; */
     position: relative;
 }
-.blog.cardHover{
-    display: none;
-
+.card:hover{
+    display: flex;
+    width: 20em;
+    height: 650px;
+    align-items: flex-start;
+    flex-direction: column;
+    /* background: 
+    linear-gradient(to right, #fa709a 0%, #fee140 50%) no-repeat; */
+    position: relative;
 }
 
 .blog.title{
