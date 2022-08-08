@@ -37,9 +37,9 @@ const ScoreBar = () => {
     })
   }
 
-  const scoreRender = scores.map((score) =>
-  <div>
-    <p><bold>{score.locaux}</bold> {score.score_locaux} - {score.score_visiteurs} <bold>{score.visiteurs}</bold></p>
+  const scoreRender = scores.map((score, index) =>
+  <div key={index}>
+    <p style={{fontWeight: 'bold'}}>{score.locaux} {score.score_locaux} - {score.score_visiteurs} {score.visiteurs}</p>
     {score.division} {score.equipe} {score.categorie}
   </div>
   )
