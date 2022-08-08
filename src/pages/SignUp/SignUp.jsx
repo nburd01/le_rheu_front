@@ -16,53 +16,51 @@ const Signup = () => {
   const [password, setPassword] = useState("");
 
 
-  const FetchData = (e) => {
-    
+  function FetchData(e){
     e.preventDefault();
-
+ 
     const data = {
-      "user": {
-        "email": email,
-        "password": password
+      "user" :{
+         "email": email,
+         "password": password
       }
     };
 
-    fetch(`${API_URL}users`, {
+    fetch(API_URL + 'users', {
       method: 'post',
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Authorization': authorizationapp
+        'Content-Type': 'application/json'
       },
-
       body: JSON.stringify(data)
     })
+    .then((response) => {return response.json()})
     .then((response) => {
-      setAuthorizationapp(response.headers.get('Authorization'));
-      console.log(response.headers.authorization)
-      Cookies.set('token', response.headers.get('Authorization'));
-      console.log("Are there cookies ? :", 'token', response.headers.get('Authorization') )
-      return response.json();
+      fetch(API_URL + 'users/sign_in', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then((response) => {   
+      setAuthorizationapp([...response.headers.get('authorization')].join(''));
+      Cookies.set('token', [...response.headers.get('authorization')].join(''))
+      return response.json()
     })
 
     .then((response) => {
-      setUser(response.user.id);
-
+      setUser(response.user.id)
       Cookies.set('id', response.user.id);
-      console.log("What the cookies for user ID ? :",  Cookies.set('id', response.user.id) )
       Cookies.set('fulluser', JSON.stringify(response.user));
-      console.log("What is the fulluser ? :", 'fulluser', JSON.stringify(response.user) )
-
-      navigate('/');
+      navigate('/')
     })
-    .catch((error) => console.log(error));
+
+    })
   }
   
   return (
     <div className="container">
       <div >
-        {authorizationapp === ''
-        ?
         <form onSubmit={FetchData}>
           <div className='Log-content'>
             <input name='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
@@ -70,9 +68,6 @@ const Signup = () => {
             <input className='log_button' type='submit' value="S'enregistrer"/> 
           </div>
         </form>
-        :
-        <p>You are logged in</p>
-      }
       </div>
     </div>
   );

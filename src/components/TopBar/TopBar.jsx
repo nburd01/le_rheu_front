@@ -67,7 +67,6 @@ const TopBar = () => {
               Cookies.remove('fulluser')
               navigate('/')
             })
-            console.log("cookies after logout :", Cookies)
           }
 
         const disciplineRender = discipline.map((discipline, index) => 
@@ -95,6 +94,7 @@ const TopBar = () => {
                     :
                     <>
                     <li key="profile"><Link to={'/profil/' + id}>Profil</Link></li>
+                    <li key="logout"><Link to={'/'} onClick={logout}>Se deconnecter</Link></li>
                     </>
          
                 }
@@ -133,7 +133,6 @@ const TopBar = () => {
 
                         <>
                         <li key="li_nav5" className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
-                        {/* <li className="items"><a href="/le_rheu_front/sign_out">Log out</a></li> */}
                         <li key="li_nav6" className="items" onClick={logout}>Se Déconnecter</li>
                         </>
 
