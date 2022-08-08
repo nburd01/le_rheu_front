@@ -22,8 +22,8 @@ const Football = () => {
       }
     })
   }
-  const disciplinesRender = disciplines.map((discipline) =>
-    <div>
+  const disciplinesRender = disciplines.map((discipline, index) =>
+    <div key={index}>
       <p>  
         {discipline.id}
       </p>

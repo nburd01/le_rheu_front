@@ -41,10 +41,10 @@ const [discipline, setDiscipline] = React.useState([]);
         })
     }
 
-    const disciplineRender = discipline.map((discipline) => 
+    const disciplineRender = discipline.map((discipline, index) => 
 
 
-                    <div className="disciplines-card">
+                    <div key={index} className="disciplines-card">
                         <div className="tag">
                             <Link to={discipline.discipline_root}>
                                 <p>{discipline.name}</p>

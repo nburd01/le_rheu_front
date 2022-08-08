@@ -81,22 +81,21 @@ const Blog = () => {
 		}
 
 		function exitCard(e){
-			// console.log(e.target)
 			setChangeOnHover(true) 
 			console.log("Is hovering ?",changeOnHover)
 		}	
 
-	const postsRender = posts.map((post) => 
-			<div className="container post">	
+	const postsRender = posts.map((post, index) => 
+			<div key={index} className="container post">	
 				<div className="blog block">
 					<div className="blog bg" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? {color: "red"} : {color: "green"} }>
 						<Link to={"/posts/" + post.id} className="blog card" key={post.id} style={cardBackground(post.post_url)} >
-							<a href={post.date} className="blog date">
-								<p>{post.created_at}</p>
-							</a>
-							<a href={post.id} className="blog title">
+							<p className="blog date">
+								{post.created_at}
+							</p>
+							<p className="blog title">
 								{post.title}
-							</a>
+							</p>
 						</Link>
 					{post.tag_id?.length > 0 && (
 						<div className="blog topics">
@@ -111,9 +110,6 @@ const Blog = () => {
 				</div>
 			</div>
 	);
-
-
-	// const content = isLoading ? (<div>Loading...</div>) : (<div>{postsRender}</div>)   
 
 	return (
 		<div className="container posts">

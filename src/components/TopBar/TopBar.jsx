@@ -70,8 +70,8 @@ const TopBar = () => {
             console.log("cookies after logout :", Cookies)
           }
 
-        const disciplineRender = discipline.map((discipline) => 
-        <nav>
+        const disciplineRender = discipline.map((discipline, index) => 
+        <nav key={index}>
             <Link to ={discipline.discipline_root} className="discipline">{discipline.name}</Link>  
         </nav>
         );
@@ -88,14 +88,13 @@ const TopBar = () => {
                 <ul>
                 {authorizationapp === ''?
                     <>
-                    <li><Link to='/register'>S'inscrire</Link></li>
-                    <li><Link to='/login'>Se Connecter</Link></li>    
+                    <li key="register"><Link to='/register'>S'inscrire</Link></li>
+                    <li key="login"><Link to='/login'>Se Connecter</Link></li>    
 
                     </>
                     :
                     <>
-                    <li><Link to={'/profil/' + id}>Profil</Link></li>
-                    {/* <li><Link onClick={logout}>Se Déconnecter</Link></li> */}
+                    <li key="profile"><Link to={'/profil/' + id}>Profil</Link></li>
                     </>
          
                 }
@@ -108,11 +107,7 @@ const TopBar = () => {
                     </a>
                 </div>
                 <div className='top-link'>
-                    <ul className ="nav-links">
-                        {/* <img src="src/assets/img/blog1.jpg" alt="test" />
-                        {/* <img src={require('../../assets/img/blog1')} /> */}
-                        {/* <img src={"../../assets/img/blog1"} /> */}
-                    </ul>
+  
                 </div>
                 <div className="burger" onClick={toggleNav}>
                     <div className="line1"></div>
@@ -128,18 +123,18 @@ const TopBar = () => {
 
                         ?
                         <>
-                        <li className="items"><a href="/le_rheu_front/login">Se connecter</a></li>
-                        <li className="items"><a href="/le_rheu_front/register">Nous rejoindre</a></li>
-                        <li className="items"><a href="/le_rheu_front/disciplines">Nos disciplines</a></li>
-                        <li className="items"><a href="/le_rheu_front/contact">Nous contacter</a></li>
+                        <li key="li_nav1" className="items"><a href="/le_rheu_front/login">Se connecter</a></li>
+                        <li key="li_nav2" className="items"><a href="/le_rheu_front/register">Nous rejoindre</a></li>
+                        <li key="li_nav3" className="items"><a href="/le_rheu_front/disciplines">Nos disciplines</a></li>
+                        <li key="li_nav4" className="items"><a href="/le_rheu_front/contact">Nous contacter</a></li>
                         </>
 
                         :
 
                         <>
-                        <li className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
+                        <li key="li_nav5" className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
                         {/* <li className="items"><a href="/le_rheu_front/sign_out">Log out</a></li> */}
-                        <li className="items" onClick={logout}>Se Déconnecter</li>
+                        <li key="li_nav6" className="items" onClick={logout}>Se Déconnecter</li>
                         </>
 
                     }
