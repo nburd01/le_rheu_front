@@ -132,7 +132,7 @@ const TopBar = () => {
                         :
 
                         <>
-                        <li key="li_nav5" className="items"><a href="/le_rheu_front/MyProfile">Mon compte</a></li>
+                        <li key="li_nav5" className="items"><Link to={'/profil/' + id}>Profil</Link></li>
                         <li key="li_nav6" className="items" onClick={logout}>Se Déconnecter</li>
                         </>
 
