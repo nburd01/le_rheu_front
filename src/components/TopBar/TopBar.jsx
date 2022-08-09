@@ -60,8 +60,9 @@ const TopBar = () => {
             })
             .then((response) => {return response.json()})
             .then((response) => {
-              setAuthorizationapp(null);
-              setId(null);
+              setAuthorizationapp("");
+              console.log("authorizationapp test", authorizationapp)
+              setId("");
               Cookies.remove('id')
               Cookies.remove('token')
               Cookies.remove('fulluser')
