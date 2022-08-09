@@ -16,7 +16,6 @@ const SignIn = () => {
 
 
   function FetchData(e){
-    
     e.preventDefault();
     
     const data = {
@@ -33,25 +32,25 @@ const SignIn = () => {
       },
       body: JSON.stringify(data)
     })
-    .then((response) => {
-      console.log(response.headers.get("Authorization"));
-      setAuthorizationapp(response.headers.get('Authorization'));
-      Cookies.set('token', response.headers.get('Authorization'));
-      return response.json();
+    .then((response) => {   
+      setAuthorizationapp([...response.headers.get('authorization')].join(''));
+      Cookies.set('token', [...response.headers.get('authorization')].join(''))
+      return response.json()
     })
+
     .then((response) => {
-      setUser(response.user.id);
+      setUser(response.user.id)
       Cookies.set('id', response.user.id);
       Cookies.set('fulluser', JSON.stringify(response.user));
+      navigate('/')
     })
-    .catch((error) => console.log(error));
   }  
 
   return(
     <div className="container">
 
       <div >
-          {authorizationapp === ""
+          {authorizationapp === "" 
           ?
           <form onSubmit={FetchData}>
             <div className='Log-content'>
