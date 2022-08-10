@@ -35,6 +35,7 @@ const SignIn = () => {
     .then((response) => {   
       setAuthorizationapp([...response.headers.get('authorization')].join(''));
       Cookies.set('token', [...response.headers.get('authorization')].join(''))
+      console.log("This is the login bearer :",[...response.headers.get('authorization')].join('').split(" ")[1])
       return response.json()
     })
 
