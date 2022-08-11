@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";	
 import { API_URL } from '../../../stores/api_url';
+import './ScoresAdmin.css'
 
 
-const ScoreTest = () => {
+const ScoresAdmin = () => {
 
 
 	const [scores, setScores] = React.useState([]);
@@ -109,4 +110,4 @@ const ScoreTest = () => {
   )
 };
 
-export default ScoreTest;
+export default ScoresAdmin;
