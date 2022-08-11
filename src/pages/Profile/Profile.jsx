@@ -12,10 +12,12 @@ function Profile() {
   const [showForm, setShowForm] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
+  const [email, setEmail] = useState("");
+  // const [token, setToken] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3000/member-data/", {
-      method: "get",
+    fetch(API_URL + 'user/' +id , {
+      method: "get",  
       headers: {
         "Content-Type": "application/json",
       },
@@ -23,28 +25,34 @@ function Profile() {
     .then(response => response.json())
     .then(response => {
       setUserId(response.user_id);
+      console.log("userthings",response.user.id)
+      setEmail(response.user.email);
+      console.log("userthings",response.user.email)
     });
   }, [id]);
 
+
   const submitData = e => {
-    // setIsLoading(true);
     e.preventDefault();
     const data = {
       user: {
         first_name: firstName, 
         second_name: secondName,
+        email: email,
       },
     };
-    fetch(API_URL + "users", {
+    
+    
+    fetch(API_URL + "users/", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-  })
-  .then(response => response.json())
-  .then(response => {
-    console.log("Ajout des names users");
+    })
+    .then(response => response.json())
+    .then(response => {
+      console.log("Ajout des names users");
   })
   .catch(err => console.error(err));
   };
@@ -53,18 +61,20 @@ function Profile() {
   return (
     <div className="container">
       <h2>My Profile</h2>
-      <h3>User #{id}</h3>
+      <p>Id #{id}</p>
+      <p>Email :{email}</p>
+      {/* <p>Token{token}</p> <br/> */}
       <button className="button" onClick={() => setShowForm(!showForm)}>Compléter mon profil</button>
       {showForm && 
       <div>
-        <form onClick={submitData} action="/action_page.php" method="get">
+        <form  action="/action_page.php" method="get">
           <label for="fname">First name:</label>
           <input type="text" id="fname" name="fname"onChange={e => setFirstName(e.target.value)}/><br/>
 
           <label for="lname">Last name:</label>
           <input type="text" id="lname" name="lname" onChange={e => setSecondName(e.target.value)}/><br/>
 
-          <input type="submit" value="Submit"/>
+          <input type="submit" onClick={submitData} value="Submit" />
         </form>
       </div>}
       {/* <form id="profileForm">
