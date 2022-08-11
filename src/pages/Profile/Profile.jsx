@@ -67,7 +67,7 @@ function Profile() {
       <button className="button" onClick={() => setShowForm(!showForm)}>Compléter mon profil</button>
       {showForm && 
       <div>
-        <form  action="/action_page.php" method="get">
+        <form method="get">
           <label for="fname">First name:</label>
           <input type="text" id="fname" name="fname"onChange={e => setFirstName(e.target.value)}/><br/>
 
