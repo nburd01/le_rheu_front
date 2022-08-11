@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { API_URL } from '../../stores/api_url';
+import { API_URL } from '../../../stores/api_url';
+import './Scores.css'
 
 
 function Scores() {
@@ -60,7 +61,7 @@ function Scores() {
   };
 
   return (
-    <div className='container'>
+    <div className='container scores'>
       <h3>Scores</h3>
       <div>
       {locaux} {scoreLocaux} - {visiteurs} {scoreVisiteurs}
@@ -94,9 +95,8 @@ function Scores() {
           <input type="submit" onClick={(e) => submitData(e)} value="Submit" />
         </form>
       </div>}
-      
-
     </div>
+
 
 
   )

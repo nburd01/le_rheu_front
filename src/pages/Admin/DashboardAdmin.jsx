@@ -1,5 +1,5 @@
 import React from "react";
-import Scores from "../../components/Admin/Scores";
+import Scores from "../../components/Admin/Scores/Scores";
 
 
 
