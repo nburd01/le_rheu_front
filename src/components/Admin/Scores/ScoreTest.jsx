@@ -1,38 +1,44 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";	
 import { API_URL } from '../../../stores/api_url';
-import './Scores.css'
 
 
-function Scores() {
-  const [locaux,setLocaux] = useState("");
-  const [scoreLocaux,setScoreLocaux] = useState("");
-  const [visiteurs,setVisiteurs] = useState("");
-  const [scoreVisiteurs,setScoreVisiteurs] = useState("");
-  const [division, setDivision] = useState("");
-  const [equipe,setEquipe] = useState("");
-  const [categorie,setCategorie] = useState("");
-  const [showForm, setShowForm] = useState(false);
+const ScoreTest = () => {
+
+
+	const [scores, setScores] = React.useState([]);
+	const [isLoading, setIsLoading] = React.useState(true);
+    const [showForm, setShowForm] = useState(false);
+    const [locaux,setLocaux] = useState("");
+    const [scoreLocaux,setScoreLocaux] = useState("");
+    const [visiteurs,setVisiteurs] = useState("");
+    const [scoreVisiteurs,setScoreVisiteurs] = useState("");
+    const [division, setDivision] = useState("");
+    const [equipe,setEquipe] = useState("");
+    const [categorie,setCategorie] = useState("");
 
 
   useEffect(() => {
-    fetch(API_URL + 'scores/2', {
-      method: "get",  
-      headers: {
-        "Content-Type": "application/json",
-      },
+		getScores();
+	},[]);
+
+  const getScores= () => {
+    axios('http://localhost:3000/scores')
+    .then(response  =>{
+      setIsLoading(false);
+      console.log("Scores", response.data);
+
+      if (response.data) {
+        setScores(response.data);
+      } else{
+        console.log("An error happened")
+      }
     })
-    .then(response => response.json())
-    .then(response => {
-      setLocaux(response.locaux);
-      setScoreLocaux(response.score_locaux);
-      setVisiteurs(response.visiteurs);
-      setScoreVisiteurs(response.score_visiteurs);
-      setDivision(response.division);
-      setEquipe(response.equipe);
-      setCategorie(response.categorie);
-    });
-  }, []);
-  
+    .catch(error => {
+      setIsLoading(false);
+      console.log('An error occured', error);
+    })
+  }
 
   const submitData = e => {
     e.preventDefault();
@@ -59,18 +65,12 @@ function Scores() {
   })
   .catch(err => console.error(err));
   };
-  
 
-  return (
-    <div className='container scores'>
-      <h3>Scores</h3>
-      <div>
-      {locaux} {scoreLocaux} - {visiteurs} {scoreVisiteurs}
-      </div>
-      <div>
-        {division} {equipe} {categorie}
-      </div>
-      <button className="button" onClick={() => setShowForm(!showForm)}>Mettre à jour ce résultat</button>
+  const scoreRender = scores.map((score, index) =>
+  <div key={index}>
+    <p style={{fontWeight: 'bold'}}>{score.locaux} {score.score_locaux} - {score.score_visiteurs} {score.visiteurs}</p>
+    {score.division} {score.equipe} {score.categorie}
+    <button className="button" onClick={() => setShowForm(!showForm)}>Mettre à jour ce résultat</button>
       {showForm &&
       <div>
         <form  method="get">
@@ -96,11 +96,17 @@ function Scores() {
           <input type="submit" onClick={(e) => submitData(e)} value="Submit" />
         </form>
       </div>}
-    </div>
-
-
-
+  </div>
   )
-}
 
-export default Scores
+  return (
+    <div className="container scores">
+      <div className="resultats">
+      <h3>Scores</h3>
+        {scoreRender}
+      </div>
+    </div>
+  )
+};
+
+export default ScoreTest;
