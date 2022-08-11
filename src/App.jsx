@@ -24,9 +24,10 @@ import Post from './components/Post/Post';
 import Infrastructures from './pages/Infrastructures/Infrastructures';
 import Vision from './pages/Vision/Vision';
 import Labels from './pages/Labels/Labels';
-import Dashboard from './admin/Admin';
 import Comments from './components/Comments/Comments';
 import Profile from './pages/Profile/Profile';
+import Admin from './pages/Admin/DashboardAdmin';
+
 
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
           <Route path="/infrastructures" element={<Infrastructures />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/labels" element={<Labels />} />
-          <Route path="/admin" element={<Dashboard />} /> 
+          <Route path="/admin" element={< Admin/>} /> 
           <Route path="/*" element={<Home />} /> 
           
         </Routes>
