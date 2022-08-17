@@ -42,19 +42,54 @@ const [discipline, setDiscipline] = React.useState([]);
     }
 
     const disciplineRender = discipline.map((discipline, index) => 
-        <img src={discipline.discipline_img} alt="discipline_image"></img>
+
+
+                    // <div key={index} className="disciplines-card">
+                    //     <div className="tag">
+                    //         <Link to={discipline.discipline_root}>
+                    //             <p>{discipline.name}</p>
+                    //         </Link>
+
+                    //     </div>
+                        <div  key={index} className="img">
+			                <Link to={discipline.discipline_root}>
+                                <img src={discipline.discipline_img} alt="discipline_image"></img>
+
+                            </Link>
+                        </div>
+                    // </div>
+
+        
     );
 
     const disciplinesBlockRendering = isLoading ? "Loading"  : disciplineRender
 
     
     return (
-    <div className="container disciplines">
-		
-        <h2>
-			<Link to={`/disciplines`}>Disciplines</Link>
-		</h2>
-        <div className="disciplines-block">{disciplinesBlockRendering}</div>
-    </div>
-  )
+        <div className="container disciplines">
+        
+            <h2>
+                <Link to={`/disciplines`}>Disciplines</Link>
+            </h2>
+            <div className="disciplines-block">{disciplinesBlockRendering}</div>
+        </div>
+        )
 }
+
+
+// const disciplineRender = discipline.map((discipline, index) => 
+// <img src={discipline.discipline_img} alt="discipline_image"></img>
+// );
+
+// const disciplinesBlockRendering = isLoading ? "Loading"  : disciplineRender
+
+
+// return (
+// <div className="container disciplines">
+
+// <h2>
+//     <Link to={`/disciplines`}>Disciplines</Link>
+// </h2>
+// <div className="disciplines-block">{disciplinesBlockRendering}</div>
+// </div>
+// )
