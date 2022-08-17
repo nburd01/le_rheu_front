@@ -1,30 +1,16 @@
 .disciplines-block{
     display: grid;
-    grid-auto-flow: row;
+    grid-auto-columns: 1fr; /* all the columns are equal */
+    grid-auto-rows: 20em;
     grid-gap: 10px;
-    max-width: 60%;
-    max-height: 60%;
-    margin: 20px auto;
+    min-height: 100%;
+    min-width: auto;
 }
 
-.disciplines-block .img:first-child {
-    grid-area: span 4 / span 3;
-  }
-.disciplines-block .img:nth-child(2) {
-    grid-area: span 1 / span 2;
-  }
-.disciplines-block .img:nth-child(3) {
-    grid-area: span 2 / span 1;
-  }
-.disciplines-block .img:nth-child(4) {
-    grid-area: span 1 / span 2;
-  }
-.disciplines-block .img:nth-child(5) {
-    grid-area: span 2 / span 2;
-  }
-.disciplines-block .img:last-child {
-    grid-area: span 2 / span 1;
-  }
+.disciplines-block .img:nth-child(4n + 1) { grid-column: 1/span 2; }
+.disciplines-block .img:nth-child(4n + 2) { grid-column-start: 3; }
+.disciplines-block .img:nth-child(4n + 3) { grid-column-start: 1; }
+.disciplines-block .img:nth-child(4n + 4) { grid-column: 2/span 2; }
 
 .disciplines-card{
     display: inline-flex;
@@ -56,6 +42,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
   }
 
         
