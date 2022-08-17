@@ -42,23 +42,7 @@ const [discipline, setDiscipline] = React.useState([]);
     }
 
     const disciplineRender = discipline.map((discipline, index) => 
-
-
-                    <div key={index} className="disciplines-card">
-                        <div className="tag">
-                            <Link to={discipline.discipline_root}>
-                                <p>{discipline.name}</p>
-                            </Link>
-
-                        </div>
-                        <div className="img">
-			                <Link to={discipline.discipline_root}>
-                                <img src={discipline.discipline_img} alt="discipline_image"></img>
-                            </Link>
-                        </div>
-                    </div>
-
-        
+        <img src={discipline.discipline_img} alt="discipline_image"></img>
     );
 
     const disciplinesBlockRendering = isLoading ? "Loading"  : disciplineRender

@@ -66,6 +66,7 @@ const TopBar = () => {
               Cookies.remove('id')
               Cookies.remove('token')
               Cookies.remove('fulluser')
+              Cookies.remove('admin')
               navigate('/')
             })
           }

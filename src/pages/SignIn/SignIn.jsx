@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useAtom } from 'jotai';
-import {userAtom, authorizationAtom} from '../../stores/auth'
+import {userAtom, authorizationAtom, adminAtom, cookieAtom} from '../../stores/auth'
+import { useSetAtom, useAtomValue } from "jotai";
 import { API_URL } from '../../stores/api_url';
 import Cookies from 'js-cookie';
 
@@ -13,6 +14,10 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const [user, setUser] = useAtom(userAtom);
   const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
+  const setAdmin = useSetAtom(adminAtom);
+  const cookiechoice = useAtomValue(cookieAtom);
+
+
 
 
   function FetchData(e){
@@ -35,14 +40,19 @@ const SignIn = () => {
     .then((response) => {   
       setAuthorizationapp([...response.headers.get('authorization')].join(''));
       Cookies.set('token', [...response.headers.get('authorization')].join(''))
+      Cookies.set('fulluser', [...response.headers.get('authorization')].join(''))
+      Cookies.set('admin', [...response.headers.get('authorization')].join(''))
       console.log("This is the login bearer :",[...response.headers.get('authorization')].join('').split(" ")[1])
       return response.json()
     })
 
     .then((response) => {
       setUser(response.user.id)
+      setAdmin(response.user.admin.toString());
+
       Cookies.set('id', response.user.id);
       Cookies.set('fulluser', JSON.stringify(response.user));
+      Cookies.set("admin", response.user.admin.toString());
       navigate('/')
     })
   }  
