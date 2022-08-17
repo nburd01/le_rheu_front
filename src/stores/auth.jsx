@@ -11,3 +11,4 @@ export const authorizationAtom = atom(Cookies.get('token') ? Cookies.get('token'
 
 export const cookieAtom = atom(Cookies.get('token' ? true : false));
 
+
