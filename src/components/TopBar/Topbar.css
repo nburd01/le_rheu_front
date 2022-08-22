@@ -118,7 +118,7 @@
     font-weight:bold;
     text-transform: uppercase;
     padding: 10px 20px;
-    color: var(--third);
+    color: var(--fourth);
 }
 .topbar .disciplines a:hover {
     color: var(--primary);
