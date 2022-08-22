@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Polkadots from '../../assets/img/Polkadots.svg'
 
 
 const Blog = () => {
@@ -90,6 +91,9 @@ const Blog = () => {
 						<Link to={"/posts/" + post.id} className="blog illustration" key={post.id} style={cardBackground(post.postBg)} >
 						<div className ="patternTop">
 						</div>
+						<div className ="patternCenter">
+							<img src={Polkadots} alt='test'/>
+						</div>
 						<div className ="patternBottom">
 						</div>
 							<div className="blog content">
@@ -117,6 +121,7 @@ const Blog = () => {
 
 	return (
 		<div className="container posts">
+			
 			<h2 >
 				<Link to={`/post`}>Actualité</Link>
 			</h2>
