@@ -1,6 +1,6 @@
 .post{
     border-radius: 20px;
-    width: 40%;
+    width: 80%;
     gap: 10%;
     margin: 0;
     padding: 0;
@@ -52,23 +52,33 @@
     left: 2em;
     right: 2em;
     bottom: 5em;
+    background: #fee140;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    /* height: 300px; */
     overflow: visible;
+}
+
+.illustration:hover{
+    background-color:#fee140
 }
 
 .patternTop{
     height: 10em;
     width: 10em;
     background-color: #e8eef2;
+    background-repeat: no-repeat;
     position: absolute;
+    top:-20px;
+    left:-20px;
     border-radius: 20px 0 0 0;
+    z-index: -1;
 }
 .patternBottom{
     height: 100px;
     width: 100px;
     background-color: #e8eef2;
+    background-repeat: no-repeat;
     position: absolute;
     border-radius: 20px;
     bottom:-100px;
