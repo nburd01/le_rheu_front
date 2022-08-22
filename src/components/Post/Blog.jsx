@@ -12,7 +12,7 @@ import { useState } from "react";
 const Blog = () => {
 	const settings = {	
 		dots: true,
-		infinite: false,
+		infinite: true,
 		speed: 500,
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -86,7 +86,7 @@ const Blog = () => {
 		}	
 
 	const postsRender = posts.map((post, index) => 
-					<div key={index} className="blog card" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? {color: `var(--secondary)`} : {color: `var(--third)`} }>
+					<div key={index} className="blog card" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? {color: `var(--secondary)`} : {color: `var(--primary)`} }>
 						<div className ="patternTop">
 						</div>
 						<div className ="patternBottom">
@@ -111,8 +111,6 @@ const Blog = () => {
 						</div>
 						
 					)}
-						<div className ="patternBottom">
-						</div>
 					</div>
 					
 	);

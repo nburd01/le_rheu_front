@@ -9,7 +9,9 @@
 .card{
     display: flex;
     margin-bottom: 150px;
+    height: 500px;
 }
+
 .card:hover{
     display: flex;
     width: 20em;
@@ -19,21 +21,29 @@
     position: relative;
 }
 
-.slick-prev, .slick-next {
-    background-color: var(--secondary) !important;
-    border-radius: 40px;    
+.slick-arrow, .slick-prev, .slick-next {
+    /* background-color: #2678ae; */
+    border-radius: 40px; 
+    font-size: 30px;
+
 }
 .slick-prev::before, .slick-next::before {
-    background-color: var(--primary) !important;
+    background-color: #242b2e;
     border-radius: 20px;
-    size: 300%;
+    font-size: 100px;
+    right:0
+}
+
+.slick-arrow{
+    font-size: 30px;
 }
 
 
 .illustration{
+    min-height:200px;
+    display: flex;
     margin: 1em 0 1em 0;
     border-radius: 20px;
-    display: flex;
     width: 20em;
     align-items: flex-start;
     flex-direction: column;
@@ -42,10 +52,10 @@
     left: 2em;
     right: 2em;
     bottom: 5em;
+    background-size: cover;
     background-repeat: no-repeat;
+    height: 500px;
     overflow: visible;
-    height:500px;
-    z-index:2
 }
 
 .patternTop{
@@ -61,7 +71,7 @@
     background-color: #e8eef2;
     position: absolute;
     border-radius: 20px;
-    bottom:-20px;
+    bottom:-100px;
     right:-20px;
     z-index: -1;
 }
@@ -121,10 +131,10 @@
 
 
 @media only screen and (max-width: 960px) {
-    .blog-block{
+    .block{
         display: block;
     }
-    .blog-card{
+    .card{
         display: block;
     }
 }
