@@ -7,7 +7,7 @@ html{
   font-size: 16px;
   --primary:#FFFD00;
   --secondary:#242B2E; 
-  --third:#ffffff; 
+  --third:##e8eef2; 
   --fourth: #F2F2F2
   }
 
@@ -19,4 +19,5 @@ body{
       linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
       /* url(/assets/Index.png) top center / cover no-repeat; */
   overflow-x: hidden;
+  
 }
