@@ -88,7 +88,8 @@ const Blog = () => {
 	const postsRender = posts.map((post, index) => 
 					<div key={index} className="blog card" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? {color: `var(--secondary)`} : {color: `var(--third)`} }>
 						<div className ="patternTop">
-
+						</div>
+						<div className ="patternBottom">
 						</div>
 						<Link to={"/posts/" + post.id} className="blog illustration" key={post.id} style={cardBackground(post.postBg)} >
 							<div className="blog content">
@@ -99,7 +100,6 @@ const Blog = () => {
 									{post.title}
 								</p>
 							</div>
-
 						</Link>
 					{post.tag_id?.length > 0 && (
 						<div className="blog topics">
@@ -111,10 +111,10 @@ const Blog = () => {
 						</div>
 						
 					)}
-							<div className ="patternBottom">
-
-							</div>
+						<div className ="patternBottom">
+						</div>
 					</div>
+					
 	);
 
 	return (
