@@ -52,10 +52,9 @@ const [discipline, setDiscipline] = React.useState([]);
 
                     //     </div>
                         <div key={index} className="contHolder">
-			                {/* <Link to={discipline.discipline_root}> */}
+			                <Link to={discipline.discipline_root}>
                                 <img src={discipline.discipline_img} alt="discipline_image"></img>
-
-                            {/* </Link> */}
+                            </Link>
                         </div>
                     // </div>
 

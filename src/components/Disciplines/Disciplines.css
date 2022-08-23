@@ -77,6 +77,11 @@
     width: 90%;
     height: 90%;
     object-fit: cover;
+    filter: grayscale(0.6)
+  }
+.contHolder img:hover {
+    filter: grayscale(0.1);
+    transition: 0.5s
   }
 
         
