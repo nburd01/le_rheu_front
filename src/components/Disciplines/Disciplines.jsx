@@ -51,10 +51,9 @@ const [discipline, setDiscipline] = React.useState([]);
                     //         </Link>
 
                     //     </div>
-                        <div  key={index} className="img">
+                        <div key={index} className="contHolder">
 			                <Link to={discipline.discipline_root}>
                                 <img src={discipline.discipline_img} alt="discipline_image"></img>
-
                             </Link>
                         </div>
                     // </div>
@@ -71,7 +70,7 @@ const [discipline, setDiscipline] = React.useState([]);
             <h2>
                 <Link to={`/disciplines`}>Disciplines</Link>
             </h2>
-            <div className="disciplines-block">{disciplinesBlockRendering}</div>
+            <div className="disciplinesBlock">{disciplinesBlockRendering}</div>
         </div>
         )
 }
@@ -90,6 +89,6 @@ const [discipline, setDiscipline] = React.useState([]);
 // <h2>
 //     <Link to={`/disciplines`}>Disciplines</Link>
 // </h2>
-// <div className="disciplines-block">{disciplinesBlockRendering}</div>
+// <div className="disciplinesBlock">{disciplinesBlockRendering}</div>
 // </div>
 // )

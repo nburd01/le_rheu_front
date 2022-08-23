@@ -55,7 +55,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     overflow: visible;
-    background-size: 90%;
+    background-size: 70%;
     filter:grayscale(0.6);
 }
 
@@ -74,12 +74,13 @@
     width: 10em;
     background-color: #e8eef2;
     background-repeat: no-repeat;
-    position: absolute;
     top:-20px;
     left:-20px;
     border-radius: 20px 0 0 0;
     z-index: -20;
 }
+
+
 .illustration::after{
     position: absolute;
     content:'';

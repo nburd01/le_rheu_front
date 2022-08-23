@@ -1,4 +1,4 @@
-.disciplines-block{
+.disciplinesBlock{
     display: grid;
     grid-auto-columns: 1fr; /* all the columns are equal */
     grid-auto-rows: 20em;
@@ -7,49 +7,85 @@
     min-width: auto;
 }
 
-.disciplines-block .img:nth-child(4n + 1) { grid-column: 1/span 2; }
-.disciplines-block .img:nth-child(4n + 1)::before{
-    
-}
-.disciplines-block .img:nth-child(4n + 2) { grid-column-start: 3; }
-.disciplines-block .img:nth-child(4n + 3) { grid-column-start: 1; }
-.disciplines-block .img:nth-child(4n + 4) { grid-column: 2/span 2; }
-
-.disciplines-card{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 300px;
-    margin: 0.4em;
-    border-radius: 20px;
-    overflow: hidden;
+.contHolder{
+    position: relative;
 }
 
-.disciplines.card .img{
-    contain: center cover;
-    object-fit: cover; 
+.contHolder:nth-child(4n + 1) { grid-column: 1/span 2; }
 
-
+.contHolder:nth-child(4n + 1)::before{
+    position: absolute;
+    content:'';
+    height: 10em;
+    width: 10em;
+    background-color: #e8eef2;
+    background-repeat: no-repeat;
+    top:-20px;
+    left:-20px;
+    border-radius: 20px 0 0 0;
+    z-index: -20;
 }
 
-.disciplines.card.tag {
-    display: block;
-    margin: 1em 0 0 1em;
-    padding: 0.3em 0.5em;
-    border-radius: 1rem;
-    background: var(--primary);
-    font-weight: 500;
+.contHolder:nth-child(4n + 2) { grid-column-start: 3; }
+
+.contHolder:nth-child(4n + 2)::before{
+    position: absolute;
+    content:'';
+    height: 10em;
+    width: 10em;
+    background-color: #e8eef2;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    border-radius:  0 0 20px 0 ;
+    z-index: -20;
 }
 
-img {
-    width: 100%;
-    height: 100%;
+.contHolder:nth-child(4n + 3) { grid-column-start: 1; }
+.contHolder:nth-child(4n + 3)::before{
+    position: absolute;
+    content: url(../../assets/img/Polkadots.svg);
+    height: 10em;
+    width: 10em;
+    /* background-color: #e8eef2; */
+    background-repeat: no-repeat;
+    top:-20px;
+    left:-100px;
+    transform:rotate(90deg);
+    border-radius: 20px 0 0 0;
+    z-index: -20;
+}
+
+.contHolder:nth-child(4n + 4) { grid-column: 2/span 2; }
+.contHolder:nth-child(4n + 4)::before{
+    position: absolute;
+    content:'';
+    height: 10em;
+    width: 10em;
+    background-color: #e8eef2;
+    background-repeat: no-repeat;
+    top:-20px;
+    left:-20px;
+    border-radius: 20px 0 0 0;
+    z-index: -20;
+}
+
+
+.contHolder img {
+    position: absolute;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
-    
+    filter: grayscale(0.6)
+  }
+.contHolder img:hover {
+    filter: grayscale(0.1);
+    transition: 0.5s
   }
 
         
-.disciplines img:hover{
+/* .disciplines img:hover{
     border: solid 1px white;
-}
+} */
 
