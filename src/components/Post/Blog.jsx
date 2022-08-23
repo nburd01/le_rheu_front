@@ -88,13 +88,12 @@ const Blog = () => {
 
 	const postsRender = posts.map((post, index) => 
 					<div key={index} className="blog card" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? {color: `var(--secondary)`} : {color: `var(--primary)`} }>
-						<Link to={"/posts/" + post.id} className="blog illustration" key={post.id} style={cardBackground(post.postBg)} >
-						<div className ="patternTop">
+						<Link to={"/posts/" + post.id} className="blog illustration" key={post.id} >
+						<img src={post.postBg} alt="discipline_image"></img>
+						<div className ="patternBottom">
 						</div>
 						<div className ="patternCenter">
 							<img src={Polkadots} alt='test'/>
-						</div>
-						<div className ="patternBottom">
 						</div>
 							<div className="blog content">
 								<p className="blog date">

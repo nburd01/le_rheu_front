@@ -54,21 +54,22 @@
     bottom: 5em;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-color: rgba(0,0,0,0.5); */
     overflow: visible;
     background-size: 90%;
-    /* height:500px; */
+    filter:grayscale(0.6);
 }
 
 
 
 .illustration:hover{
-    background-color:#fee140;
+    background-color:#fee14022;
     transition: 0.5s ease-in-out;
-    /* z-index: -2; */
+    filter:grayscale(0);
 }
 
-.patternTop{
+.illustration::before{
+    position: absolute;
+    content:'';
     height: 10em;
     width: 10em;
     background-color: #e8eef2;
@@ -77,9 +78,24 @@
     top:-20px;
     left:-20px;
     border-radius: 20px 0 0 0;
-    z-index: -1;
+    z-index: -20;
 }
+.illustration::after{
+    position: absolute;
+    content:'';
+    height: 10em;
+    width: 10em;
+    background-color: #e8eef2;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:-20px;
+    left:-20px;
+    border-radius: 20px 0 0 0;
+    z-index: -20;
+}
+
 .patternBottom{
+    position: absolute;
     height: 100px;
     width: 100px;
     background-color: #e8eef2;
@@ -88,7 +104,7 @@
     border-radius: 20px;
     bottom:-100px;
     right:-15px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .patternCenter{
@@ -96,7 +112,7 @@
     top:-15px;
     height: 150px;
     width: 150px;
-    z-index: -1;
+    z-index: -10;
     transform: rotate(90deg);
 }
 
