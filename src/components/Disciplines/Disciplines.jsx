@@ -9,6 +9,7 @@ import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
+import '../../assets/stylesheets/tag.css';
 
 export default function Disciplines(props) {
 // const [cards, setCards] = React.useState([]);
@@ -54,6 +55,7 @@ const [discipline, setDiscipline] = React.useState([]);
                         <div key={index} className="contHolder">
 			                <Link to={discipline.discipline_root}>
                                 <img src={discipline.discipline_img} alt="discipline_image"></img>
+                                <div className='disciplinesTag'>{discipline.name}</div>
                             </Link>
                         </div>
                     // </div>

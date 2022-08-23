@@ -1,8 +1,8 @@
 .tag{
-    display: block;
+    display: flex;
     margin: 1em 0 0 1em;
     padding: 0.3em 0.5em;
     border-radius: 1rem;
-    background: var(--primary);
     font-weight: 500;
+    z-index: 10;
 }
