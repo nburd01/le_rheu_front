@@ -8,6 +8,9 @@
 }
 
 .disciplines-block .img:nth-child(4n + 1) { grid-column: 1/span 2; }
+.disciplines-block .img:nth-child(4n + 1)::before{
+    
+}
 .disciplines-block .img:nth-child(4n + 2) { grid-column-start: 3; }
 .disciplines-block .img:nth-child(4n + 3) { grid-column-start: 1; }
 .disciplines-block .img:nth-child(4n + 4) { grid-column: 2/span 2; }
