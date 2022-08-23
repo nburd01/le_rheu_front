@@ -37,8 +37,13 @@ const ScoreBar = () => {
     })
   }
 
+  const slideLeft = () => {
+    var slider = document.getElementById('scrollmenu');
+    slider.scrollLeft = slider.scrollLeft + 500;
+  };
+
   const scoreRender = scores.map((score, index) =>
-  <div key={index}>
+  <div className="uniqueScore"  key={index}>
     <p style={{fontWeight: 'bold'}}>{score.locaux} {score.score_locaux} - {score.score_visiteurs} {score.visiteurs}</p>
     {score.division} {score.equipe} {score.categorie}
   </div>
@@ -52,7 +57,10 @@ const ScoreBar = () => {
 
       <div className="resultats">
           <h2>Résultats</h2>
-        {scoreRender}
+          <div className="scrollBtn"/>
+          <div className="scrollmenu">
+            {scoreRender}
+          </div>
       </div>
     </div>
   )

@@ -84,7 +84,7 @@
 .contHolder img:hover {
     filter:grayscale(0) ;
     filter:hue-rotate(2.2);
-    filter: saturate(1.3);
+    filter: saturate(1.6);
     transition: 0.5s;
     /* box-shadow: 10px 5px 5px 10px #fee14022; */
   }

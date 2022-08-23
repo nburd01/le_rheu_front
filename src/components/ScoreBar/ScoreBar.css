@@ -34,6 +34,8 @@
     margin: 0 1em;
     justify-content: right;
     align-content:center;
+    overflow: auto;
+    white-space: nowrap;
 }
     .score-bar .resultats h2{
         color: var(--fourth) ;
@@ -46,6 +48,29 @@
         width: 2em;
         height: 2px;
     }
+
+.scrollmenu {
+  /* background-color: #333; */
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scrollmenu .uniqueScore {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+div.scrollmenu p:hover {
+background-color: #777;
+}
+.uniqueScore{
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+}
     @media only screen and (max-width: 960px) {
         .score-bar{
             display: block;
