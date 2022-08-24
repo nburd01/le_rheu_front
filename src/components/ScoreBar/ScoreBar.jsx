@@ -7,6 +7,7 @@ import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
 import '../../assets/stylesheets/tag.css';
+import ImageSlider from "./ImageSlider";
 
 const ScoreBar = () => {
 
@@ -37,17 +38,33 @@ const ScoreBar = () => {
     })
   }
 
-  const slideLeft = () => {
-    var slider = document.getElementById('scrollmenu');
-    slider.scrollLeft = slider.scrollLeft + 500;
-  };
+  // ------------------------------------------------
 
-  const scoreRender = scores.map((score, index) =>
-  <div className="uniqueScore"  key={index}>
-    <p style={{fontWeight: 'bold'}}>{score.locaux} {score.score_locaux} - {score.score_visiteurs} {score.visiteurs}</p>
-    {score.division} {score.equipe} {score.categorie}
-  </div>
-  )
+
+
+  // ------------------------------------------------
+
+  // const scoreRender = scores.map((score, index) =>
+  // <div key={index}>
+  //   <p className="abc" style={{fontWeight: 'bold'}}>{score.locaux} {score.score_locaux} - {score.score_visiteurs} {score.visiteurs}</p>
+  //   {score.division} {score.equipe} {score.categorie}
+  // </div>
+  // )
+
+  const scoreRender = [
+    { url: "https://picsum.photos/200/300", title: "beach" },
+    { url: "https://picsum.photos/200/300", title: "boat" },
+    { url: "https://picsum.photos/200/300g", title: "forest" },
+    { url: "https://picsum.photos/200/300", title: "city" },
+    { url: "https://picsum.photos/200/300", title: "italy" },
+  ];
+console.log("scoreRender",scoreRender)
+
+  const containerStyles = {
+    width: '280px',
+    height: '50px',
+    margin: '0 auto',
+  };
 
   return (
     <div className="score-bar">
@@ -57,9 +74,8 @@ const ScoreBar = () => {
 
       <div className="resultats">
           <h2>Résultats</h2>
-          <div className="scrollBtn"/>
-          <div className="scrollmenu">
-            {scoreRender}
+          <div style={containerStyles} className="scrollmenu">
+            <ImageSlider scoreRender={scoreRender}/>
           </div>
       </div>
     </div>
