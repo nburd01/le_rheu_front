@@ -1,10 +1,10 @@
 
-.score-bar{
+.scoreBar{
     display: flex;
     height: 20vh;
     background-image: linear-gradient(70deg, var(--primary) 50%, var(--secondary) 50%);
 }
-.score-bar .classements{
+.classements{
     display: inline-block;
     width: 50%;
     padding: 0 1em;
@@ -12,7 +12,7 @@
     justify-content: space-around;
     align-content:center;
 }
-.score-bar .classements img{
+.classements img{
         opacity: 0.1;
         rotate: -10deg;
         position:absolute;
@@ -20,7 +20,7 @@
         background-repeat: no-repeat;
 }
 
-.score-bar .classements h2::after{
+.classements h2::after{
     content:'';
     display: block;
     border: solid 0.1em var(--secondary, #000);
@@ -28,54 +28,24 @@
     width: 2em;
     height: 2px;
 }
-.score-bar .resultats{
+.resultats{
+    display: flex;
     width: 50%;
     padding: 0 1em;
-    margin: 0 1em;
-    justify-content: right;
-    align-content:center;
+    max-width: var(--max-width);
 }
-.score-bar .resultats h2{
+
+.resultats h2{
     color: var(--fourth) ;
 }
-.score-bar .resultats h2::after{
+.resultats h2::after{
     content:'';
     display: block;
     border: solid 0.1em var(--fourth, #000);
     position: absolute;
     width: 2em;
     height: 2px;
-}
-
-.uniqueScore{
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-}
-
-.scrollMenu .uniqueScore {
-    max-width: 100%;
-    display: none;
-  }
-
-.uniqueScore.active {
-display: block;
-animation: fade 0.8s;
-}
-
-.cont-btn {
-    width: 100%;
-    height: auto;
-    border: 1px solid #000;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-  }
-  .btn-nav {
-    font-size: 50px;
-    margin: 0 15px;
-    cursor: pointer;
-  }
+} 
     @media only screen and (max-width: 960px) {
         .score-bar{
             display: block;
@@ -86,7 +56,7 @@ animation: fade 0.8s;
             margin:0;
         }
 
-        .score-bar .classements{
+        .classements{
             display: flex;
             width: 100%;
             background-color: var(--primary);
@@ -94,7 +64,7 @@ animation: fade 0.8s;
             margin:0;
         }
 
-        .score-bar .resultats{
+        .resultats{
             display: flex;
             width: 100%;
             background-color: var(--secondary);
