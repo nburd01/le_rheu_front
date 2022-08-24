@@ -10,8 +10,6 @@ import ImageSlider from "./ImageSlider";
 
 const ScoreBar = () => {
 
-
-
   return (
     <div className="scoreBar">
          <div className="classements">
