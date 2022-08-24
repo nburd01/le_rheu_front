@@ -1,60 +1,101 @@
-import React from 'react'
-import {useState} from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";	
+import './ScoreBar.css'
+import './ImageSlider.css'
+import '../../assets/stylesheets/containers.css';
+import '../../assets/stylesheets/buttons.css';
+import '../../assets/stylesheets/img.css';
+import '../../assets/stylesheets/font.css';
+import '../../assets/stylesheets/main.css';
+import '../../assets/stylesheets/tag.css';
 
-function ImageSlider({scoreRender}) {
-    const [currentIndex, setCurrentIndex] = useState(0);
+const ScoreBar = () => {
 
-    const sliderStyles= {
-        height: '100%',
-        position: 'relative',
+
+	const [scores, setScores] = React.useState([]);
+  const [index, setIndex] = useState(0);
+
+
+
+  useEffect(() => {
+		getScores();
+	},[]);
+
+  const getScores= () => {
+    axios('http://localhost:3000/scores')
+    .then(response  =>{
+      // setIsLoading(false);
+      console.log("Scores", response.data);
+
+      if (response.data) {
+        setScores(response.data);
+      } else{
+        console.log("An error happened")
+      }
+    })
+    .catch(error => {
+      // setIsLoading(false);
+      console.log('An error occured', error);
+    })
+  }
+
+  useEffect(() => {
+    const lastIndex = scores.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
     }
-     const slideStyles= {
-         width: '100%',
-         height: '100%',
-         borderRadius: '10px',
-         backgroundImage: `url(${scoreRender[currentIndex].url})`,
-     }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, scores]);
 
-//     const rightArrowStyles = {
-//         position: "absolute",
-//         top: "50%",
-//         transform: "translate(0, -50%)",
-//         right: "32px",
-//         fontSize: "45px",
-//         color: "#fff",
-//         zIndex: 1,
-//         cursor: "pointer",
-//       };
-      
-//       const leftArrowStyles = {
-//         position: "absolute",
-//         top: "50%",
-//         transform: "translate(0, -50%)",
-//         left: "32px",
-//         fontSize: "45px",
-//         color: "#fff",
-//         zIndex: 1,
-//         cursor: "pointer",
-//       };
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index, scores]);
 
-//  const goToPrevious = () => {
-//     const isFirstSlide = currentIndex === 0;
-//     const newIndex = isFirstSlide ? scoreRender.length - 1 : currentIndex - 1;
-//     setCurrentIndex(newIndex);
-//   };
-//   const goToNext = () => {
-//     const isLastSlide = currentIndex === scoreRender.length - 1;
-//     const newIndex = isLastSlide ? 0 : currentIndex + 1;
-//     setCurrentIndex(newIndex);
-//   };
 
   return (
-    <div style={sliderStyles}>
-        {/* <div style={leftArrowStyles} onClick={goToNext}> ❰ </div>
-        <div style={rightArrowStyles} onClick={goToPrevious}> ❱ </div> */}
-        <div style={slideStyles}></div>
-    </div>
-  )
-}
+    <section className='section'>
+      <div className="section-center">
+      {scores.map((score, indexScore) => {
+          const { id, locaux, score_locaux, score_visiteurs, visiteurs} = score;
+          // ----------------------------------------------
+          let position = "nextSlide";
+          if (indexScore === index) {
+            position = "activeSlide";
+          }
+          if (
+            indexScore === index - 1 ||
+            (index === 0 && indexScore === scores.length - 1)
+          ) {
+            position = "lastSlide";
+          }
+          // ----------------------------------------------
 
-export default ImageSlider
+          return (
+            <article className={position} key={id}>
+                <p>{locaux}</p>
+                <p>{score_locaux}</p>
+                <p>{visiteurs}</p>
+                <p>{score_visiteurs}</p>
+            </article>
+          );})}
+
+          
+        <button className="prev" onClick={() => setIndex(index - 1)}>
+          <i className="fas fa-arrow-left" />
+        </button>
+        <button className="next" onClick={() => setIndex(index + 1)}>
+          <i className="fas fa-arrow-right" />
+        </button>      
+      </div>
+      </section>
+  
+)};
+
+export default ScoreBar;
