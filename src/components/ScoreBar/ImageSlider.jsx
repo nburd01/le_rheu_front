@@ -52,18 +52,19 @@ const ScoreBar = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
-    }, 5000);
+    }, 6000);
     return () => {
       clearInterval(slider);
     };
   }, [index, scores]);
+  console.log("scores",scores)
 
 
   return (
     <section className='section'>
       <div className="section-center">
       {scores.map((score, indexScore) => {
-          const { id, locaux, score_locaux, score_visiteurs, visiteurs} = score;
+          const { id, locaux, score_locaux, score_visiteurs, visiteurs, categorie, equipe, division} = score;
           // ----------------------------------------------
           let position = "nextSlide";
           if (indexScore === index) {
@@ -83,6 +84,9 @@ const ScoreBar = () => {
                 <p>{score_locaux}</p>
                 <p>{visiteurs}</p>
                 <p>{score_visiteurs}</p>
+                <p>{categorie}</p>
+                <p>{equipe}</p>
+                <p>{division}</p>
             </article>
           );})}
 
