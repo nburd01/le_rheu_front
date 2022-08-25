@@ -4,7 +4,6 @@ import './Players.css'
 
 const Players = () => {
   const settings = {
-
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -13,29 +12,48 @@ const Players = () => {
   return (
     <div className="container">
       <Slider {...settings}>
-      <div className='flex'>
-        <div className='photo'></div>
+      <div className='player-card'>
+        <div className='photo'>
+          <div className='pattern'></div>
+        </div>
         <div className='decoration'></div>
       </div>
       
-
-      <div className='flex'>
+      <div className='player-card'>
+        <div className='photo'>
+          <div className='pattern'></div>
+        </div>
         <div className='decoration'></div>
       </div>
       
+      <div className='player-card'>
+        <div className='photo'>
+          <div className='pattern'></div>
+        </div>
+        <div className='decoration'></div>
+      </div>
 
-      <div className='flex'>
+      <div className='player-card'>
+        <div className='photo'>
+          <div className='pattern'></div>
+        </div>
         <div className='decoration'></div>
       </div>
-      <div className='flex'>
+
+      <div className='player-card'>
+        <div className='photo'>
+          <div className='pattern'></div>
+        </div>
         <div className='decoration'></div>
       </div>
-      <div className='flex'>
+
+      <div className='player-card'>
+        <div className='photo'>
+          <div className='pattern'></div>
+        </div>
         <div className='decoration'></div>
       </div>
-      <div className='flex'>
-        <div className='decoration'></div>
-      </div>
+
     </Slider>
   </div>
   )
