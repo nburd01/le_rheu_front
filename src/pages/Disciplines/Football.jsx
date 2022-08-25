@@ -3,18 +3,18 @@ import axios from "axios";
 import { API_URL } from '../../stores/api_url';
 
 
-const Football = () => {
+const Feminines = () => {
 
-	const [disciplines, setDisciplines] = React.useState([]);
+    const [disciplines, setDisciplines] = React.useState([]);
 
   useEffect(() => {
-		getDisciplines();
+		fetchFeminines();
 	},[]);
 
-  const getDisciplines= () => {
-    axios(`${API_URL}disciplines`)
+  const fetchFeminines= () => {
+    axios(`${API_URL}disciplines/1`)
     .then(response  =>{
-      console.log("DISCIPLINES", response.data);
+      console.log("féminines", response.data);
       if (response.data) {
         setDisciplines(response.data);
       } else{
@@ -22,17 +22,16 @@ const Football = () => {
       }
     })
   }
-  const disciplinesRender = disciplines.map((discipline, index) =>
-    <div key={index}>
-      <p>  
-        {discipline.id}
-      </p>
-    </div>
-  );
+  const disciplinesRender = 
+  <div>
+      <h2>
+        {disciplines.name}
+      </h2>
+        {disciplines.id}
+  </div>
 
   return (
     <div className="container">
-        <h2>Football</h2>
         <p>{disciplinesRender}</p> 
     </div>
     )
@@ -40,4 +39,4 @@ const Football = () => {
   
 };
 
-export default Football;
+export default Feminines;
