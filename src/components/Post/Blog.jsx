@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import '../../assets/stylesheets/posts.css';
 import axios from "axios";	
-// import { API_URL } from "../../store/api_url";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";

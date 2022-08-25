@@ -2,12 +2,12 @@ import React from 'react'
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faLocationDot, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
 
   return (
-    <div className='flex'>
+    <div className='flex_contact'>
       <div className='row'>
           <div className='info'>
             <div className='center'>
@@ -61,7 +61,6 @@ export default function Contact() {
             <input className='sub_button'  type="submit" />
           </Link>
         </div>
-
       </div>
     </div>
   )
