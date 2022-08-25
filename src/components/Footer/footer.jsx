@@ -5,9 +5,7 @@ import '../../assets/stylesheets/buttons.css';
 import '../../assets/stylesheets/img.css';
 import '../../assets/stylesheets/font.css';
 import '../../assets/stylesheets/main.css';
-// import logo from '../assets/img/logo-leRheu.png';
-
-
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -18,19 +16,19 @@ export default function Footer() {
                 <h4>Le Club</h4>
                 <ul>
                     <li> 
-                        <a href="#">Le mot du Président</a>
+                        <Link to="/">Le mot du Président</Link>
                     </li>
                     <li>
-                        <a href="#">Ils font le club</a>
+                        <Link to="/">Ils font le club</Link>
                     </li>
                     <li>
-                        <a href="#">Les infrastructures</a>
+                        <Link to="/">Les infrastructures</Link>
                     </li>
                     <li>
-                        <a href="#">Le palmarès</a>
+                        <Link to="/">Le palmarès</Link>
                     </li>
                     <li>
-                        <a href="#">Communauté</a>
+                        <Link to="/">Communauté</Link>
                     </li>
                 </ul>
             </div>
@@ -38,7 +36,7 @@ export default function Footer() {
                 <h4>Les Actualités</h4>
                 <ul>
                     <li>
-                        <a href="#">Actualités</a>
+                        <Link to="/">Actualités</Link>
                     </li>
                 </ul>
             </div>
@@ -46,13 +44,13 @@ export default function Footer() {
                 <h4>Partenaires</h4>
                 <ul>
                     <li>
-                    <a href="#">Partenaires officiels</a>
+                        <Link to="/">Partenaires officiels</Link>
                     </li>
                     <li>
-                    <a href="#">Sponsors officiels</a>
+                        <Link to="/">Sponsors officiels</Link>
                     </li>
                     <li>
-                    <a href="#">Fournisseurs officiels</a>
+                        <Link to="/">Fournisseurs officiels</Link>
                     </li>
                 </ul>
             </div>
@@ -60,7 +58,7 @@ export default function Footer() {
                 <h4>La boutique</h4>
                 <ul>
                     <li>
-                    <a href="#">Nos produits</a>
+                        <Link to="/">Nos produits</Link>
                     </li>
                 </ul>
             </div>
@@ -68,13 +66,13 @@ export default function Footer() {
                 <h4>Nous contacter</h4>
                 <ul>
                     <li>
-                    <a href="#">Nous contacter</a>
+                        <Link to="/contact">Nous contacter</Link>
                     </li>
                     <li>
-                    <a href="#">Inscription à la newsletter</a>
+                        <Link to="/">Inscription à la newsletter</Link>
                     </li>
                     <li>
-                    <a href="#">Venir au club</a>
+                        <Link to="/">Venir au club</Link>
                     </li>
                 </ul>
             </div>
