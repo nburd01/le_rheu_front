@@ -70,9 +70,6 @@ const Blog = () => {
 				console.log('An error occured', error);
 			})
 		}
-		const cardBackground = (src) => ({
-			backgroundImage: 'url(' + src + ')'
-		  })
 
 
 		function enterCard(e){
