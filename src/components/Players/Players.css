@@ -1,14 +1,9 @@
-.flex {
-  position: relative;
-  width: 280px !important;
-  height: 300px;
-}
-
 .photo {
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 350px;
   position: absolute;
-  background-color: aqua;
+  background-color: black;
+  border-top-right-radius: 15px;
   z-index: 1;
   transition: 0.5s ease-in-out;
 }
@@ -16,15 +11,25 @@
 
 .decoration{
   position: absolute;;
-  width: 150px;
-  height: 150px;
-  background-color: orange;
+  width: 220px;
+  height: 350px;
+  border-top-right-radius: 15px;
+  background-color: yellow;
   transition: 0.3s;
 }
 
 .photo:hover + .decoration{
   transition-timing-function: ease-in;
-  transform: translateY(-20px) translateX(10px);
+  transform: translateY(-10px) translateX(10px);
+}
+
+.pattern{
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  border: 10px solid white;
+  transform: rotate(-10deg) translateY(10px) translateX(-15px);
 }
 
 h3 {
@@ -34,6 +39,34 @@ h3 {
 .slick-list{
   padding-top: 100px;
   padding-bottom: 100px;
-  height: 400px;
+  height: 500px;
+}
+
+.slick-prev {
+  background-color: yellow ;
+  transform: translate(-100%, -50%);
+  width: 50px;
+  height: 50px;
+}
+.slick-next {
+  background-color: yellow ;
+  transform: translate(100%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.slick-prev::before {
+  content: "";
+}
+
+.slick-next::before {
+  content: "";
+}
+
+.slick-prev:hover, .slick-next:hover {
+  background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.slick-prev:focus, .slick-next:focus {
+  outline: none;
 }
 
