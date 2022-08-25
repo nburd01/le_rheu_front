@@ -14,6 +14,7 @@ export default function Home() {
         <LeClub/>
         <DisciplinesBar/>
         <Blog/> 
+        <Players />
     </div>
   )
 }
