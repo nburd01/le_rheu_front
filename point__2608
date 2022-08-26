@@ -1,0 +1,51 @@
+Bilan__
+
+HEBERGEMENT
+    - non lancé
+    - déploiement prévu pour que vous ayez un oeil dessus
+
+BACK
+    - identification : ok
+    - Tables de données :
+        -créées et prêtes
+    - admin: 
+        - peut mettre à jour les résultats 
+    - authentification: complication perte de temps. Lesystème ne trouve pas l'utilisateur stocké donc difficultés à créer un chemin en fonction du statut. Recherche d'une alternative
+    - mailer: ok,
+    - blog: créé (+ commentaires et commentaires de commentaires) 
+
+BRANCHEMENTS
+    - 
+
+FRONT
+    - Design :
+        - Charte graphiques + elements
+            - atomic design
+            -  
+        - UXI : 
+            - structure / utilisation utilisateur
+    -Contenu: 
+        - Pages:
+            - Notre vision
+            - Label
+            - Infrastructures
+            - Pages de chaque discipline
+
+
+------------------------------------------------------------------------------
+A venir: 
+    - Espace Admin
+        - MAJ : classement, joueurs, membres, equipes, catégories; compétitions, adversaires, 
+
+
+
+------------------------------------------------------------------------------
+
+Pour résumer :
+    - site qui affiche enpremière page les scores, disciplines et actualités
+    - des bases de données prêtes
+    - On va se focus sur frontpour avoir un résultat finit, on pourra lancer le site puis on finit la partie admin pour auto-gestion
+
+Il nous faut:
+- un nom de domaine
+- adresse mail admin

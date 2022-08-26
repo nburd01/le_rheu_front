@@ -14,7 +14,7 @@
   width: 220px;
   height: 350px;
   border-top-right-radius: 15px;
-  background-color: var(--primary);
+  background-color: var(--fifth);
   transition: 0.3s;
 }
 
