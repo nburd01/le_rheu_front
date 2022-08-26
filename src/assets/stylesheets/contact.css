@@ -1,7 +1,7 @@
 .container-small .block-contact{
     background: var(--primary);
     padding : 2em;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .block-contact{
     display: flex;

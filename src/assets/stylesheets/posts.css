@@ -1,5 +1,5 @@
 .post{
-    border-radius: 20px;
+    border-radius: 10px;
     width: 80%;
     gap: 10%;
     margin: 0;
@@ -28,7 +28,7 @@
 
 .slick-prev::before, .slick-next::before {
     background-color: #2e2428;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 100px;
     right:0;
     height: 400px;
@@ -43,7 +43,7 @@
     min-height:200px;
     display: flex;
     margin: 1em 0 1em 0;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 20em;
     align-items: flex-end;
     flex-direction: column;
@@ -81,7 +81,7 @@
     background-repeat: no-repeat;
     top:-20px;
     left:-20px;
-    border-radius: 20px 0 0 0;
+    border-radius: 10px 0 0 0;
     z-index: -20;
 }
 
@@ -96,7 +96,7 @@
     position: absolute;
     top:-20px;
     left:-20px;
-    border-radius: 20px 0 0 0;
+    border-radius: 10px 0 0 0;
     z-index: -20;
 }
 
@@ -107,7 +107,7 @@
     background-color: #e8eef2;
     background-repeat: no-repeat;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 10px;
     bottom:-100px; 
     right:-15px;
     /* z-index: -1; */
