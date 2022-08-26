@@ -24,6 +24,7 @@ const Players = () => {
   };
   return (
     <div className="container">
+      <h2>Squad List</h2>
       <Slider {...settings}>
       <div className='player-card'>
         <div className='photo'>
@@ -33,7 +34,7 @@ const Players = () => {
         <div class="team__card__info ">
           <div class="team__card__info__content">
             <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Wielrennen</span>
+            <span class="team__card__info__description">Attaquant</span>
           </div>
           <div class="team__card__info__icon">
           <img src={hexagon_third} alt='test'   style={{ height: 53, width: 36 }}/>
@@ -49,7 +50,7 @@ const Players = () => {
          <div class="team__card__info ">
           <div class="team__card__info__content">
             <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Wielrennen</span>
+            <span class="team__card__info__description">Milieu</span>
           </div>
         </div>
       </div>
