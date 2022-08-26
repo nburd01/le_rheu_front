@@ -20,7 +20,7 @@
 
 .photo:hover + .decoration{
   transition-timing-function: ease-in;
-  transform: translateY(-10px) translateX(10px);
+  transform: translateY(-10px) translateX(10px) rotate(1deg);
 }
 
 .pattern{
