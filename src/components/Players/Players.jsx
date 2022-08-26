@@ -6,11 +6,11 @@ import LeftArrow from "../../assets/img/leftArrow.svg"
 
 const Players = () => {
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <img src={LeftArrow} alt="prevArrow" {...props} />
+    <img className="leftArrow" src={LeftArrow} alt="prevArrow" {...props} />
   );
 
   const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <img src={RightArrow} alt="Arrow" {...props} />
+    <img className="rigthArrow" src={RightArrow} alt="Arrow" {...props} />
   );
 
   const settings = {
@@ -33,6 +33,8 @@ const Players = () => {
           <div class="team__card__info__content">
             <span class="team__card__info__name">Jean Dupont</span>
             <span class="team__card__info__description">Wielrennen</span>
+          </div>
+          <div class="team__card__info__icon">
           </div>
         </div>
       </div>
