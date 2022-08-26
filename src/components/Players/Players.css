@@ -72,6 +72,14 @@ h3 {
   transition: all .3s ease;
 }
 
+.team__card__info__icon{
+  content: " ";
+  height: 30px;
+  width: 30px;
+  background-color: #fa709a;
+  color: #fee140
+}
+
 .slick-list{
   padding-top: 100px;
   padding-bottom: 100px;
@@ -79,16 +87,34 @@ h3 {
 }
 
 .slick-prev {
-  background-color: var(--primary) ;
+  background-color: var(--third) ;
   transform: translate(-100%, -50%);
   width: 50px;
   height: 50px;
+  border-radius: 0 1px 0 10px;
 }
 .slick-next {
-  background-color: var(--primary) ;
+  content: "";
+  height: 50px;
+  width: 50px;
+  background-color: var(--third) ;
   transform: translate(100%, -50%);
   width: 50px;
   height: 50px;
+  border-radius: 1px 0 10px 0;
+}
+.slick-prev:hover {
+  transform: translate(-100%, -50%)rotate(-3deg);
+  transition: all 0.3s;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 1px 0 10px;
+}
+.slick-next:hover {
+  transform: translate(100%, -50%) rotate(3deg);
+  width: 50px;
+  height: 50px;
+  border-radius: 1px 0 10px 0;
 }
 
 .slick-prev::before {
@@ -106,3 +132,17 @@ h3 {
   outline: none;
 }
 
+.rigthArrow{
+  content: "";
+  position: relative;
+  background-color: var(--secondary) ;
+  border-radius: 0 0 10px 0;
+
+}
+.leftArrow{
+  content: "";
+  position: relative;
+  background-color: var(--secondary) ;
+  border-radius: 0 0 10px 0;
+
+}

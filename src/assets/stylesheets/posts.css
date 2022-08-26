@@ -27,12 +27,12 @@
 }
 
 .slick-prev::before, .slick-next::before {
-    background-color: #242b2e;
+    background-color: #2e2428;
     border-radius: 20px;
     font-size: 100px;
     right:0;
     height: 400px;
-}
+}   
 
 .slick-arrow{
     font-size: 30px;
