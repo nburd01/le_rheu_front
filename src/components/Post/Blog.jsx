@@ -6,9 +6,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import Polkadots from '../../assets/img/Polkadots.svg'
-
+import RightArrow from "../../assets/img/rightArrow.svg"
+import LeftArrow from "../../assets/img/leftArrow.svg"
 
 const Blog = () => {
+	const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <img src={LeftArrow} alt="prevArrow" {...props} />
+  );
+
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <img src={RightArrow} alt="Arrow" {...props} />
+  );
+
 	const settings = {	
 		dots: true,
 		infinite: true,
@@ -16,6 +25,8 @@ const Blog = () => {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		initialSlide: 0,
+		prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
 		responsive:  [
 			{
 				breakpoint: 1024,
