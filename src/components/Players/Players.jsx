@@ -1,13 +1,25 @@
 import React from 'react'
 import Slider from "react-slick";
 import './Players.css'
+import RightArrow from "../../assets/img/rightArrow.svg"
+import LeftArrow from "../../assets/img/leftArrow.svg"
 
 const Players = () => {
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <img src={LeftArrow} alt="prevArrow" {...props} />
+  );
+
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <img src={RightArrow} alt="Arrow" {...props} />
+  );
+
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
   };
   return (
     <div className="container">
@@ -89,17 +101,6 @@ const Players = () => {
           </div>
         </div>
       </div>
-
-
-
-			
-{/* <svg width="35" height="35" class="team__card__info__icon">
-			<use xlink:href="/build/svg/symbol/svg/sprite.symbol.svg?v=2#icon-cycling"></use>
-</svg> */}
-					
-
-
-
     </Slider>
   </div>
   )
