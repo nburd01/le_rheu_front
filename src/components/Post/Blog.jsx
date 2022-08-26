@@ -6,16 +6,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import Polkadots from '../../assets/img/Polkadots.svg'
-import RightArrow from "../../assets/img/rightArrow.svg"
-import LeftArrow from "../../assets/img/leftArrow.svg"
+import flecheDroite from "../../assets/img/flecheDroite.svg"
+import flecheGauche from "../../assets/img/flecheGauche.svg"
 
 const Blog = () => {
 	const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <img src={LeftArrow} alt="prevArrow" {...props} />
+    <img src={flecheGauche} alt="prevArrow" {...props} />
   );
 
   const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <img src={RightArrow} alt="Arrow" {...props} />
+    <img src={flecheDroite} alt="Arrow" {...props} />
   );
 
 	const settings = {	
