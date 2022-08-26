@@ -27,10 +27,15 @@ import Labels from './pages/Labels/Labels';
 import Comments from './components/Comments/Comments';
 import Profile from './pages/Profile/Profile';
 import Admin from './pages/Admin/DashboardAdmin';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee, faHamburger } from '@fortawesome/free-solid-svg-icons'
 
 
 
 function App() {
+
+  library.add(fab, faCheckSquare, faCoffee, faHamburger)
 
   return (
 <div className="App">

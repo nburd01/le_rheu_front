@@ -52,6 +52,9 @@ h3 {
 }
 
 .team__card__info__content {
+  position: relative;
+  left: -50px;
+  top: 4px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -73,11 +76,14 @@ h3 {
 }
 
 .team__card__info__icon{
-  content: " ";
-  height: 30px;
-  width: 30px;
-  background-color: #fa709a;
-  color: #fee140
+  color: #fee140;
+  position: absolute;
+  top:0;
+  left: -110px;
+  height: 150px;
+  width: 150px;
+  z-index: -10;
+  transform: rotate(90deg);
 }
 
 .slick-list{
