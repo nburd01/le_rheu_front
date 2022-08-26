@@ -5,7 +5,7 @@
 
 html{
   font-size: 16px;
-  --primary:#FFFD00;
+  --primary: #FFFD00;
   --secondary:#242B2E; 
   --third:#e8eef2; 
   --fourth: #ffffff;
@@ -21,4 +21,4 @@ body{
       /* url(/assets/Index.png) top center / cover no-repeat; */
   overflow-x: hidden;
   
-}
+} 
