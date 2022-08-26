@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import '../../assets/stylesheets/posts.css';
 import axios from "axios";	
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import Polkadots from '../../assets/img/Polkadots.svg'
 
 
