@@ -2,7 +2,7 @@
   width: 220px;
   height: 350px;
   position: absolute;
-  background-color: black;
+  background-color: var(--secondary);
   border-top-right-radius: 15px;
   z-index: 1;
   transition: 0.5s ease-in-out;
