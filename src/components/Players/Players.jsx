@@ -1,16 +1,17 @@
 import React from 'react'
 import Slider from "react-slick";
 import './Players.css'
-import RightArrow from "../../assets/img/rightArrow.svg"
-import LeftArrow from "../../assets/img/leftArrow.svg"
+import hexagon_third from '../../assets/img/hexagon_third.svg'
+import flecheDroite from "../../assets/img/flecheDroite.svg"
+import flecheGauche from "../../assets/img/flecheGauche.svg"
 
 const Players = () => {
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <img className="leftArrow" src={LeftArrow} alt="prevArrow" {...props} />
+    <img className="leftArrow" src={flecheGauche} alt="prevArrow" {...props} />
   );
 
   const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <img className="rigthArrow" src={RightArrow} alt="Arrow" {...props} />
+    <img className="rigthArrow" src={flecheDroite} alt="Arrow" {...props} />
   );
 
   const settings = {
@@ -35,6 +36,7 @@ const Players = () => {
             <span class="team__card__info__description">Wielrennen</span>
           </div>
           <div class="team__card__info__icon">
+          <img src={hexagon_third} alt='test'   style={{ height: 53, width: 36 }}/>
           </div>
         </div>
       </div>
