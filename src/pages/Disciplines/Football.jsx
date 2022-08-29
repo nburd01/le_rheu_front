@@ -8,10 +8,10 @@ const Feminines = () => {
     const [disciplines, setDisciplines] = React.useState([]);
 
   useEffect(() => {
-		fetchFeminines();
+		fetchFootball();
 	},[]);
 
-  const fetchFeminines= () => {
+  const fetchFootball = () => {
     axios(`${API_URL}disciplines/1`)
     .then(response  =>{
       console.log("féminines", response.data);
