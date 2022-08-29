@@ -8,11 +8,12 @@ const Feminines = () => {
     const [disciplines, setDisciplines] = React.useState([]);
 
   useEffect(() => {
-		fetchFeminines();
+		fetchFutsal();
 	},[]);
 
-  const fetchFeminines= () => {
+  const fetchFutsal= () => {
     axios(`${API_URL}disciplines/3`)
+
     .then(response  =>{
       console.log("féminines", response.data);
       if (response.data) {

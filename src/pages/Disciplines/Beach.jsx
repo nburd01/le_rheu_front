@@ -8,10 +8,10 @@ const Feminines = () => {
     const [disciplines, setDisciplines] = React.useState([]);
 
   useEffect(() => {
-		fetchFeminines();
+		fetchBeach();
 	},[]);
 
-  const fetchFeminines= () => {
+  const fetchBeach= () => {
     axios(`${API_URL}disciplines/2`)
     .then(response  =>{
       console.log("féminines", response.data);
