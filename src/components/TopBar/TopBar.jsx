@@ -18,11 +18,6 @@ const TopBar = () => {
     const [authorizationapp, setAuthorizationapp] = useAtom(authorizationAtom);
     const [id, setId] = useAtom(userAtom);
     const navigate = useNavigate();
-    const [toggleMenu, SetToggleMenu] = useState(false)
-    const toggleNav = () => {
-        SetToggleMenu(!toggleMenu)
-    }
-
     const [isLoading, setIsLoading] = React.useState(true);
     const [discipline, setDiscipline] = React.useState([]);
 
@@ -104,22 +99,21 @@ const TopBar = () => {
                 </div>
                 
                 <div className="logo">
-                    <a href="/le_rheu_front/">
+                    <a className='logo-link' href="/le_rheu_front/">
                         <img className="lerheu-logo" src={require("../../assets/img/logo-leRheu.png")} alt={"S.C. Le Rheu"}/>
                     </a>
                 </div>
                 <div className='top-link'>
   
                 </div>
-                <div className="burger" onClick={toggleNav}>
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                    <div className="line3"></div>
-                </div>
+
             </div>
-            {toggleMenu &&(
-            <div>
+
+            <div className='burger-div'>
                 <nav>
+                <label>
+                <input type="checkbox" />
+                    <span class="menu"> <span class="hamburger"></span> </span>
                     <ul className="list">
                     {authorizationapp === ''
 
@@ -140,9 +134,10 @@ const TopBar = () => {
 
                     }
                     </ul>
+                    </label>
                 </nav>
             </div>
-            )}
+
             <div className="disciplines">
                 {disciplinesRendering}
             </div>
