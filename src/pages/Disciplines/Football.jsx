@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";	
 import { API_URL } from '../../stores/api_url';
+import Blog from "../../components/Post/Blog";
 
 
 const Feminines = () => {
@@ -14,7 +15,7 @@ const Feminines = () => {
   const fetchFootball = () => {
     axios(`${API_URL}disciplines/1`)
     .then(response  =>{
-      console.log("féminines", response.data);
+      console.log("football", response.data);
       if (response.data) {
         setDisciplines(response.data);
       } else{
@@ -32,7 +33,9 @@ const Feminines = () => {
 
   return (
     <div className="container">
-        <p>{disciplinesRender}</p> 
+        <p>{disciplinesRender}</p>
+        <Blog/>
+
     </div>
     )
 
