@@ -108,16 +108,16 @@ const Blog = () => {
 								</p>
 							</div>
 						</Link>
-					{post.tag_id?.length > 0 && (
+					{/* {post.tag_id?.length > 0 && (
 						<div className="blog topics">
 							{post.tag_id.map((tag) => (
 								<a href={post.tag_id} key={tag} className="blog labels">
 									{tag}
 								</a>
-							))}
-						</div>
+							// ))}
+						</div> */}
 						
-					)}
+					{/* )} */}
 					</div>
 					
 	);
