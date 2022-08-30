@@ -15,8 +15,10 @@ const ScoreBar = () => {
          <div className="classements">
         <h2>Classements</h2>
       </div>
-      <div className="resultats"></div>
+      <div className="resultats">
+        <h2>Resultats</h2> 
         <ImageSlider />
+      </div>
     </div>
   
 )};

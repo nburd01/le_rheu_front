@@ -101,3 +101,11 @@
     transform:rotate(-2deg);
 }
 
+@media only screen and (max-width: 768px) {
+    .contHolder:nth-child(4n + 1), 
+    .contHolder:nth-child(4n + 2), 
+    .contHolder:nth-child(4n + 3),
+    .contHolder:nth-child(4n + 4){
+      grid-column: 1;
+    }
+  }

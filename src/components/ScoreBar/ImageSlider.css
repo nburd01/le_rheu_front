@@ -1,28 +1,12 @@
 
-.section {
-  width: 90vw;
-  margin: 5rem auto;
-  max-width: 1170px;
-}
-
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
-}
 
 
 
 .section-center {
-  /* margin: 0 auto; */
-  margin-top: 4rem;
-  /* width: 80vw; */
-  /* height: 450px; */
-  max-width: 800px;
+  width: 200px;
   text-align: center;
   position: relative;
   display: flex;
-  /* overflow: hidden; */
 }
 
 article {
@@ -123,4 +107,14 @@ article h4 {
     height: 2rem;
     font-size: 1.5rem;
   }
+}
+
+.flex-score{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.locaux {
+  padding-right: 30px;
 }

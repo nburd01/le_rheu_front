@@ -29,17 +29,16 @@ const Blog = () => {
     nextArrow: <SlickArrowRight />,
 		responsive:  [
 			{
-				breakpoint: 1024,
+				breakpoint: 1100,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 1,
+					slidesToScroll: 2,
 					dots: true
 				}
 			},
 			{
-				breakpoint: 700,
+				breakpoint: 776,
 				settings: {
-					centerMode: true,
 					slidesToShow: 1,
 					slidesToScroll: 1,
 				}
@@ -47,7 +46,6 @@ const Blog = () => {
 			{
 				breakpoint: 480,
 				settings: {
-					
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}

@@ -60,8 +60,47 @@ const ScoreBar = () => {
   console.log("scores",scores)
 
 
+  // ...
+  const next = () => {
+    setIndex(index - 1)
+  }
+
+  const prev = () => {
+    setIndex(index + 1)
+  }
+
+  const [touchPosition, setTouchPosition] = useState(null)
+
+  const handleTouchStart = (e) => {
+      const touchDown = e.touches[0].clientX
+      setTouchPosition(touchDown)
+  }
+
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition
+
+    if(touchDown === null) {
+        return
+    }
+
+    const currentTouch = e.touches[0].clientX
+    const diff = touchDown - currentTouch
+
+    if (diff > 5) {
+        next()
+    }
+
+    if (diff < -5) {
+        prev()
+    }
+
+    setTouchPosition(null)
+  }
+
+
   return (
-    <section className='section'>
+
       <div className="section-center">
       {scores.map((score, indexScore) => {
           const { id, locaux, score_locaux, score_visiteurs, visiteurs, categorie, equipe, division} = score;
@@ -79,26 +118,34 @@ const ScoreBar = () => {
           // ----------------------------------------------
 
           return (
-            <article className={position} key={id}>
-                <p>{locaux}</p>
-                <p>{score_locaux}</p>
-                <p>{visiteurs}</p>
-                <p>{score_visiteurs}</p>
+            <article onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} className={position} key={id}>
+              <div className="flex-score">
+                <div className="locaux">
+                  <p>{locaux}</p>
+                  <p>{score_locaux}</p>
+                </div>
+                <div>
+                  <p>{visiteurs}</p>
+                  <p>{score_visiteurs}</p>
+                </div>
+              </div>
+              <div>
                 <p>{categorie}</p>
                 <p>{equipe}</p>
                 <p>{division}</p>
+              </div>
             </article>
           );})}
 
           
-        <button className="prev" onClick={() => setIndex(index - 1)}>
+        {/*<button className="prev" onClick={() => setIndex(index - 1)}>
           <i className="fas fa-arrow-left" />
         </button>
         <button className="next" onClick={() => setIndex(index + 1)}>
           <i className="fas fa-arrow-right" />
-        </button>      
+          </button> */}     
       </div>
-      </section>
+
   
 )};
 

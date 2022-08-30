@@ -30,7 +30,8 @@
 }
 .resultats{
     display: flex;
-    width: 50%;
+    justify-content: center;
+
     padding: 0 1em;
     max-width: var(--max-width);
 }
@@ -47,30 +48,13 @@
     height: 2px;
 } 
     @media only screen and (max-width: 960px) {
-        .score-bar{
-            display: block;
-            height: auto;
-            justify-content: left;
-            background-image:none;
-            padding: 0;
-            margin:0;
+        .scoreBar{
+            display: flex;
+            height: 20vh;
+            background-image: linear-gradient(70deg, var(--primary) 50%, var(--secondary) 50%);
         }
 
-        .classements{
-            display: flex;
-            width: 100%;
-            background-color: var(--primary);
-            padding: 0;
-            margin:0;
-        }
-
-        .resultats{
-            display: flex;
-            width: 100%;
-            background-color: var(--secondary);
-            padding: 0;
-            margin:0;
-            
-        }
     }
-
+p{
+    color: orange;
+}

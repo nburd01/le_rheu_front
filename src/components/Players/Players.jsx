@@ -21,6 +21,30 @@ const Players = () => {
     slidesToScroll: 1,
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
+    responsive:  [
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 750,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 520,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
   };
   return (
     <div className="container">
