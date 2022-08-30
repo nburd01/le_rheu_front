@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+	import React, { useEffect, useState } from "react";
 import '../../assets/stylesheets/posts.css';
 import axios from "axios";	
 import Slider from "react-slick";

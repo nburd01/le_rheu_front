@@ -1,0 +1,19 @@
+.heroBlog{
+    display: grid;
+}
+
+.heroImage{
+    grid-column: 1 / 4;
+    grid-row: 1 / 5;
+    
+}
+.heroTitle{
+    grid-column: 4 / 6;
+    grid-row: 1 / 1;
+    
+}
+.heroContent{
+    grid-column: 4 / 6;
+    grid-row: 2 / 2;
+    
+}

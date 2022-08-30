@@ -3,6 +3,7 @@ import axios from "axios";
 import { API_URL } from '../../stores/api_url';
 import Blog from "../../components/Post/Blog";
 import Players from "../../components/Players/Players";
+import { HeroBlog } from "../../components/Post/heroBlog";
 
 
 const Feminines = () => {
@@ -35,6 +36,7 @@ const Feminines = () => {
   return (
     <div className="container">
         <p>{disciplinesRender}</p>
+        <HeroBlog/>
         <Blog/>
         <Players/>
 
