@@ -31,12 +31,12 @@ const Players = () => {
           <div className='pattern'></div>
         </div>
         <div className='decoration'></div>
-        <div class="team__card__info ">
-          <div class="team__card__info__content">
-            <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Attaquant</span>
+        <div className="team__card__info ">
+          <div className="team__card__info__content">
+            <span className="team__card__info__name">Jean Dupont</span>
+            <span className="team__card__info__description">Attaquant</span>
           </div>
-          <div class="team__card__info__icon">
+          <div className="team__card__info__icon">
           <img src={hexagon_third} alt='test'   style={{ height: 53, width: 36 }}/>
           </div>
         </div>
@@ -47,10 +47,10 @@ const Players = () => {
           <div className='pattern'></div>
         </div>
         <div className='decoration'></div>
-         <div class="team__card__info ">
-          <div class="team__card__info__content">
-            <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Milieu</span>
+         <div className="team__card__info ">
+          <div className="team__card__info__content">
+            <span className="team__card__info__name">Jean Dupont</span>
+            <span className="team__card__info__description">Milieu</span>
           </div>
         </div>
       </div>
@@ -60,10 +60,10 @@ const Players = () => {
           <div className='pattern'></div>
         </div>
         <div className='decoration'></div>
-         <div class="team__card__info ">
-          <div class="team__card__info__content">
-            <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Gardien de but</span>
+         <div className="team__card__info ">
+          <div className="team__card__info__content">
+            <span className="team__card__info__name">Jean Dupont</span>
+            <span className="team__card__info__description">Gardien de but</span>
           </div>
         </div>
       </div>
@@ -73,10 +73,10 @@ const Players = () => {
           <div className='pattern'></div>
         </div>
         <div className='decoration'></div>
-         <div class="team__card__info ">
-          <div class="team__card__info__content">
-            <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Défenseur</span>
+         <div className="team__card__info ">
+          <div className="team__card__info__content">
+            <span className="team__card__info__name">Jean Dupont</span>
+            <span className="team__card__info__description">Défenseur</span>
           </div>
         </div>
       </div>
@@ -86,10 +86,10 @@ const Players = () => {
           <div className='pattern'></div>
         </div>
         <div className='decoration'></div>
-         <div class="team__card__info ">
-          <div class="team__card__info__content">
-            <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Milieu</span>
+         <div className="team__card__info ">
+          <div className="team__card__info__content">
+            <span className="team__card__info__name">Jean Dupont</span>
+            <span className="team__card__info__description">Milieu</span>
           </div>
         </div>
       </div>
@@ -99,10 +99,10 @@ const Players = () => {
           <div className='pattern'></div>
         </div>
         <div className='decoration'></div>
-         <div class="team__card__info ">
-          <div class="team__card__info__content">
-            <span class="team__card__info__name">Jean Dupont</span>
-            <span class="team__card__info__description">Attquant</span>
+         <div className="team__card__info ">
+          <div className="team__card__info__content">
+            <span className="team__card__info__name">Jean Dupont</span>
+            <span className="team__card__info__description">Attquant</span>
           </div>
         </div>
       </div>

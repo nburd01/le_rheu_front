@@ -113,7 +113,7 @@ const TopBar = () => {
                 <nav>
                 <label>
                 <input type="checkbox" />
-                    <span class="menu"> <span class="hamburger"></span> </span>
+                    <span className="menu"> <span className="hamburger"></span> </span>
                     <ul className="list">
                     {authorizationapp === ''
 
