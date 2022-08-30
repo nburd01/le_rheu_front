@@ -17,7 +17,8 @@ export const Taggable = () => {
 				`${API_URL}taggables`)
 			.then(response  =>{
 				console.log("getTagData", response.data);
-				console.log("getTagPost", response.data.post);
+				console.log("getTagDisciplines", response.data.discipline);
+				// console.log("getTagDisciplinesName", response.data.discipline.name);
 
 				if (response.data) {
 					setTags(response.data);
@@ -45,7 +46,8 @@ const tagsRender = tags.map((tag, index) =>
             voici le discipline id :{tag.discipline_id}
             </p>
             <p className="discipline_id">
-            {/* voici le post name :{tag.post.title} */}
+            {/* voici le discipline name :{tag.discipline.name} */}
+			{/* {tag.map((tag,i)=> <p key={i}>{tag.name}</p> )} */}
             </p>
         </div>
     // </div>

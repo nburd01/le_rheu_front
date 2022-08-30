@@ -9,7 +9,7 @@ const Hamburger = () => {
     <div>
       <label>
       <input type="checkbox" />
-        <span class="menu"> <span class="hamburger"></span> </span>
+        <span className="menu"> <span className="hamburger"></span> </span>
         <ul>
           <li> <a href="#">Se connecter</a> </li>
           <li> <a href="#">Nous rejoindre</a> </li>
