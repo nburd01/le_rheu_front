@@ -39,9 +39,7 @@ footer a{
         text-decoration: underline ;
     }
     @media only screen and (max-width: 700px) {
-        footer{
-            background-image: linear-gradient(180deg, var(--fourth) 95%, var(--secondary) 1%);
-        }
+
         footer .column-block{
             display: flex;
             align-items: center;
@@ -55,6 +53,21 @@ footer a{
         }
         .logo-div{
             width: 850px;
+        }
+    }
+
+    @media only screen and (max-width: 868px) {
+        .column-block{
+            flex-wrap: wrap;
+        }
+        footer{
+            background-image: linear-gradient(180deg, var(--primary) 94%, var(--secondary) 1%);
+        }
+    }
+
+    @media  (min-width:700px) and (max-width:868px){
+        footer{
+            background-image: linear-gradient(180deg, var(--primary) 90%, var(--secondary) 1%);
         }
     }
 
