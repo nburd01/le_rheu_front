@@ -7,6 +7,7 @@ export const HeroBlog = () => {
 
   const [posts, setPosts] = useState([]);
 
+
   useEffect(() => {
 		getData();
 	},[]);	
@@ -26,6 +27,13 @@ export const HeroBlog = () => {
 				console.log('An error occured', error);
 			})
 		}
+	const truncateString = (str, num) => {
+		if (str?.length > num) {
+			return str.slice(0, num) + '...';
+		} else {
+			return str;
+		}
+	};
 
     const heroBlogRender = posts.map((post, index) => 
     <div className="heroBlog" key={index} >
@@ -33,7 +41,7 @@ export const HeroBlog = () => {
       <h2 className="heroTitle">
         {post.title}
       </h2>
-      <p className="heroContent">{post.content}</p>
+      <p className="heroContent">{truncateString(post?.content, 150)}</p>
     </div>
 	);
 
