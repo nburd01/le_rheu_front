@@ -11,6 +11,7 @@ import axios from "axios";
 import { API_URL } from '../../stores/api_url';
 import {authorizationAtom, userAtom} from '../../stores/auth'
 import { useAtom, useAtomValue } from 'jotai';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const TopBar = () => {
@@ -104,9 +105,20 @@ const TopBar = () => {
                     </a>
                 </div>
                 <div className='top-link'>
-  
-                </div>
 
+                    <h3>suivez-nous</h3>
+
+                    <a target="_blank" rel="noreferrer" href="https://twitter.com/rheuscfoot">
+                        <FontAwesomeIcon icon="fa-brands fa-twitter" size="xl" />
+                    </a>
+                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/SCLERHEUFOOTBALL">
+                        <FontAwesomeIcon icon="fa-brands fa-facebook" size="xl" />
+                    </a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/sc-le-rheu-football/">
+                        <FontAwesomeIcon icon="fa-brands fa-linkedin" size="xl" />
+                    </a>
+
+                </div>
             </div>
 
             <div className='burger-div'>

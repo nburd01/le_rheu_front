@@ -28,14 +28,15 @@ import Comments from './components/Comments/Comments';
 import Profile from './pages/Profile/Profile';
 import Admin from './pages/Admin/DashboardAdmin';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faHamburger } from '@fortawesome/free-solid-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas, faTwitter, faFontAwesome)
 
 
 
 function App() {
 
-  library.add(fab, faCheckSquare, faCoffee, faHamburger)
 
   return (
 <div className="App">
