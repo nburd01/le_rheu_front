@@ -30,7 +30,6 @@ const Feminines = () => {
       <h2>
         {disciplines.name}
       </h2>
-        {disciplines.id}
   </div>
 
   return (
