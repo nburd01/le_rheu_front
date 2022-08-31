@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {useParams } from 'react-router-dom';
-import Comments from "../Comments/Comments";
 import {authorizationAtom} from '../../stores/auth'
 import { useAtomValue } from "jotai";
 import { API_URL } from '../../stores/api_url';
@@ -11,11 +10,12 @@ function Post() {
   const [postContent, setPostContent] = useState(" ");
   const [userId, setUserId] = useState(" ");
   const [postTag, setPostTag] = useState(" ");
+  const [postBg, setPostBg] = useState(" ");
   const jwt = useAtomValue(authorizationAtom);
 
 
   useEffect(() => {
-    fetch(`${API_URL}disciplines` + id, {
+    fetch(`${API_URL}posts/` + id, {
       method: "get",
       headers: {
         "Content-Type": "application/json",
@@ -26,25 +26,25 @@ function Post() {
       .then(response => {
         setPostTitle(response.title);
         setPostContent(response.content);
+        setPostBg(response.postBg);
         setUserId(response.user_id);
         setPostTag(response.tag_id);
         // .catch(err => console.error(err));
       });
   }, [id]);
 
- 
+ console.log("postTitle",postTitle)
 
   return (
     <div className="container">
       <h2>Post {id}</h2>
-      <div>{postTitle}</div>
-      <div>{postContent}</div>
-      <br />
-      <div>User #{userId}</div>
+      <div>Title{postTitle}</div>
+      <div>Content{postContent}</div>
+      <br/>
+      {/* <div>User #{userId}</div> */}
       <div className="tag">Tag {postTag}</div>
-      <br />
+      <br/>
       <div>
-        {<Comments/>}
       </div>
       <p id="demo"></p>
     </div>
