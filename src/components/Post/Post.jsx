@@ -44,7 +44,7 @@ function Post() {
 
       <br/>
       {/* <div>User #{userId}</div> */}
-      <div className="tag">Tag {postTag}</div>
+      {/* <div className="tag">Tag {postTag}</div> */}
       <br/>
       <div>
       </div>

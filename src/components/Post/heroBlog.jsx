@@ -39,10 +39,14 @@ export const HeroBlog = () => {
     const heroBlogRender = posts.map((post, index) => 
 
     <div className="heroBlog" key={index} >
-      <img className="heroImage" src={post.postBg} alt="discipline_image"></img>
-      <h2 className="heroTitle">
-        {post.title}
-      </h2>
+	  <Link to={"/posts/" + post.id} className="heroImage" >
+      	<img src={post.postBg} alt="discipline_image"></img>
+	  </Link>
+	  <Link to={"/posts/" + post.id} className="heroTitle" >
+		<h2>
+			{post.title}
+		</h2>
+	  </Link>
       <p className="heroContent">{truncateString(post?.content, 350)}</p>
 	  	<div className="button-block">
 	  		<Link to={"/posts/" + post.id}>Lire</Link>
