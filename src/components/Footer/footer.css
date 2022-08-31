@@ -40,6 +40,11 @@ footer a{
         color: var(--secondary);
         text-decoration: underline ;
     }
+
+    .logo-leRheu {
+        width: 15%;
+    }
+    
     @media only screen and (max-width: 700px) {
 
         footer .column-block{
@@ -54,7 +59,10 @@ footer a{
             width: 100px;
         }
         .logo-div{
-            width: 850px;
+            width: auto;
+        }
+        .logo-leRheu {
+            width: 30%;
         }
     }
 
@@ -73,6 +81,3 @@ footer a{
         }
     }
 
-.logo-leRheu {
-    width: 15%;
-}
