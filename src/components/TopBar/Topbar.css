@@ -28,6 +28,12 @@
 .top-link a {
     padding:1em;
 }
+.iconsFontAwesome{
+    color: var(--secondary);
+}
+.iconsFontAwesome:hover{
+    color: var(--fifth);
+}
 
 .topbar{
     display: flex;

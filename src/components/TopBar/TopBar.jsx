@@ -109,13 +109,13 @@ const TopBar = () => {
                     <h3>suivez-nous</h3>
 
                     <a target="_blank" rel="noreferrer" href="https://twitter.com/rheuscfoot">
-                        <FontAwesomeIcon icon="fa-brands fa-twitter" size="xl" />
+                        <FontAwesomeIcon icon="fa-brands fa-twitter" size="xl" className="iconsFontAwesome"/>
                     </a>
                     <a target="_blank" rel="noreferrer" href="https://www.facebook.com/SCLERHEUFOOTBALL">
-                        <FontAwesomeIcon icon="fa-brands fa-facebook" size="xl" />
+                        <FontAwesomeIcon icon="fa-brands fa-facebook" size="xl" className="iconsFontAwesome"/>
                     </a>
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/sc-le-rheu-football/">
-                        <FontAwesomeIcon icon="fa-brands fa-linkedin" size="xl" />
+                        <FontAwesomeIcon icon="fa-brands fa-linkedin" size="xl" className="iconsFontAwesome"/>
                     </a>
 
                 </div>
