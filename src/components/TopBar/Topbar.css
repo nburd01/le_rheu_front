@@ -28,6 +28,12 @@
 .top-link a {
     padding:0.5em;
 }
+.titleIcons{
+    background-color: var(--primary);
+    padding:0.5em;
+    border-radius: 1px 20px;
+    font-style: bolder;
+}
 .iconsFontAwesome{
     color: var(--secondary);
 }
