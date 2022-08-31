@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import axios from "axios";	
 import { API_URL } from '../../stores/api_url';
-import Blog from "../../components/Post/Blog";
 import Players from "../../components/Players/Players";
 import { HeroBlog } from "../../components/Post/heroBlog";
+import AutresActualites from "../../components/Post/AutresActualites";
 
 
 const Feminines = () => {
@@ -36,7 +36,7 @@ const Feminines = () => {
     <div className="container">
         <p>{disciplinesRender}</p>
         <HeroBlog/>
-        <Blog/>
+        <AutresActualites/>
         <Players/>
 
     </div>
