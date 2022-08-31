@@ -20,7 +20,13 @@
     display: flex;
     width: 33%;
     /* background-color: rgb(80, 5, 5); */
-    justify-content: flex-end;
+    justify-content: center;
+    justify-content: center;
+    align-items:center ;
+}
+
+.top-link a {
+    padding:1em;
 }
 
 .topbar{
