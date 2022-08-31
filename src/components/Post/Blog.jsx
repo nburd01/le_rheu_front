@@ -9,6 +9,7 @@ import Polkadots from '../../assets/img/Polkadots.svg'
 import flecheDroite from "../../assets/img/flecheDroite.svg"
 import flecheGauche from "../../assets/img/flecheGauche.svg"
 
+
 const Blog = () => {
 	const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <img src={flecheGauche} alt="prevArrow" {...props} />
@@ -88,7 +89,9 @@ const Blog = () => {
 		function exitCard(e){
 			setChangeOnHover(true) 
 			console.log("Is hovering ?",changeOnHover)
-		}	
+		}
+		
+
 
 	const postsRender = posts.map((post, index) => 
 					<div key={index} className="blog card" onMouseOver={enterCard} onMouseLeave={exitCard} style={changeOnHover ? {color: `var(--secondary)`} : {color: `var(--primary)`} }>
