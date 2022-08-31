@@ -15,7 +15,9 @@ export default function Home() {
         <LeClub/>
         <HeroBlog/>
         <Blog/> 
-        <DisciplinesBar/>
+        <section className="disciplineSection">
+          <DisciplinesBar/>
+        </section>
         {/* <Taggable /> */}
     </div>
   )
