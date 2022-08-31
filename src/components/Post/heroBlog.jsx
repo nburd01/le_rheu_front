@@ -48,7 +48,7 @@ export const HeroBlog = () => {
 		</h2>
 	  </Link>
       <p className="heroContent">{truncateString(post?.content, 350)}</p>
-	  	<div className="button-block">
+	  	<div className="heroBtn">
 	  		<Link to={"/posts/" + post.id}>Lire</Link>
 		</div>
     </div>

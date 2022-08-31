@@ -1,22 +1,42 @@
 .heroBlog{
     display: grid;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px; 
+    grid-template-columns: [first] 50% [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    grid-template-rows: [row1-start] 3em [row1-end] auto [third-line] 50px [fourth-line] 3em [last-line];
+    grid-column-gap: 20px;
+    grid-row-gap: 20px; 
 }
 
 .heroImage{
-    grid-column: 1 / 4;
-    grid-row: 1 / 5;
-    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: row1-start;
+    grid-row-end: 4;
 }
 .heroTitle{
-    grid-column: 4 / 6;
-    grid-row: 1 / 1;
-    
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: row1-start;
+    grid-row-end: 3;  
 }
 .heroContent{
-    grid-column: 4 / 6;
-    grid-row: 2 / 2;   
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;  
+}
+.heroBtn{
+    display: flex;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;  
+    justify-self: center;
+    padding: 0 2em;
+    border-radius: 20px;
+    background-color: var(--fifth);
+    justify-content: center;
+    align-items: center;
+
 }
 
 @media only screen and (max-width: 768px) {

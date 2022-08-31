@@ -81,7 +81,7 @@ const TopBar = () => {
 
             <div className='top-link'>
 
-            <h3 className="iconsFontAwesome">suivez-nous</h3>
+            <p className="titleIcons">suivez-nous</p>
 
                 <a target="_blank" rel="noreferrer" href="https://twitter.com/rheuscfoot">
                     <FontAwesomeIcon icon="fa-brands fa-twitter" size="xl" className="iconsFontAwesome"/>
@@ -106,14 +106,14 @@ const TopBar = () => {
                     <ul>
                     {authorizationapp === ''?
                         <>
-                        <li key="register"><Link to='/register'>S'inscrire</Link></li>
-                        <li key="login"><Link to='/login'>Se Connecter</Link></li>    
+                        <p key="register"><Link to='/register'>S'inscrire</Link></p>
+                        <p key="login"><Link to='/login'>Se Connecter</Link></p>    
 
                         </>
                         :
                         <>
-                        <li key="profile"><Link to={'/profil/' + id}>Profil</Link></li>
-                        <li key="logout"><Link to={'/'} onClick={logout}>Se deconnecter</Link></li>
+                        <p key="profile"><Link to={'/profil/' + id}>Profil</Link></p>
+                        <p key="logout"><Link to={'/'} onClick={logout}>Se deconnecter</Link></p>
                         </>
 
                     }
