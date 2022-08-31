@@ -128,9 +128,9 @@ const Blog = () => {
 	return (
 		<div className="container posts">
 			
-			<h2 >
+			{/* <h2 >
 				<Link to={`/post`}>Actualité</Link>
-			</h2>
+			</h2> */}
 			<Slider {...settings}>
 				{postsRender}
       		</Slider>
