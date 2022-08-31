@@ -37,9 +37,11 @@ function Post() {
 
   return (
     <div className="container">
-      <h2>Post {id}</h2>
-      <div>Title{postTitle}</div>
+      <h2>{postTitle}</h2>
       <div>Content{postContent}</div>
+
+        <img src={postBg} alt="discipline_image"></img>
+
       <br/>
       {/* <div>User #{userId}</div> */}
       <div className="tag">Tag {postTag}</div>
