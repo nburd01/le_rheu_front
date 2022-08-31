@@ -235,8 +235,8 @@ cursor: pointer;
 
 label .menu {
     position: absolute;
-    right: -50px;
-    top: -50px;
+    right: -80px;
+    top: -60px;
     z-index: 1;
     width: 200px;
     height: 200px;
