@@ -52,7 +52,7 @@ function App() {
           <Route path='/sign_out' element={<SignOut/>}/>
           <Route path="/profil/:id" element={<Profile/>} />
           <Route path ='/disciplines' element= {<Disciplines />}/>
-          <Route path ='/discipline/:id' element= {<Discipline/>}/>
+          <Route path ='/:id' element= {<Discipline/>}/>
           <Route path ='/football' element= {<Football />} />
           <Route path ='/beach' element= {<Beach/>} />
           <Route path ='/futsal' element= {<Futsal/>} />

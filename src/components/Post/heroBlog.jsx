@@ -59,6 +59,6 @@ export const HeroBlog = () => {
 
 
   return (
-    <div >{lastPost}</div>
+    <div className="container">{lastPost}</div>
   )
 }

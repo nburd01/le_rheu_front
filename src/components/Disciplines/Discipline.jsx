@@ -9,7 +9,7 @@ function Discipline() {
   return (
     <div className="container">
 
-    <h2>Discipline {id}</h2>
+    <h2>Discipline</h2>
     <p>Discipline {name}</p>
     </div>
   )

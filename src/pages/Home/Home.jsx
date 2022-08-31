@@ -5,6 +5,7 @@ import LeClub from '../../components/LeClub/LeClub'
 import ScoreBar from '../../components/ScoreBar/ScoreBar'
 import Blog from '../../components/Post/Blog'
 import { Taggable } from '../../components/taggable/taggable'
+import { HeroBlog } from '../../components/Post/heroBlog'
 
 export default function Home() {
   return (
@@ -12,9 +13,10 @@ export default function Home() {
         <HeaderHome/>
         <ScoreBar/>
         <LeClub/>
-        <DisciplinesBar/>
+        <HeroBlog/>
         <Blog/> 
-        <Taggable />
+        <DisciplinesBar/>
+        {/* <Taggable /> */}
     </div>
   )
 }
