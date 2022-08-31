@@ -12,6 +12,8 @@
 .container-end{
     margin: 0 auto;
     padding: 0 1.25em;
+    overflow: hidden;
+
     }
 .container-large{
     margin: 1.875em auto;

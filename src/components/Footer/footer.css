@@ -6,6 +6,7 @@ footer {
 }
 .footer-column {
     padding: 10px;
+    
 }
 
 footer li{
@@ -18,6 +19,7 @@ footer a{
     footer .column-block{
         display: flex;
         justify-content: space-around;
+        overflow: hidden;
     }
     footer .logo-div{
         display: flex;
