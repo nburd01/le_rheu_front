@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";	
 import './heroBlog.css'
 
@@ -36,13 +37,16 @@ export const HeroBlog = () => {
 	};
 
     const heroBlogRender = posts.map((post, index) => 
+	<Link to={"/posts/" + post.id} className="" key={post.id} >
     <div className="heroBlog" key={index} >
       <img className="heroImage" src={post.postBg} alt="discipline_image"></img>
       <h2 className="heroTitle">
         {post.title}
       </h2>
-      <p className="heroContent">{truncateString(post?.content, 150)}</p>
+      <p className="heroContent">{truncateString(post?.content, 350)}</p>
+	  <button>Lire</button>
     </div>
+	</Link>
 	);
 
   const lastPost = heroBlogRender[0];
