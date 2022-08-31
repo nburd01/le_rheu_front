@@ -176,11 +176,54 @@
     }
 
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1300px) {
     .block{
         display: block;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .blog{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .slick-slide slick-active slick-current{
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
     .card{
-        display: block;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .card:hover{
+        display: flex;
+        width: 20em;
+        height: 500px;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .illustration::before{
+        display: none;
+    }
+    .illustration::after{
+        display: none;
+    }
+    .patternBottom{
+        display: none;
+    }
+    .patternCenter{
+        display: none;
+    }
+    .slick-slide{
+        display:none;
     }
 }
