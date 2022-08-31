@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(180deg, var(--primary) 80%, var(--secondary) 1%);
+    background-image: linear-gradient(180deg, var(--fourth) 80%, var(--secondary) 1%);
 }
 .footer-column {
     padding: 10px;
