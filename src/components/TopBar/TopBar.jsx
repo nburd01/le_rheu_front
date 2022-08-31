@@ -79,44 +79,45 @@ const TopBar = () => {
         <div className="topbar">
             <div className="top">
 
-                
-                <div className="menu">
+            <div className='top-link'>
 
-                <ul>
-                {authorizationapp === ''?
-                    <>
-                    <li key="register"><Link to='/register'>S'inscrire</Link></li>
-                    <li key="login"><Link to='/login'>Se Connecter</Link></li>    
+            <h3 className="iconsFontAwesome">suivez-nous</h3>
 
-                    </>
-                    :
-                    <>
-                    <li key="profile"><Link to={'/profil/' + id}>Profil</Link></li>
-                    <li key="logout"><Link to={'/'} onClick={logout}>Se deconnecter</Link></li>
-                    </>
-         
-                }
-                </ul>
-                </div>
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/rheuscfoot">
+                    <FontAwesomeIcon icon="fa-brands fa-twitter" size="xl" className="iconsFontAwesome"/>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.facebook.com/SCLERHEUFOOTBALL">
+                    <FontAwesomeIcon icon="fa-brands fa-facebook" size="xl" className="iconsFontAwesome"/>
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/sc-le-rheu-football/">
+                    <FontAwesomeIcon icon="fa-brands fa-linkedin" size="xl" className="iconsFontAwesome"/>
+                </a>
+
+            </div>
+
                 
                 <div className="logo">
                     <a className='logo-link' href="/le_rheu_front/">
                         <img className="lerheu-logo" src={require("../../assets/img/logo-leRheu.png")} alt={"S.C. Le Rheu"}/>
                     </a>
                 </div>
-                <div className='top-link'>
+                <div className="menu">
 
-                    <h3 className="iconsFontAwesome">suivez-nous</h3>
+                    <ul>
+                    {authorizationapp === ''?
+                        <>
+                        <li key="register"><Link to='/register'>S'inscrire</Link></li>
+                        <li key="login"><Link to='/login'>Se Connecter</Link></li>    
 
-                    <a target="_blank" rel="noreferrer" href="https://twitter.com/rheuscfoot">
-                        <FontAwesomeIcon icon="fa-brands fa-twitter" size="xl" className="iconsFontAwesome"/>
-                    </a>
-                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/SCLERHEUFOOTBALL">
-                        <FontAwesomeIcon icon="fa-brands fa-facebook" size="xl" className="iconsFontAwesome"/>
-                    </a>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/sc-le-rheu-football/">
-                        <FontAwesomeIcon icon="fa-brands fa-linkedin" size="xl" className="iconsFontAwesome"/>
-                    </a>
+                        </>
+                        :
+                        <>
+                        <li key="profile"><Link to={'/profil/' + id}>Profil</Link></li>
+                        <li key="logout"><Link to={'/'} onClick={logout}>Se deconnecter</Link></li>
+                        </>
+
+                    }
+                    </ul>
 
                 </div>
             </div>
