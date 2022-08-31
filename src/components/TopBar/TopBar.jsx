@@ -106,7 +106,7 @@ const TopBar = () => {
                 </div>
                 <div className='top-link'>
 
-                    <h3>suivez-nous</h3>
+                    <h3 className="iconsFontAwesome">suivez-nous</h3>
 
                     <a target="_blank" rel="noreferrer" href="https://twitter.com/rheuscfoot">
                         <FontAwesomeIcon icon="fa-brands fa-twitter" size="xl" className="iconsFontAwesome"/>
