@@ -8,8 +8,9 @@ import { Taggable } from '../../components/taggable/taggable'
 import { HeroBlog } from '../../components/Post/heroBlog'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faLinkedin, faFacebook, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { Partners } from '../../components/Partners/Partners'
+import { Boutique } from '../../components/Boutique/Boutique'
 
 library.add(fas, faTwitter, faLinkedin, faFacebook)
 
@@ -25,6 +26,9 @@ export default function Home() {
           <DisciplinesBar/>
         </section>
         {/* <Taggable /> */}
+        <section className="boutiqueSection">
+          <Boutique/>
+        </section>
         <section className="partnersSection">
           <Partners/>
         </section>
