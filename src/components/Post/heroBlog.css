@@ -36,6 +36,37 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .heroImage{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: row1-start;
+        grid-row-end: 4;
+    }
+    .heroTitle{
+        display: flex;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: row1-start;
+        grid-row-end: 2; 
+        justify-self: end;
+        align-items: end; 
+        margin-bottom:0;
+    }
+    .heroDescription{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;  
+    }
+    .heroBtn{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;  
+    }
+}
+
+@media only screen and (max-width: 768px) {
     .heroBlog{
         display: block;
     }
