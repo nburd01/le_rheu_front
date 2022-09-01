@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";	
 import './heroBlog.css'
+import '../../assets/stylesheets/buttons.css'
 
 
 export const HeroBlog = () => {
@@ -47,8 +48,8 @@ export const HeroBlog = () => {
 			{post.title}
 		</h2>
 	  </Link>
-      <p className="heroContent">{truncateString(post?.content, 350)}</p>
-	  	<div className="heroBtn">
+      <p className="heroDescription">{truncateString(post?.description, 350)}</p>
+	  	<div className="componentBtn heroBtn">
 	  		<Link to={"/posts/" + post.id}>Lire</Link>
 		</div>
     </div>

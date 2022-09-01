@@ -169,6 +169,9 @@ background: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 color:var(--secondary, #3e6bd3);
 cursor: pointer;
 }
+
+
+
 @media only screen and (min-width: 1400px)  {
     label .menu, .burger-div {
         display: none;
@@ -182,6 +185,7 @@ cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        background-color: var(--primary)
     }
     .topbar .top{
         display: flex ;
