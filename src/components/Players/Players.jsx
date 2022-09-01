@@ -80,7 +80,7 @@ const Players = () => {
     <div key={index}>
       <div className='player-card'>
         <div className='photo'>
-          <img src={player.player_img} alt="player_image"></img>
+          <img src={player.player_img} className='playerPhoto'alt="player_image"></img>
           <div className='pattern'></div>
         </div>
         <div className='decoration'></div>
